@@ -22,7 +22,7 @@ docker run -it -v $(pwd):/app -p 5005:5005 --net my-project rasa/rasa:2.8.6-full
 
 ## ¿Como inicio en modo API?
 
-docker run -it -v $(pwd):/app -p 5005:5005 --net my-project rasa/rasa:2.8.6-full RUN
+docker run -it -v $(pwd):/app -p 5005:5005 --net my-project rasa/rasa:2.8.6-full run
 
 ## ¿Como doy de baja el servidor de acciones?
 
