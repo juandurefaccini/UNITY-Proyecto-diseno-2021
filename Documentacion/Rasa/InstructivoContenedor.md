@@ -15,10 +15,10 @@ docker run -u 1000 -v $(pwd):/app rasa/rasa:2.8.6-full train --domain domain.yml
 ## ¿Como inicio el servidor de acciones?
 
 1era vez - Creo una red en el contenedor 
-docker network create my-project 
+--> docker network create my-project 
 
 Cada vez - Inicio el servidor de acciones y queda activo
-docker run -d -v $(pwd)/actions:/app/actions --net my-project --name action-server rasa/rasa-sdk:2.8.1
+--> docker run -d -v $(pwd)/actions:/app/actions --net my-project --name action-server rasa/rasa-sdk:2.8.1
 
 ## ¿Como inicio en modo shell?
 
