@@ -1,0 +1,38 @@
+version: "2.0"
+
+intents:
+  - saludo
+  - que_hiciste_ayer
+  - cagada_a_pedo
+  - despedida
+
+actions:
+  - accion_respuesta
+
+responses:
+  utter_saludo:
+  - text: "happy3=Hola, que tal"
+  - text: "happy3=Buuuuuuenas"
+  - text: "happy3=Que tuuul"
+  - text: "happy3=Buenas Noches America"
+     
+  utter_que_hiciste_ayer:
+  - text: "beg1=No hice nada"
+  - text: "beg1=La verdad que no he hecho nada"
+  - text: "beg1=Estuve aburrido sin hacer nada"
+
+  utter_cagada_a_pedo:
+  - text: "angry1=No me rompas"
+  - text: "angry1=No me jodas flaco"
+  - text: "angry1=Dejame de joder"
+
+
+  utter_despedida:
+  - text: "saludo3=Hasta Luego"
+  - text: "saludo3=Chau"
+  - text: "saludo3=Nos vemos"
+  - text: "saludo3=Estamos en contacto"
+       
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

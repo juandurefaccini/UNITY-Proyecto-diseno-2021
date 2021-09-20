@@ -1,0 +1,38 @@
+version: "2.0"
+
+intents:
+  - saludo
+  - que_hiciste_ayer
+  - felicitaciones  
+  - despedida
+
+actions:
+  - accion_respuesta
+
+responses:
+  utter_saludo:
+  - text: "happy3=Hola Hola"
+  - text: "happy3=Que tal, como va"
+  - text: "happy3=Como va eso"
+  - text: "happy3=Holaa"
+     
+  utter_que_hiciste_ayer:
+  - text: "happy1=Bienn, pude avanzar bastante"
+  - text: "happy1=La verdad que muy bien, termine con lo que estaba haciendo"
+  - text: "happy1=Pude terminar mi tarea"
+
+  utter_felicitaciones:
+  - text: "happy2=Muchas muchas gracias"
+  - text: "happy2=Muchisimas Gracias"
+  - text: "happy2=Graciass"
+
+
+  utter_despedida:
+  - text: "saludo3=Hasta Luego"
+  - text: "saludo2=Chau"
+  - text: "saludo1=Nos vemos"
+  - text: "saludo3=Estamos en contacto"
+       
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
