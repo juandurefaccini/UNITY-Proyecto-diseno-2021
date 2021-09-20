@@ -41,6 +41,7 @@
      <Compile Include="Assets/Scripts/UnityWithRasaDemoScene/JsonSerializationOption.cs" />
      <Compile Include="Assets/Scripts/UnityWithRasaDemoScene/HttpClient.cs" />
      <Compile Include="Assets/Scripts/UnityWithRasaDemoScene/ConnectionController.cs" />
+     <Compile Include="Assets/Scripts/UnityWithRasaDemoScene/Model/Answer_Version.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/juandurefaccini/UnityEditor/2020.3.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -261,7 +262,7 @@
         <HintPath>/home/juandurefaccini/UnityEditor/2020.3.17f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>/home/juandurefaccini/UnityEditor/2020.3.17f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -609,43 +610,43 @@
         <HintPath>/home/juandurefaccini/UnityEditor/2020.3.17f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Sysroot.Linux_x86_64">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Toolchain.Linux-x86_64">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.SysrootPackage.Editor">
-        <HintPath>/home/juandurefaccini/develop/Unity-Kinect-Demo/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
+        <HintPath>/home/juandurefaccini/develop/UNITY-Proyecto-diseno-2021/Proyecto Unity Diseño 2021/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

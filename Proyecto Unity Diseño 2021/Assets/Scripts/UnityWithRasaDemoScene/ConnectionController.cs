@@ -21,7 +21,7 @@ public class ConnectionController : MonoBehaviour
         var httpClient = new HttpClient(new JsonSerializationOption());
 
         // Set the API Url RASA
-        var url_rasa = "http://localhost:5005/webhooks/rest/webhook";
+        var url_rasa = "localhost:5005/webhooks/rest/webhook";
 
         // Genero un form para guardar los valores a enviar en el POST
         WWWForm form = new WWWForm();
@@ -30,6 +30,7 @@ public class ConnectionController : MonoBehaviour
         form.AddField("sender", "juan");
         form.AddField("message", "Hola");
 
-        var result = await httpClient.Post<Answer>(url_rasa, form);
+        //var result = await httpClient.Post<Answer>(url_rasa, form);
+        var result = await httpClient.Get<Answer_Version>("http://localhost:5005/webhooks/rest/webhook");
     }
 }
