@@ -4,6 +4,10 @@ Para mas informacion: https://rasa.com/docs/rasa/docker/building-in-docker/
 
 Antes de comenzar, hay que aclarar algunos comandos puede llegar a ser que deban ser corridos con superusuario (agregando sudo separado antes del comando). Ademas, deben ser ejecutados con el usuario 1000 algunos.
 
+## ¿Como hago el rasa init?
+
+docker run -u 1000 -v $(pwd):/app rasa/rasa:2.8.6-full init --no-prompt
+
 ## ¿Como entreno al chatbot?
 
 docker run -u 1000 -v $(pwd):/app rasa/rasa:2.8.6-full train --domain domain.yml --data data --out models
