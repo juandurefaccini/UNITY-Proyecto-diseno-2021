@@ -1,0 +1,24 @@
+version: "2.0"
+
+rules:
+
+- rule: saludo
+  steps:
+  - intent: saludo
+  - action: utter_saludo  
+
+- rule: que_hiciste_ayer
+  steps:
+  - intent: que_hiciste_ayer
+  - action: utter_que_hiciste_ayer
+
+- rule: cagada_a_pedo
+  steps:
+  - intent: cagada_a_pedo
+  - action: utter_cagada_a_pedo
+
+
+- rule: despedida
+  steps:
+  - intent: despedida
+  - action: utter_despedida

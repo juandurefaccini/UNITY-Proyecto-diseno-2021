@@ -1,0 +1,38 @@
+version: "2.0"
+
+intents:
+  - saludo
+  - que_hiciste_ayer
+  - felicitaciones  
+  - despedida
+
+actions:
+  - accion_respuesta
+
+responses:
+  utter_saludo:
+  - text: "FelizAmigable=Hola Hola"
+  - text: "FelizAmigable=Que tal, como va"
+  - text: "FelizAmigable=Como va eso"
+  - text: "FelizAmigable=Holaa"
+     
+  utter_que_hiciste_ayer:
+  - text: "FelizFormal=Bienn, pude avanzar bastante"
+  - text: "FelizFormal=La verdad que muy bien, termine con lo que estaba haciendo"
+  - text: "FelizFormal=Pude terminar mi tarea"
+
+  utter_felicitaciones:
+  - text: "FelizSusc=Muchas muchas gracias"
+  - text: "FelizSusc=Muchisimas Gracias"
+  - text: "FelizSusc=Graciass"
+
+
+  utter_despedida:
+  - text: "SadAnim=Hasta Luego"
+  - text: "SadAnim=Chau"
+  - text: "SadAnim=Nos vemos"
+  - text: "SadAnim=Estamos en contacto"
+       
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,38 @@
+version: "2.0"
+
+intents:
+  - saludo
+  - que_hiciste_ayer
+  - cagada_a_pedo
+  - despedida
+
+actions:
+  - accion_respuesta
+
+responses:
+  utter_saludo:
+  - text: "FelizSusc=Hola, que tal"
+  - text: "FelizSusc=Buuuuuuenas"
+  - text: "FelizSusc=Que tuuul"
+  - text: "FelizSusc=Buenas Noches America"
+     
+  utter_que_hiciste_ayer:
+  - text: "FelizAmigable=No hice nada"
+  - text: "FelizAmigable=La verdad que no he hecho nada"
+  - text: "FelizAmigable=Estuve aburrido sin hacer nada"
+
+  utter_cagada_a_pedo:
+  - text: "RetadoSusceptible=No me rompas"
+  - text: "RetadoSusceptible=No me jodas flaco"
+  - text: "RetadoSusceptible=Dejame de joder"
+
+
+  utter_despedida:
+  - text: "SadAnim=Hasta Luego"
+  - text: "SadAnim=Chau"
+  - text: "SadAnim=Nos vemos"
+  - text: "SadAnim=Estamos en contacto"
+       
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
