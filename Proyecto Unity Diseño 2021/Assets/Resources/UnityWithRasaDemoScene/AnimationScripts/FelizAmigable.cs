@@ -4,10 +4,8 @@ using AnimatorComposerStructures;
 
 public class FelizAmigable : InterfazAnim
 {
-    
     private List<Block> anim = new List<Block>();
 
-    
     private AnimationComposer _composer;
     // Start is called before the first frame update
     void Start()
@@ -25,10 +23,12 @@ public class FelizAmigable : InterfazAnim
         anim.Add(clearBlock);
         
         //START
-        List <LayerInfo> d6 = new List <LayerInfo>(); 
+        List <LayerInfo> d6 = new List <LayerInfo>();
         d6.Add(new LayerInfo("Excited"));
-        d6.Add(new LayerInfo("JoyfullJump"));
         anim.Add(new Block(d6));
+        List <LayerInfo> d7 = new List <LayerInfo>();
+        d7.Add(new LayerInfo("JoyfullJump"));
+        anim.Add(new Block(d7));
         List <LayerInfo> d9 = new List <LayerInfo>();
         d9.Add(new LayerInfo("clearTorsoLayer"));
         d9.Add(new LayerInfo("clearBothArmsLayer"));
