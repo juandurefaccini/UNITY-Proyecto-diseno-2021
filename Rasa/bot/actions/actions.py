@@ -44,7 +44,8 @@ class ActionVector(Action):
         accion_a_responder = "utter_" + ultimo_intent + "_" + emocion 
         
         index = self.get_mood(emocion)
-        vectorResultado = self.calcularVector(tracker.current_state()['sender_id'], index)
+        print("INDEX: ", index)
+        vectorResultado = self.calcularVector("Agustin", index) #tracker.current_state()['sender_id']
 
         print("Vector resultado: ", vectorResultado)
         print("Accion a responder: ", accion_a_responder) 

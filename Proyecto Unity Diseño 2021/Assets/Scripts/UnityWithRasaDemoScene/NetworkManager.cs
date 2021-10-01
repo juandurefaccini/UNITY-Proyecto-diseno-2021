@@ -30,8 +30,15 @@ public class Custom
 // Se usa para extraer un solo mensaje devuelto por el bot
 public class ReceiveMessageJson
 {
+    // public string recipient_id;
+    // public Custom custom;
     public string recipient_id;
-    public Custom custom;
+    public string text;
+    public string image;
+    public string attachemnt;
+    public string button;
+    public string element;
+    public string quick_replie;
 }
 
 public class NetworkManager : MonoBehaviour
@@ -72,7 +79,9 @@ public class NetworkManager : MonoBehaviour
         // receiver.GetComponent<Persona>();
         
         //Debug.Log(recieveMessages);
-        Debug.Log(recieveMessages.messages.Length);
+        Debug.Log(recieveMessages.messages[0].recipient_id);
+
+        Debug.Log(recieveMessages.messages[0].image);
 
         //string recipient = recieveMessages.messages[0].text;
         //Custom cus = recieveMessages.messages[0].custom;
