@@ -19,18 +19,19 @@ public class RootReceiveMessageJson
     public ReceiveMessageJson[] messages;
 }
 
+public class Custom
+{
+    public String text;
+    public String[] vector;
+}
+
 [Serializable]
 // ReceiveMessageJson extrae el valor del objeto json que se recibe del servidor rasa
 // Se usa para extraer un solo mensaje devuelto por el bot
 public class ReceiveMessageJson
 {
     public string recipient_id;
-    public string text;
-    public string image;
-    public string attachemnt;
-    public string button;
-    public string element;
-    public string quick_replie;
+    public Custom custom;
 }
 
 public class NetworkManager : MonoBehaviour
@@ -69,12 +70,30 @@ public class NetworkManager : MonoBehaviour
 
         RootReceiveMessageJson recieveMessages = JsonUtility.FromJson<RootReceiveMessageJson>("{\"messages\":" + request.downloadHandler.text + "}");
         // receiver.GetComponent<Persona>();
-        string data = recieveMessages.messages[0].text;
-        string animacionAEjecutar = data.Split('=')[0];
-        string mensaje = data.Split('=')[1];
+        
+        //Debug.Log(recieveMessages);
+        Debug.Log(recieveMessages.messages.Length);
 
-        UIManager.GetInstance().mostrarMensaje("CHAT: " + mensaje);
-        AnimationManager.playAnim(animacionAEjecutar, receiver.gameObject);
+        //string recipient = recieveMessages.messages[0].text;
+        //Custom cus = recieveMessages.messages[0].custom;
+
+        
+        //Debug.Log(recipient);
+
+        //Debug.Log(cus.text);
+
+        //Debug.Log(cus.vector);
+        
+        // Comento de aca para abajo porque hay que implementarlo de la nueva forma //////
+
+        //string animacionAEjecutar = data.Split('=')[0];
+        //string mensaje = data.Split('=')[1];
+
+        //UIManager.GetInstance().mostrarMensaje("CHAT: " + mensaje);
+        //AnimationManager.playAnim(animacionAEjecutar, receiver.gameObject);
+
+        //////////////////////////////////////////////////////////////////////////////////
+
         // RecieveResponse(request.downloadHandler.text);
     }
 }

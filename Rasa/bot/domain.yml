@@ -1,0 +1,244 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - saludo
+  - que_hiciste_ayer
+  - felicitaciones  
+  - despedida
+
+      
+entities: []
+
+## alegre   enojo   miedo   sorpresa    confianza
+responses:
+
+    ##  SALUDO  ################################
+  utter_saludo_alegre:
+  - custom:
+      text: "Holaa"
+      vector: "{vector}"
+  - custom:
+      text: "Buenas!"
+      vector: "{vector}"
+  - custom:
+      text: "Hola hola!"
+      vector: "{vector}"
+
+  utter_saludo_enojo:
+  - custom:
+      text: "Hola."
+      vector: "{vector}"
+  - custom:
+      text: "Hola,que tal"
+      vector: "{vector}"
+  - custom:
+      text: "Hola"
+      vector: "{vector}"
+
+  utter_saludo_miedo:
+  - custom:
+      text: "Hola"
+      vector: "{vector}"
+  - custom:
+      text: "Holi"
+      vector: "{vector}"
+  - custom:
+      text: "Holis"
+      vector: "{vector}"
+
+  utter_saludo_sorpresa:
+  - custom:
+      text: "Holaaaa"
+      vector: "{vector}"
+  - custom:
+      text: "Buenass"
+      vector: "{vector}"
+  - custom:
+      text: "Holaa"
+      vector: "{vector}"
+
+  utter_saludo_confianza:
+  - custom:
+      text: "Hola hola"
+      vector: "{vector}"
+  - custom:
+      text: "Buenas noches America"
+      vector: "{vector}"
+  - custom:
+      text: "Bueeeeenassss"
+      vector: "{vector}"
+
+
+      ##  QUE HICISTE AYER  ################################
+  utter_que_hiciste_ayer_alegre:
+  - custom:
+      text: "Estuve con la base de datoss"
+      vector: "{vector}"
+  - custom:
+      text: "A full con la BD"
+      vector: "{vector}"
+  - custom:
+      text: "Termine lo de la BD"
+      vector: "{vector}"
+
+  utter_que_hiciste_ayer_enojo:
+  - custom:
+      text: "Hablame bien y te respondo bien. Estuve con la BD"
+      vector: "{vector}"
+  - custom:
+      text: "Si me vas a hablar asi no te respondo un carajo. Estuve con la UI"
+      vector: "{vector}"
+  - custom:
+      text: "Bue.. estamos de mal humor hoy?. Estuve con la BD"
+      vector: "{vector}"
+
+  utter_que_hiciste_ayer_miedo:
+  - custom:
+      text: "Estuve muy complicado con la BD... pero pude avanzar"
+      vector: "{vector}"
+  - custom:
+      text: "Trabaje... con la interfaz de usuario"
+      vector: "{vector}"
+  - custom:
+      text: "Me centre mas que nada en... el backend"
+      vector: "{vector}"
+
+  utter_que_hiciste_ayer_sorpresa:
+  - custom:
+      text: "Emmmm.... Estuve con la base de datos"
+      vector: "{vector}"
+  - custom:
+      text: "Ehhh... Anduve acomodando un poco de la interfaz de usuario"
+      vector: "{vector}"
+  - custom:
+      text: "Ehh... Estuve trabajando con la BD"
+      vector: "{vector}"
+
+  utter_que_hiciste_ayer_confianza:
+  - custom:
+      text: "Le mande a pleno con la BD"
+      vector: "{vector}"
+  - custom:
+      text: "A full con la interfaz de usuario"
+      vector: "{vector}"
+  - custom:
+      text: "Con todo le meti a la BD"
+      vector: "{vector}"
+
+
+      ##  Felicitaciones  ################################
+  utter_felicitaciones_alegre:
+  - custom:
+      text: ":D"
+      vector: "{vector}"
+  - custom:
+      text: "MUCHAS MUCHAS GRACIASS"
+      vector: "{vector}"
+  - custom:
+      text: "GRACIAS!"
+      vector: "{vector}"
+
+  utter_felicitaciones_enojo:
+  - custom:
+      text: "Gracias"
+      vector: "{vector}"
+
+  utter_felicitaciones_miedo:
+  - custom:
+      text: "Uf, muchas gracias"
+      vector: "{vector}"
+  - custom:
+      text: "En serio, muchas gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Muchisisimas gracias"
+      vector: "{vector}"
+
+  utter_felicitaciones_sorpresa:
+  - custom:
+      text: "Muchass graciassss"
+      vector: "{vector}"
+  - custom:
+      text: "Graciass"
+      vector: "{vector}"
+  - custom:
+      text: "Wow! muchas gracias!"
+      vector: "{vector}"
+
+  utter_felicitaciones_confianza:
+  - custom:
+      text: "Lo sabia :D, gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Jeje, gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Obvioo que si, gracias"
+      vector: "{vector}"
+  
+
+      ##  DESPEDIDA  ################################
+  utter_despedida_alegre:
+  - custom:
+      text: "Chau chauu"
+      vector: "{vector}"
+  - custom:
+      text: "Adiositoo"
+      vector: "{vector}"
+  - custom:
+      text: "Byee"
+      vector: "{vector}"
+
+  utter_despedida_enojo:
+  - custom:
+      text: "Adios."
+      vector: "{vector}"
+  - custom:
+      text: "Nos vemos."
+      vector: "{vector}"
+  - custom:
+      text: "Chau."
+      vector: "{vector}"
+
+  utter_despedida_miedo:
+  - custom:
+      text: "Chau, espero poder verte pronto"
+      vector: "{vector}"
+  - custom:
+      text: "Adios, espero volver a verte pronto"
+      vector: "{vector}"
+  - custom:
+      text: "Espero verte pronto"
+      vector: "{vector}"
+
+  utter_despedida_sorpresa:
+  - custom:
+      text: "Nos estamos viendo!"
+      vector: "{vector}"
+  - custom:
+      text: "Nos vemos!"
+      vector: "{vector}"
+  - custom:
+      text: "Adios!"
+      vector: "{vector}"
+
+  utter_despedida_confianza:
+  - custom:
+      text: "Bye byee"
+      vector: "{vector}"
+  - custom:
+      text: "Chau chau chauuuu"
+      vector: "{vector}"
+  - custom:
+      text: "Adioss"
+      vector: "{vector}"
+    
+actions:
+  - accion_vector
+
+forms: {}
+e2e_actions: []

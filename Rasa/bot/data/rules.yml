@@ -1,0 +1,24 @@
+version: "2.0"
+
+rules:
+
+- rule: saludo
+  steps:
+  - intent: saludo
+  - action: accion_vector  
+
+- rule: que_hiciste_ayer
+  steps:
+  - intent: que_hiciste_ayer
+  - action: accion_vector
+
+- rule: felicitaciones
+  steps:
+  - intent: felicitaciones
+  - action: accion_vector
+
+
+- rule: despedida
+  steps:
+  - intent: despedida
+  - action: accion_vector

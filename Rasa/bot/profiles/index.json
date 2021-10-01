@@ -1,0 +1,9 @@
+{
+    "EMOTIONS-INDEX": {
+        "alegre":0,
+        "enojo": 1,
+        "miedo": 2,
+        "sorpresa": 3,
+        "confianza": 4
+    }
+}
