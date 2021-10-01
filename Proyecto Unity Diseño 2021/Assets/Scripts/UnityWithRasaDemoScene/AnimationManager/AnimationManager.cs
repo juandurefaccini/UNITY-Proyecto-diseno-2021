@@ -25,12 +25,12 @@ public class AnimationManager : MonoBehaviour
     public static void playAnim(string anim, GameObject personaje)
     {
         InterfazAnim animation = personaje.GetComponent(anim) as InterfazAnim;
-        Debug.Log(personaje.ToString());
+        //        Debug.Log(personaje.ToString());
         if (animation == null)
         {
             personaje.AddComponent(anim_scripts[anim].GetClass());
             animation = personaje.GetComponent(anim) as InterfazAnim;
-           
+
             animation.personajeAAnimar = personaje;
         }
         animation.playAnim();
