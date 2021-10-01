@@ -36,13 +36,18 @@ public class ReceiveMessageJson
 public class NetworkManager : MonoBehaviour
 {
 
+    public BotUI botUI;
 
     private const string rasa_url = "http://localhost:5005/webhooks/rest/webhook";
 
 
     public void SendMessageToRasa(GameObject sender, GameObject receiver, string message)
     {
-        // Va a ser llamado cuando el usuario presiona el botÃ³n de enviar mensaje
+
+        string msg = botUI.input.text;
+        botUI.input.text = "";
+
+        // Va a ser llamado cuando el usuario presiona el botón de enviar mensaje
         // Creo un JSON para representar el mensaje del usuario
         PostMessageJson postMessage = new PostMessageJson
         {
@@ -52,13 +57,15 @@ public class NetworkManager : MonoBehaviour
 
         string jsonBody = JsonUtility.ToJson(postMessage);
 
-        // Creo una peticiÃ³n POST con los datos a enviar al servidor Rasa
+        botUI.UpdateDisplay("user", msg, "text");
+
+        // Creo una petición POST con los datos a enviar al servidor Rasa
         StartCoroutine(PostRequest(receiver, rasa_url, jsonBody));
     }
 
     private IEnumerator PostRequest(GameObject receiver, string url, string jsonBody)
     {
-        // Va a crear una peticiÃ³n POST asÃ­ncrona al servidor Rasa y obtener la respuesta.
+        // Va a crear una petición POST asíncrona al servidor Rasa y obtener la respuesta.
         UnityWebRequest request = new UnityWebRequest(url, "POST");
         byte[] rawBody = new System.Text.UTF8Encoding().GetBytes(jsonBody);
         request.uploadHandler = (UploadHandler)new UploadHandlerRaw(rawBody);
@@ -72,6 +79,11 @@ public class NetworkManager : MonoBehaviour
         string data = recieveMessages.messages[0].text;
         string animacionAEjecutar = data.Split('=')[0];
         string mensaje = data.Split('=')[1];
+
+        if (data != null) //&& field.Name != "recipient_id")s
+        {
+            botUI.UpdateDisplay("bot", data, "text"); //Mateo: Lo force a text sin usar field.name 
+        }
 
         UIManager.GetInstance().mostrarMensaje("CHAT: " + mensaje);
         AnimationManager.playAnim(animacionAEjecutar, receiver.gameObject);
