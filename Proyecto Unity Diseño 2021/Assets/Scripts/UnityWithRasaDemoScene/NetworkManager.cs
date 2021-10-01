@@ -19,10 +19,11 @@ public class RootReceiveMessageJson
     public ReceiveMessageJson[] messages;
 }
 
+[Serializable]
 public class Custom
 {
     public String text;
-    public String[] vector;
+    public String vector;
 }
 
 [Serializable]
@@ -30,15 +31,8 @@ public class Custom
 // Se usa para extraer un solo mensaje devuelto por el bot
 public class ReceiveMessageJson
 {
-    // public string recipient_id;
-    // public Custom custom;
     public string recipient_id;
-    public string text;
-    public string image;
-    public string attachemnt;
-    public string button;
-    public string element;
-    public string quick_replie;
+    public Custom custom;
 }
 
 public class NetworkManager : MonoBehaviour
@@ -81,7 +75,9 @@ public class NetworkManager : MonoBehaviour
         //Debug.Log(recieveMessages);
         Debug.Log(recieveMessages.messages[0].recipient_id);
 
-        Debug.Log(recieveMessages.messages[0].image);
+        Debug.Log(recieveMessages.messages[0].custom.text);
+
+        Debug.Log(recieveMessages.messages[0].custom.vector);
 
         //string recipient = recieveMessages.messages[0].text;
         //Custom cus = recieveMessages.messages[0].custom;

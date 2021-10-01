@@ -45,7 +45,7 @@ class ActionVector(Action):
         
         index = self.get_mood(emocion)
         print("INDEX: ", index)
-        vectorResultado = self.calcularVector("Agustin", index) #tracker.current_state()['sender_id']
+        vectorResultado = self.calcularVector(tracker.current_state()['sender_id'], index)
 
         print("Vector resultado: ", vectorResultado)
         print("Accion a responder: ", accion_a_responder) 
@@ -64,7 +64,7 @@ class ActionVector(Action):
             BF[i] = float(BF[i]) * float(multiplicador)
             if BF[i] > 1:
                 BF[i] = 1
-        return BF
+        return str(BF)
 
     def get_mood(self, intentname): 
 

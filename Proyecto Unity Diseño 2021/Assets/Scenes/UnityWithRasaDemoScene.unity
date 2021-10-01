@@ -339,8 +339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d790ce3a5ef6b7f88dc5fe6a5fe180f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nombre: Cami
-  mensaje: Ponete a laburar flaco
+  nombre: Pedro
+  mensaje: Hola Hola
   otraPersona: {fileID: 537565062}
   networkManager: {fileID: 181167943}
 --- !u!114 &611008399
