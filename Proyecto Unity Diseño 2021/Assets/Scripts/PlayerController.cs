@@ -17,18 +17,11 @@ public class PlayerController : MonoBehaviour
             fpl.changelockState(false);
             gameObject.GetComponent<FirstPersonMovement>().enabled = false;
             estaInteractuando = true;
-
-            m_MainCamera.enabled = false;
-            m_CameraTwo.enabled = true;
-
         }
         else{
             fpl.changelockState(true);
             gameObject.GetComponent<FirstPersonMovement>().enabled = true;
             estaInteractuando = false;
-
-            m_MainCamera.enabled = true;
-            m_CameraTwo.enabled = false;
         }
     }
     private void FixedUpdate()
@@ -44,6 +37,12 @@ public class PlayerController : MonoBehaviour
             }
             if (!isHoveringCharacter){
                 uI_Manager.setInteractDialogueState(false);
+            }
+
+            if (Input.GetKeyUp(KeyCode.C))
+            {
+                m_MainCamera.enabled = !m_MainCamera.enabled;
+                m_CameraTwo.enabled = !m_CameraTwo.enabled;
             }
         }
     }
