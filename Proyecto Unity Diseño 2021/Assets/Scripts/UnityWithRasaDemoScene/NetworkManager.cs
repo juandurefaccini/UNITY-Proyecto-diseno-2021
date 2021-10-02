@@ -73,8 +73,8 @@ public class NetworkManager : MonoBehaviour
         string animacionAEjecutar = data.Split('=')[0];
         string mensaje = data.Split('=')[1];
 
-        UIManager.GetInstance().mostrarMensaje("CHAT: " + mensaje);
-        AnimationManager.playAnim(animacionAEjecutar, receiver.gameObject);
+        //UIManager.mostrarMensaje("CHAT: " + mensaje);
+        //AnimationManager.playAnim(animacionAEjecutar, receiver.gameObject);
         // RecieveResponse(request.downloadHandler.text);
     }
 }
