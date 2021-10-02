@@ -18,6 +18,6 @@ public class Persona : MonoBehaviour
 
     public void Hablar(GameObject otraPersona, string mensaje)
     {
-        networkManager.SendMessageToRasa(gameObject, otraPersona, mensaje);
+        networkManager.SendMessageToRasa(otraPersona, mensaje);
     }
 }
