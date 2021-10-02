@@ -59,7 +59,7 @@ public class BotUI : MonoBehaviour
         //Esperar al fin del frame para calcular el transform de la UI
         yield return new WaitForEndOfFrame();
 
-        // Recargar la posicion de los gameobjects basados en el tamaño
+        // Recargar la posicion de los gameobjects basados en el tamaÃ±o
 
         int localAllMessagesHeight = messagePadding;
         foreach (RectTransform chatBubbleRect in contentDisplayObject.GetComponent<RectTransform>())
@@ -100,7 +100,7 @@ public class BotUI : MonoBehaviour
             chat.transform.SetParent(contentDisplayObject.transform, false);
         }
 
-        // agregar fitter de tamaño de content
+        // agregar fitter de tamaÃ±o de content
         ContentSizeFitter chatSize = chat.AddComponent<ContentSizeFitter>();
         chatSize.horizontalFit = ContentSizeFitter.FitMode.PreferredSize;
         chatSize.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
