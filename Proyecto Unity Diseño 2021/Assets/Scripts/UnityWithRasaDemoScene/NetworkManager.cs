@@ -113,6 +113,8 @@ public class NetworkManager : MonoBehaviour
 
         //////////////////////////////////////////////////////////////////////////////////
 
+        //UIManager.mostrarMensaje("CHAT: " + mensaje);
+        //AnimationManager.playAnim(animacionAEjecutar, receiver.gameObject);
         // RecieveResponse(request.downloadHandler.text);
     }
 }

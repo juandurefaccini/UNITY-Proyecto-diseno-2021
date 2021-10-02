@@ -8,6 +8,7 @@ namespace AnimatorComposerStructures
         Queue<Block> blocks;
 
         public BlockQueue() => blocks = new Queue<Block>();
+        public BlockQueue(List<Block> blocks) => this.blocks = new Queue<Block>(blocks);
 
         // Encolar
         public void Enqueue(Block block) => blocks.Enqueue(block);
@@ -30,6 +31,10 @@ namespace AnimatorComposerStructures
         public Block(List<LayerInfo> stateTransitions)
         {
             this.stateTransitions = stateTransitions;
+        }
+        public Block(string stateTransition)
+        {
+            this.stateTransitions = new List<LayerInfo>() { new LayerInfo(stateTransition) };
         }
 
         public Block()
