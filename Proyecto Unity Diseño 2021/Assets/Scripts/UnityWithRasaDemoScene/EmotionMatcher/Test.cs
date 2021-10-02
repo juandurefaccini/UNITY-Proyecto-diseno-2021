@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityWithRasaDemoScene;
+using AnimatorComposerStructures;
+
 
 namespace UnityWithRasaDemoScene
 {
     public class Test : MonoBehaviour
     {
         public ReceiveMessageJson mensaje;
-        public EmotionMatching emotionMatching;
+        public EmotionInterpreter emotionInterpreter;
         private void Start()
         {
-            List<Tupla> conjGanador= emotionMatching.ObtenerConjGanador(mensaje);
+            BlockQueue conjGanador = emotionInterpreter.GetBlockQueue(mensaje);
         }
 
         [Serializable]

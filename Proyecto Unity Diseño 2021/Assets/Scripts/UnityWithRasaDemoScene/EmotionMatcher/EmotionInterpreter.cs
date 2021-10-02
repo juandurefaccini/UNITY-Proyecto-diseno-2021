@@ -1,34 +1,26 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityWithRasaDemoScene;
+using AnimatorComposerStructures;
 
 namespace UnityWithRasaDemoScene
 {
-    public class EmotionMatching : MonoBehaviour
+    public class EmotionInterpreter : MonoBehaviour
     {
         public List<TuplaScriptableObject> anim;
-    
-        // Start is called before the first frame update
-        void Start()
-        {
 
-        }
-    
-        // Update is called once per frame
-        public List<Tupla> ObtenerConjGanador(Test.ReceiveMessageJson mensaje)
+        public BlockQueue GetBlockQueue(Test.ReceiveMessageJson mensaje)
         {
-            double[] bigFive= new double[5];
+            double[] bigFive = new double[5];
             double doubleVal = 0;
             for (int i = 0; i < 5; i++)
             {
                 doubleVal = Convert.ToDouble(mensaje.custom.vector[i]);
                 bigFive[i] = doubleVal;
             }
-    
+
             List<Tupla> conjGanador = MatchingVector(bigFive, anim);
-            return conjGanador;
+            return BlockQueueGenerator.GetBlockQueue(conjGanador);
         }
         public double diferencia(double[] v, double[] vector)
         {
@@ -36,23 +28,23 @@ namespace UnityWithRasaDemoScene
                                   v[4]);
             return aux;
         }
-        
+
         public List<Tupla> MatchingVector(double[] vector, List<TuplaScriptableObject> lista)
         {
-            TuplaScriptableObject sol1= new TuplaScriptableObject()
+            TuplaScriptableObject sol1 = new TuplaScriptableObject()
             {
-                Vector=new double[]{10, 10, 10 ,10 ,10},
-                tupla= new Tupla()
+                Vector = new double[] { 10, 10, 10, 10, 10 },
+                tupla = new Tupla()
                 {
                     Trigger = null,
                     Layer = null,
                 }
-             
+
             };
-            TuplaScriptableObject sol2= new TuplaScriptableObject()
+            TuplaScriptableObject sol2 = new TuplaScriptableObject()
             {
-                Vector=new double[]{10, 10, 10 ,10 ,10},
-                tupla= new Tupla()
+                Vector = new double[] { 10, 10, 10, 10, 10 },
+                tupla = new Tupla()
                 {
                     Trigger = null,
                     Layer = null,
@@ -63,12 +55,13 @@ namespace UnityWithRasaDemoScene
                 if (diferencia(vector, t.Vector) < diferencia(vector, sol1.Vector))
                 {
                     sol1 = t;
-                }else if (diferencia(vector, t.Vector) < diferencia(vector, sol2.Vector))
+                }
+                else if (diferencia(vector, t.Vector) < diferencia(vector, sol2.Vector))
                 {
                     sol2 = t;
                 }
             }
-    
+
             List<Tupla> aux = new List<Tupla>();
             if (sol1.tupla.Trigger != null)
             {
@@ -80,8 +73,8 @@ namespace UnityWithRasaDemoScene
             }
             return aux;
         }
-    
-        
+
+
     }
 }
 
