@@ -42,7 +42,7 @@ public class NetworkManager : MonoBehaviour
     private const string rasa_url = "http://localhost:5005/webhooks/rest/webhook";
 
 
-    public void SendMessageToRasa(GameObject sender, GameObject receiver, string message)
+    public void SendMessageToRasa(GameObject receiver, string message)
     {
         string msg = botUI.input.text;
         botUI.input.text = "";
@@ -51,7 +51,7 @@ public class NetworkManager : MonoBehaviour
         // Creo un JSON para representar el mensaje del usuario
         PostMessageJson postMessage = new PostMessageJson
         {
-            sender = sender.GetComponent<Persona>().nombre,
+            sender = receiver.GetComponent<Persona>().nombre,
             message = message
         };
 
@@ -78,7 +78,7 @@ public class NetworkManager : MonoBehaviour
 
         RootReceiveMessageJson recieveMessages = JsonUtility.FromJson<RootReceiveMessageJson>("{\"messages\":" + request.downloadHandler.text + "}");
         // receiver.GetComponent<Persona>();
-        
+
         //Debug.Log(recieveMessages);
         Debug.Log(recieveMessages.messages[0].recipient_id);
 
