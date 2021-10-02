@@ -1,0 +1,142 @@
+version: "2.0"
+
+nlu:
+
+ #INTENTS DE SALUDOS
+ #
+ #
+ #
+
+# - intent: saludo
+#   examples: |
+#     - Hola, Que tal?
+#     - Hola, Como estas?
+#     - Hola, Vas bien?
+#     - Que tal, como estas?
+#     - Hola.
+#     - Buenos dias
+#     - Que tal?
+#     - Hola, buenos dias.
+#     - Buenas
+#     - Que onda?
+#     - Hola wachin
+#     - Que onda amigo?
+
+- intent: saludo/alegre
+  examples: |
+    - Hola!!
+    - Buen dia!
+    - Buenas tardes!
+
+- intent: saludo/enojo
+  examples: |
+    - Hola flaco
+    - Buen dia.
+    - Buenas tardes.
+
+- intent: saludo/miedo
+  examples: |
+    - Hola :(
+    - Buen dia
+    - Buenas tardes
+
+- intent: saludo/sorpresa
+  examples: |
+    - Holaaaaaaa, tanto tiempo
+    - Holaaaaaaa, que tal?
+    - Holaaaaaaa, que onda?
+
+- intent: saludo/confianza
+  examples: |
+    - Buuuuuueeenasssss
+    - Buen dia cheee
+    - Buenas tardessss
+
+ #INTENTS DE QUEHICISTE
+ #
+ #
+ #
+
+- intent: que_hiciste_ayer/alegre
+  examples: |
+    - Que hiciste ayer?
+    - Que hiciste hoy?
+ 
+  
+
+- intent: que_hiciste_ayer/enojo
+  examples: |
+    - Uh flaco, que hiciste ayer?
+    - Flaco, laburaste? Que hiciste ayer?
+
+
+
+- intent: que_hiciste_ayer/miedo
+  examples: |
+      - Por favor decime, que hiciste algo ayer
+      - Decime que pudiste hacer algo ayer
+
+
+- intent: que_hiciste_ayer/sorpresa
+  examples: |
+    - Que sorpresa!, Que hiciste ayer?
+    - Que raro verte aca, Que hiciste ayer?
+   
+- intent: que_hiciste_ayer/confianza
+  examples: |
+    - Que haces locura, Que con que laburaste ayer?
+    - Que haces amigo, Que hiciste ayer?
+    
+
+- intent: felicitaciones/alegre
+  examples: |
+    - Felicitacionesss
+    - Felicidades
+
+- intent: felicitaciones/enojo
+  examples: |
+    - Bien pibe
+    - bien.
+
+- intent: felicitaciones/miedo
+  examples: |
+    - Buen trabajo
+    - Bien hecho
+
+
+- intent: felicitaciones/sorpresa
+  examples: |
+    - Noo que bienn,Felicitaciones
+    - Que biennn, Felicidades
+
+- intent: felicitaciones/confianza
+  examples: |
+    - Felicitaciones capooo
+    - Felicidades titan
+
+- intent: despedida/alegre
+  examples: |
+    - Chauuu
+    - Hasta luegooo
+    
+
+- intent: despedida/miedo
+  examples: |
+    - nos vemos
+    - adios
+
+- intent: despedida/enojo
+  examples: |
+    - chau pibe
+    - chau piba
+
+- intent: despedida/sorpresa
+  examples: |
+    - Uhh, adioss
+    - Chau chauu
+
+- intent: despedida/confianza
+  examples: |
+    - Nos vemosss
+    - Chauuu
+  
