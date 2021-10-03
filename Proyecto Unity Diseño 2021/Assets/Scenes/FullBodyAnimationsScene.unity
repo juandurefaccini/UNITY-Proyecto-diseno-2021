@@ -15316,7 +15316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chatDialogue: {fileID: 2003178847}
   yourButton: {fileID: 1887727208}
-  networkManager: {fileID: 0}
+  networkManager: {fileID: 922280327}
 --- !u!114 &1887727208
 MonoBehaviour:
   m_ObjectHideFlags: 0
