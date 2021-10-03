@@ -13,6 +13,7 @@ namespace AnimatorComposerStructures
         // Encolar
         public void Enqueue(Block block) => blocks.Enqueue(block);
 
+        public Queue<Block> GetBlocks() => blocks;
         // Desencolar
         public Block Dequeue() => blocks.Dequeue();
 

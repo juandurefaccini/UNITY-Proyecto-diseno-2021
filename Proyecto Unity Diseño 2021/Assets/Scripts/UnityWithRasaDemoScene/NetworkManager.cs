@@ -40,9 +40,10 @@ public class NetworkManager : MonoBehaviour
     public BotUI botUI;
 
     private const string rasa_url = "http://localhost:5005/webhooks/rest/webhook";
+    public AnimationManager animationManager;
 
 
-    public void SendMessageToRasa(GameObject receiver, string message) 
+    public void SendMessageToRasa(GameObject receiver, string message)
     {
         // Va a ser llamado cuando el usuario presiona el botón de enviar mensaje
         // Creo un JSON para representar el mensaje del usuario
@@ -83,6 +84,9 @@ public class NetworkManager : MonoBehaviour
 
         Debug.Log(recieveMessages.messages[0].custom.vector);
 
+        // Agregar comportamiento de alterar animaciones
+        var vector = recieveMessages.messages[0].custom.vector;
+        animationManager.AnimateCharacter(vector, receiver);
 
         if (recieveMessages.messages[0].custom.text != null)//&& field.Name != "recipient_id")
         {

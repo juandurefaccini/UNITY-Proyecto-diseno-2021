@@ -9,17 +9,10 @@ namespace UnityWithRasaDemoScene
     {
         public List<TuplaScriptableObject> anim;
 
-        public BlockQueue GetBlockQueue(Test.ReceiveMessageJson mensaje)
+        public BlockQueue GetBlockQueue(string vector)
         {
-            double[] bigFive = new double[5];
-            double doubleVal = 0;
-            for (int i = 0; i < 5; i++)
-            {
-                doubleVal = Convert.ToDouble(mensaje.custom.vector[i]);
-                bigFive[i] = doubleVal;
-            }
-
-            List<Tupla> conjGanador = MatchingVector(bigFive, anim);
+            var parsedVector = ParseVector(vector);
+            List<Tupla> conjGanador = MatchingVector(parsedVector, anim);
             return BlockQueueGenerator.GetBlockQueue(conjGanador);
         }
         public double diferencia(double[] v, double[] vector)
@@ -74,7 +67,17 @@ namespace UnityWithRasaDemoScene
             return aux;
         }
 
-
+        private double[] ParseVector(string vector)
+        {
+            var aux = vector.Substring(1, vector.Length - 2);
+            string[] csv_input = aux.Split(',');
+            double[] res = new double[5];
+            for (int i = 0; i < 5; i++)
+            {
+                res[i] = Convert.ToDouble(csv_input[i]);
+            }
+            return res;
+        }
     }
 }
 
