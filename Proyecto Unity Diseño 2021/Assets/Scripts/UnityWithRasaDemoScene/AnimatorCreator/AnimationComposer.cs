@@ -50,12 +50,19 @@ public class AnimationComposer : MonoBehaviour
     public void SignalAnimationComplete()
     {
         _animsInProgress--;
-        Debug.Log(_animsInProgress);
+
     }
 
     public void AddBlock(Block block)
     {
         _blockQueue.Enqueue(block);
+    }
+    public void AddBlockQueue(BlockQueue blockQueue)
+    {
+        foreach (Block block in blockQueue.GetBlocks())
+        {
+            _blockQueue.Enqueue(block);
+        }
     }
 
     public void StartAnimations()
@@ -75,4 +82,3 @@ public class AnimationComposer : MonoBehaviour
         _blockQueue.Enqueue(new Block(clear));
     }
 }
-

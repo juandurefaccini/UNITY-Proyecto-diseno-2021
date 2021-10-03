@@ -1,0 +1,25 @@
+<<<<<<< HEAD:Proyecto Unity Diseño 2021/Assets/Scripts/UnityWithRasaDemoScene/AnimationManager/AnimationManager.cs.meta
+fileFormatVersion: 2
+guid: 69e40368ff009dd1eb246fcb238c5c27
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+=======
+fileFormatVersion: 2
+guid: cf9e8fd2ba3a77666b8b2a1c3b8ca0ee
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+>>>>>>> chat:Proyecto Unity Diseño 2021/Assets/Scripts/UnityWithRasaDemoScene/AnimationManager.cs.meta
