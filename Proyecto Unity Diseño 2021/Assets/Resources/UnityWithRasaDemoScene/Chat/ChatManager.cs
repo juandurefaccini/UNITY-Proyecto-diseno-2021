@@ -47,7 +47,7 @@ public class ChatManager : MonoBehaviour
         //Esperar al fin del frame para calcular el transform de la UI
         yield return new WaitForEndOfFrame();
 
-        //Conseguir la posicion horizontal del sender // NO SE SI NUESTRO SENDER ES USER O BOT O HAY MAS!
+        //Conseguir la posicion horizontal del sender
         int HorizontalPos = 0;
         if (sender == "user")
         {

@@ -2659,7 +2659,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 680066145}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999934
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3423,6 +3423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 4
   rotationSpeed: 125
+  estaInteractuando: 0
   animator: {fileID: 609772311}
 --- !u!95 &609772311 stripped
 Animator:
@@ -3518,6 +3519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terceraPersona: {fileID: 1461391122}
   primeraPersona: {fileID: 1577860798}
+  estaInteractuando: 0
 --- !u!1001 &613406093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4029,7 +4031,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.14285715}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

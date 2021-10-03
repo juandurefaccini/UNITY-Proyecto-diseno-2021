@@ -8,6 +8,14 @@ public class PlayerController : MonoBehaviour
     public bool estaInteractuando = false;
     public ChatManager chatManager;
 
+
+    public void toggleInteraction(bool activate){
+        estaInteractuando = activate;
+        transform.GetComponent<Movement>().estaInteractuando = activate;
+        transform.GetComponent<CambioCamara>().estaInteractuando = activate;
+    }
+
+
     private void FixedUpdate()
     {
         if (!estaInteractuando)
@@ -19,7 +27,11 @@ public class PlayerController : MonoBehaviour
             {
                 uI_Manager.setChatState(true);
                 chatManager.last_receiver = HoveringCharacter;
+                toggleInteraction(true);
             }
+        }
+        else if (chatManager.gameObject.activeSelf == false && estaInteractuando){
+                toggleInteraction(false);
         }
     }
 
