@@ -42,23 +42,20 @@ public class NetworkManager : MonoBehaviour
     private const string rasa_url = "http://localhost:5005/webhooks/rest/webhook";
 
 
-    public void SendMessageToRasa(GameObject receiver, string message)
+    public void SendMessageToRasa(GameObject receiver, string message) 
     {
-        string msg = botUI.input.text;
-        botUI.input.text = "";
-
         // Va a ser llamado cuando el usuario presiona el botón de enviar mensaje
         // Creo un JSON para representar el mensaje del usuario
         PostMessageJson postMessage = new PostMessageJson
         {
-            sender = receiver.GetComponent<Persona>().nombre,
+            sender = receiver.name,
             message = message
         };
 
         string jsonBody = JsonUtility.ToJson(postMessage);
 
         // botUI solo reconoce user y bot de sender, no distintos usuarios DE MOMENTO
-        botUI.UpdateDisplay("user", msg, "text");
+        botUI.UpdateDisplay("user", message, "text");
 
 
         // Creo una petición POST con los datos a enviar al servidor Rasa
@@ -87,10 +84,9 @@ public class NetworkManager : MonoBehaviour
         Debug.Log(recieveMessages.messages[0].custom.vector);
 
 
-        //botUI solo reconoce bot y usuario como sender, no mas de 1 usuario o bot DE MOMENTO
         if (recieveMessages.messages[0].custom.text != null)//&& field.Name != "recipient_id")
         {
-            botUI.UpdateDisplay("bot", recieveMessages.messages[0].custom.text, "text"); //messageType si o si text, solo muestra el contenido de la rta
+            botUI.UpdateDisplay("bot", receiver.name + ": " + recieveMessages.messages[0].custom.text, "text"); //messageType si o si text, solo muestra el contenido de la rta
         }
 
         //string recipient = recieveMessages.messages[0].text;
@@ -103,7 +99,7 @@ public class NetworkManager : MonoBehaviour
 
         //Debug.Log(cus.vector);
 
-        // Comento de aca para abajo porque hay que implementarlo de la nueva forma //////
+        // Comento de aca para abajo porque hay que implementarlo de la nueva forma ////// IMPORTANTE
 
         //string animacionAEjecutar = data.Split('=')[0];
         //string mensaje = data.Split('=')[1];

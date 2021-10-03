@@ -11,14 +11,12 @@ public class send_Button : MonoBehaviour
 
     void TaskOnClick()
     {
-        //Debug.Log("hola");
         string message = networkManager.botUI.input.text;
-        
-        
-        
+        //networkManager.botUI.UpdateDisplay("user", message, "text");
         networkManager.botUI.input.text = "";
-        networkManager.botUI.UpdateDisplay("user", message, "text");
-        // networkManager.sendMessageToRasa().... etc Hay que conseguir los gameobjects que pide el metodo ese y despues sacar las dos lineas anteriores
+        GameObject receiver = networkManager.botUI.last_receiver;
+        networkManager.SendMessageToRasa(receiver, message);
+        // networkManager.sendMessageToRasa().... etc Hay que conseguir los gameobjects que pide el metodo ese y despues sacar las tres lineas anteriores
     }
     
     // Start is called before the first frame update

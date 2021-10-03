@@ -13,6 +13,7 @@ public class UI_Manager : MonoBehaviour
         interactDialogue.SetActive(state);
     }
 
+
     public void setChatState(bool state)
     {
         chatDialogue.SetActive(state);

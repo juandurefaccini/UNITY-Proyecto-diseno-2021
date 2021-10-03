@@ -8,6 +8,7 @@ public class exit_Button : MonoBehaviour
     public GameObject chatDialogue;
     public Button yourButton;
     public PlayerController activePlayer;
+    public NetworkManager networkManager;
 
 
     void TaskOnClick()
@@ -15,6 +16,7 @@ public class exit_Button : MonoBehaviour
         //Debug.Log("hola");
         chatDialogue.SetActive(false);
         activePlayer.triggerInteract(false);
+        networkManager.botUI.ResetDisplay();
     }
     
     // Start is called before the first frame update

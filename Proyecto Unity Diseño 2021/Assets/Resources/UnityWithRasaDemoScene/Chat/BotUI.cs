@@ -11,11 +11,23 @@ public class BotUI : MonoBehaviour
     public GameObject userBubble; // referencia al prefab de dialogo usuario
     public GameObject botBubble; // referencia al prefab de dialogo bot
 
+    public GameObject last_receiver;
+
     private const int messagePadding = 15; // espacio entre dialogos
     private int allMessagesHeight = messagePadding; // int para saber donde se hara el prox mensaje
     public bool increaseContentObjectHeight; // bool para ver si hay que aumentar la altura de content object
 
-    public NetworkManager networkManager; // cosa de Agus
+    public NetworkManager networkManager; 
+
+    public void ResetDisplay()
+    {
+        allMessagesHeight = messagePadding;
+        foreach (Transform child in contentDisplayObject.transform) 
+        {
+            Destroy(child.gameObject);
+        }
+ 
+    }
 
     public void UpdateDisplay(string sender, string message, string messageType)
     {

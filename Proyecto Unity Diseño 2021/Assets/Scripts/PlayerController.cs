@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public UI_Manager uI_Manager;
     public FirstPersonLook fpl;
     public bool estaInteractuando = false;
+    public BotUI bot_UI;
 
     Camera m_MainCamera;
     //This is the second Camera and is assigned in inspector
@@ -28,12 +29,14 @@ public class PlayerController : MonoBehaviour
     {
         if (!estaInteractuando)
         {
-            var isHoveringCharacter = checkHoveringCharacter();
+            GameObject HoveringCharacter = checkHoveringCharacter();
+            bool isHoveringCharacter = HoveringCharacter != null;
             uI_Manager.setInteractDialogueState(isHoveringCharacter);
             if (Input.GetKeyUp(KeyCode.E) && isHoveringCharacter)
             {
                 uI_Manager.setChatState(true);
                 triggerInteract(true);
+                bot_UI.last_receiver = HoveringCharacter;
             }
             if (!isHoveringCharacter){
                 uI_Manager.setInteractDialogueState(false);
@@ -47,7 +50,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    bool checkHoveringCharacter()
+    GameObject checkHoveringCharacter()
     {
         // ESte metodo revisa si estamos mirando a otra persona
         // Builds a ray from camera point of view to the mouse position
@@ -60,11 +63,11 @@ public class PlayerController : MonoBehaviour
             {
                 if (hit.distance < 3f)
                 {
-                    return true;
+                    return hit.transform.gameObject;
                 }
             }
         }
-        return false;
+        return null;
     }
 
     void Start()

@@ -128,6 +128,17 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 3051221247338093407, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
   m_PrefabInstance: {fileID: 409056556}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &152367744 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4590578300443797932, guid: 96c1ed8058ca0ea41958d3d25c498285, type: 3}
+  m_PrefabInstance: {fileID: 2035090218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac34864ba48b644d9911680e9d5e817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &170353010
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +152,7 @@ GameObject:
   - component: {fileID: 170353012}
   - component: {fileID: 170353011}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Pedro
   m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,7 +232,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &253188519 stripped
 MonoBehaviour:
@@ -372,7 +383,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &409056556
 PrefabInstance:
@@ -493,7 +504,7 @@ GameObject:
   - component: {fileID: 428246704}
   - component: {fileID: 428246703}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Camila
   m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -573,7 +584,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &630681002 stripped
 GameObject:
@@ -834,7 +845,7 @@ GameObject:
   - component: {fileID: 1020001199}
   - component: {fileID: 1020001198}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Tobias
   m_TagString: Interactuable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -914,7 +925,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1266713820 stripped
 GameObject:
@@ -936,6 +947,7 @@ MonoBehaviour:
   uI_Manager: {fileID: 1939785828}
   fpl: {fileID: 842883131}
   estaInteractuando: 0
+  bot_UI: {fileID: 152367744}
   m_CameraTwo: {fileID: 87772515}
 --- !u!114 &1289943301 stripped
 MonoBehaviour:
@@ -1060,7 +1072,7 @@ GameObject:
   - component: {fileID: 1939785824}
   - component: {fileID: 1939785828}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas - UI Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1140,7 +1152,7 @@ RectTransform:
   m_Children:
   - {fileID: 739662894}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1297,7 +1309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8685666028614542465, guid: d23f1ebed522c7848a271a782225974c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.14285715
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8685666028614542465, guid: d23f1ebed522c7848a271a782225974c, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1321,7 +1333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8685666029526098005, guid: d23f1ebed522c7848a271a782225974c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 177.90106
+      value: 0.00026952985
       objectReference: {fileID: 0}
     - target: {fileID: 8685666030293827809, guid: d23f1ebed522c7848a271a782225974c, type: 3}
       propertyPath: m_Name
@@ -1419,5 +1431,9 @@ PrefabInstance:
       propertyPath: activePlayer
       value: 
       objectReference: {fileID: 1266713825}
+    - target: {fileID: 8905756338240308556, guid: d23f1ebed522c7848a271a782225974c, type: 3}
+      propertyPath: networkManager
+      value: 
+      objectReference: {fileID: 1289943301}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d23f1ebed522c7848a271a782225974c, type: 3}
