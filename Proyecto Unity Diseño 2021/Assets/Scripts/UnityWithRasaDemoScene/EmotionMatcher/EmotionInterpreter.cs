@@ -7,12 +7,18 @@ namespace UnityWithRasaDemoScene
 {
     public class EmotionInterpreter : MonoBehaviour
     {
-        public List<TuplaScriptableObject> anim;
+        public TuplaScriptableObject[] anim;
+
+        private void Start()
+        {
+            anim = Resources.LoadAll("ScriptableObjects/TriggersEmotions", typeof(TuplaScriptableObject)) as TuplaScriptableObject[];
+            Debug.Log(anim.Length);
+        }
 
         public BlockQueue GetBlockQueue(string vector)
         {
             var parsedVector = ParseVector(vector);
-            List<Tupla> conjGanador = MatchingVector(parsedVector, anim);
+            List<Tupla> conjGanador = MatchingVector(parsedVector, new List<TuplaScriptableObject>(anim));
             return BlockQueueGenerator.GetBlockQueue(conjGanador);
         }
         public double diferencia(double[] v, double[] vector)

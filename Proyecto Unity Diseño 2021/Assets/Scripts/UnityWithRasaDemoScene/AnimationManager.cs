@@ -11,6 +11,7 @@ public class AnimationManager : MonoBehaviour
     {
         emotionInterpreter = GetComponent<EmotionInterpreter>(); // Obtiene el componente hermano
         BlockQueue blockQueue = emotionInterpreter.GetBlockQueue(vector);
+        Debug.Log("blockQueue: " + blockQueue.ToString());
         // checkpoint :  Aca ya consegui la block queue para animar al reveiver
         receiver.GetComponent<AnimationComposer>().AddBlockQueue(blockQueue);
     }

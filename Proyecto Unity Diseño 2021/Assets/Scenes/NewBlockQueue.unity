@@ -845,6 +845,7 @@ GameObject:
   - component: {fileID: 1020001199}
   - component: {fileID: 1020001198}
   - component: {fileID: 1020001202}
+  - component: {fileID: 1020001203}
   m_Layer: 0
   m_Name: Tobias
   m_TagString: Interactuable
@@ -940,6 +941,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2a8e5a3f969a558b05e17f69664254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1020001203
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020001197}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1266713820 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5241267463746980526, guid: f2e0b7ae4dae8cf44955bccd3512b213, type: 3}
@@ -1216,7 +1236,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb7dd4d21907704d87111d1768a46b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: []
+  anim:
+  - {fileID: 11400000, guid: 652d39e327465864e8943ffc8bd7e7b9, type: 2}
+  - {fileID: 11400000, guid: 1d5a9e88e5dcd414aa41d38731836e04, type: 2}
+  - {fileID: 11400000, guid: 1b98f833dc62f6c4e99198667ecaa748, type: 2}
+  - {fileID: 11400000, guid: 3829cdb552615574caa1692caccfca3d, type: 2}
+  - {fileID: 11400000, guid: 8c855fbf1635ee142ac87b7d30b94eae, type: 2}
+  - {fileID: 11400000, guid: aabffd87f788ab04a99221be92ceff02, type: 2}
+  - {fileID: 11400000, guid: 632a73c33c47f084f8b9d5f0e8600458, type: 2}
+  - {fileID: 11400000, guid: c7fbe8a087d00634b899ae9ac7c2f52d, type: 2}
+  - {fileID: 11400000, guid: 6a68ad405751ed74a86b3616922b13e2, type: 2}
+  - {fileID: 11400000, guid: 90b4aaa357f28104989692ec0f0a6766, type: 2}
+  - {fileID: 11400000, guid: c5f8ca9334dbf6b42b13f4b7ee264fa0, type: 2}
+  - {fileID: 11400000, guid: 5720064eabe2a5e4c95a333c49ffbc80, type: 2}
+  - {fileID: 11400000, guid: 54230bcfef2752c4b8dcb4d90726c7a2, type: 2}
+  - {fileID: 11400000, guid: 7a90e956d2102a042bea65f5dc901c63, type: 2}
+  - {fileID: 11400000, guid: afcf230052f6a894a988dfd6f27bb65e, type: 2}
+  - {fileID: 11400000, guid: 9d9371b3e2cb48243a825b30c9ae12b4, type: 2}
+  - {fileID: 11400000, guid: 9936ef622ed2b5c448dd0480aaf5fb11, type: 2}
+  - {fileID: 11400000, guid: 7373772a4b54426449cc07e2ead3dab6, type: 2}
+  - {fileID: 11400000, guid: b8d41f26556a1784fa45bfede724ea21, type: 2}
+  - {fileID: 11400000, guid: 541410e2e9499fc4d84858a624964f11, type: 2}
+  - {fileID: 11400000, guid: 7fd5be36ad0e0564ebed80d26df0c28c, type: 2}
+  - {fileID: 11400000, guid: 45313bb5d1636ff40a9c1fe330e276a3, type: 2}
+  - {fileID: 11400000, guid: 6d65d5660ca857444b64eb8f5774fd8f, type: 2}
+  - {fileID: 11400000, guid: 4327de811f303eb49bfcee95a65e83dd, type: 2}
+  - {fileID: 11400000, guid: 0c703d66a19da6f4d81a4e367b609e5c, type: 2}
+  - {fileID: 11400000, guid: ad400b5bf800dbd458834947e86e5f97, type: 2}
+  - {fileID: 11400000, guid: 0517eb143b4df6045acb387277da8fb3, type: 2}
+  - {fileID: 11400000, guid: 60673ec6455e92c449a3ca04ccc4e721, type: 2}
 --- !u!4 &2022560116
 Transform:
   m_ObjectHideFlags: 0
@@ -1295,6 +1343,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4590578300443797931, guid: 96c1ed8058ca0ea41958d3d25c498285, type: 3}
+      propertyPath: animationManager
+      value: 
+      objectReference: {fileID: 2022560117}
     - target: {fileID: 4590578300443797932, guid: 96c1ed8058ca0ea41958d3d25c498285, type: 3}
       propertyPath: input
       value: 
