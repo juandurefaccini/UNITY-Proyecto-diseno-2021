@@ -13,12 +13,11 @@ public class exit_Button : MonoBehaviour
 
     void TaskOnClick()
     {
-        //Debug.Log("hola");
         chatDialogue.SetActive(false);
         activePlayer.triggerInteract(false);
         networkManager.botUI.ResetDisplay();
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +25,4 @@ public class exit_Button : MonoBehaviour
         btn.onClick.AddListener(TaskOnClick);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

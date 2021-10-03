@@ -11,8 +11,7 @@ namespace UnityWithRasaDemoScene
 
         private void Start()
         {
-            anim = Resources.LoadAll("ScriptableObjects/TriggersEmotions", typeof(TuplaScriptableObject)) as TuplaScriptableObject[];
-            Debug.Log(anim.Length);
+            // anim = Resources.LoadAll("ScriptableObjects/TriggersEmotions", typeof(TuplaScriptableObject)) as TuplaScriptableObject[];
         }
 
         public BlockQueue GetBlockQueue(string vector)
