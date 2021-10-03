@@ -11,7 +11,7 @@ public class Persona : MonoBehaviour
     [ContextMenu("Conversar")]
     private void Conversar()
     {
-        Hablar(otraPersona, mensaje);
+        //Hablar(otraPersona, mensaje);
         // Mandarle a tal persona que haga tal animacion (MATE TOBI PEDRO)
         // Mostrar en consola el mensaje que vuelve de Rasa
     }

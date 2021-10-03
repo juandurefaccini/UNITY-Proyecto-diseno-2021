@@ -22,17 +22,18 @@ public class AnimationManager : MonoBehaviour
         CargarAnimaciones();
     }
 
-    public static void playAnim(string anim, GameObject personaje)
+    public static void PlayAnim(string anim, GameObject personaje)
     {
-        InterfazAnim animation = personaje.GetComponent(anim) as InterfazAnim;
-        Debug.Log(personaje.ToString());
+        AbstractAnimation animation = personaje.GetComponent(anim) as AbstractAnimation;
+        
         if (animation == null)
         {
             personaje.AddComponent(anim_scripts[anim].GetClass());
-            animation = personaje.GetComponent(anim) as InterfazAnim;
-           
+            animation = personaje.GetComponent(anim) as AbstractAnimation;
+            // TODO Es posible que animacion ya no requiera de un atributo personajeAAnimar ya que se encuentra dentro del mismo
             animation.personajeAAnimar = personaje;
         }
-        animation.playAnim();
+        
+        animation.PlayAnim();
     }
 }

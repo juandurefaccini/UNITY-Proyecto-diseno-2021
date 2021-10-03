@@ -50,7 +50,7 @@ public class AnimationComposer : MonoBehaviour
     public void SignalAnimationComplete()
     {
         _animsInProgress--;
-        
+        Debug.Log(_animsInProgress);
     }
 
     public void AddBlock(Block block)
