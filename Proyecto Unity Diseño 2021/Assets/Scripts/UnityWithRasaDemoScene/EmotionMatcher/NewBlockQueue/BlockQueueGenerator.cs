@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using AnimatorComposerStructures;
 using UnityWithRasaDemoScene;
 public class BlockQueueGenerator
 {
     private const string DEFAULT_TRIGGER = " ";
-    public static BlockQueue GetBlockQueue(List<Tupla> triggerScriptableObjects)
+    public static BlockQueue GetBlockQueue(List<Tupla> triggerScriptableObjects, string triggerFacial)
     {
         List<Block> blocks = new List<Block>();
         Tupla tupla1 = triggerScriptableObjects[0];
@@ -25,6 +26,12 @@ public class BlockQueueGenerator
             }
 
         }
+        else
+        {
+            // Es un trigger
+            blocks = new List<Block>() { new Block(new List<LayerInfo> { new LayerInfo(tupla1.Trigger) }) }; // Genero un bloque con un solo trigger
+        }
+        blocks[0].AddLayerInfo(new LayerInfo(triggerFacial));
         blocks.Add(new Block(GetCleanBlock())); // Agrego un bloque con un trigger por defecto
         return new BlockQueue(blocks);
     }

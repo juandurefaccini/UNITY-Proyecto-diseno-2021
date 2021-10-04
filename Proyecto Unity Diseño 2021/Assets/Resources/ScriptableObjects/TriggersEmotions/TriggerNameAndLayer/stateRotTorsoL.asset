@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f35f5a42c1048b483516f2f79ea5855, type: 3}
   m_Name: stateRotTorsoL
   m_EditorClassIdentifier: 
-  Trigger: stateRotTorsoL
+  Trigger: RotTorsoL
   Layer: TorsoLayer
