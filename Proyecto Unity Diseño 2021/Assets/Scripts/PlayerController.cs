@@ -8,6 +8,16 @@ public class PlayerController : MonoBehaviour
     public bool estaInteractuando = false;
     public ChatManager chatManager;
 
+
+    public void toggleInteraction(bool activate){
+        estaInteractuando = activate;
+        transform.GetComponent<Movement>().estaInteractuando = activate;
+        transform.GetComponent<Movement>().animator.SetFloat("VelX",0);
+        transform.GetComponent<Movement>().animator.SetFloat("VelY",0);
+        transform.GetComponent<CambioCamara>().estaInteractuando = activate;
+    }
+
+
     private void FixedUpdate()
     {
         if (!estaInteractuando)
@@ -17,9 +27,14 @@ public class PlayerController : MonoBehaviour
             uI_Manager.setInteractDialogueState(isHoveringCharacter);
             if (Input.GetKeyUp(KeyCode.E) && isHoveringCharacter)
             {
+                StartCoroutine(DoRotationAtTargetDirection(HoveringCharacter.transform));
                 uI_Manager.setChatState(true);
                 chatManager.last_receiver = HoveringCharacter;
+                toggleInteraction(true);
             }
+        }
+        else if (chatManager.gameObject.activeSelf == false && estaInteractuando){
+                toggleInteraction(false);
         }
     }
 
@@ -41,6 +56,22 @@ public class PlayerController : MonoBehaviour
             }
         }
         return null;
+    }
+
+    IEnumerator DoRotationAtTargetDirection(Transform other)
+    {
+        Quaternion targetRotation = Quaternion.identity;
+        do
+        {
+            Debug.Log("Rotating");
+            Vector3 targetDirection = transform.position - other.position;
+            targetRotation = Quaternion.LookRotation(targetDirection);
+            Quaternion nextRotation = Quaternion.RotateTowards(targetRotation,
+                    transform.rotation, 5f * Time.deltaTime);
+            other.rotation = nextRotation;
+            yield return null;
+
+        } while (Quaternion.Angle(transform.rotation, targetRotation) > 0.05f && Vector3.Distance(transform.position, other.position) < 5f);
     }
 
 }
