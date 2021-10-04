@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public void toggleInteraction(bool activate){
         estaInteractuando = activate;
         transform.GetComponent<Movement>().estaInteractuando = activate;
+        transform.GetComponent<Movement>().animator.SetFloat("VelX",0);
+        transform.GetComponent<Movement>().animator.SetFloat("VelY",0);
         transform.GetComponent<CambioCamara>().estaInteractuando = activate;
     }
 

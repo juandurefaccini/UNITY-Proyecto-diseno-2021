@@ -51,11 +51,11 @@ public class ChatManager : MonoBehaviour
         int HorizontalPos = 0;
         if (sender == "user")
         {
-            HorizontalPos = -50;
+            HorizontalPos = -20;
         }
         else if (sender == "bot")
         {
-            HorizontalPos = 50;
+            HorizontalPos = 20;
         }
 
         //Poner la posicion vertical de la burbuja de dialogo
@@ -133,6 +133,10 @@ public class ChatManager : MonoBehaviour
         {
             verticalLayout.padding = new RectOffset(20, 10, 5, 5);
         }
+
+        //que no haya overflow horizontal
+        LayoutElement layoutElement = chat.AddComponent<LayoutElement>();
+        layoutElement.preferredWidth = 250;
         // Devolver gameobject vacio donde se van a agregar los componentes chat
         return chat.transform.GetChild(0).gameObject;
     }
