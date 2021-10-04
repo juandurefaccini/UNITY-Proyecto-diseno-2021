@@ -9,11 +9,12 @@ public class PlayerController : MonoBehaviour
     public ChatManager chatManager;
 
 
-    public void toggleInteraction(bool activate){
+    public void toggleInteraction(bool activate)
+    {
         estaInteractuando = activate;
         transform.GetComponent<Movement>().estaInteractuando = activate;
-        transform.GetComponent<Movement>().animator.SetFloat("VelX",0);
-        transform.GetComponent<Movement>().animator.SetFloat("VelY",0);
+        transform.GetComponent<Movement>().animator.SetFloat("VelX", 0);
+        transform.GetComponent<Movement>().animator.SetFloat("VelY", 0);
         transform.GetComponent<CambioCamara>().estaInteractuando = activate;
     }
 
@@ -33,8 +34,9 @@ public class PlayerController : MonoBehaviour
                 toggleInteraction(true);
             }
         }
-        else if (chatManager.gameObject.activeSelf == false && estaInteractuando){
-                toggleInteraction(false);
+        else if (chatManager.gameObject.activeSelf == false && estaInteractuando)
+        {
+            toggleInteraction(false);
         }
     }
 
@@ -63,7 +65,6 @@ public class PlayerController : MonoBehaviour
         Quaternion targetRotation = Quaternion.identity;
         do
         {
-            Debug.Log("Rotating");
             Vector3 targetDirection = transform.position - other.position;
             targetRotation = Quaternion.LookRotation(targetDirection);
             Quaternion nextRotation = Quaternion.RotateTowards(targetRotation,
