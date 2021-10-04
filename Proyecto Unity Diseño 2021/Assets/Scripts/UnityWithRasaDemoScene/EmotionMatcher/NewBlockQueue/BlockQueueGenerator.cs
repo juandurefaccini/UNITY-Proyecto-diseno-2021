@@ -25,7 +25,17 @@ public class BlockQueueGenerator
             }
 
         }
-        return new BlockQueue(blocks); // Return the blockQueue
+        blocks.Add(new Block(GetCleanBlock())); // Agrego un bloque con un trigger por defecto
+        return new BlockQueue(blocks);
     }
-
+    private static List<LayerInfo> GetCleanBlock()
+    {
+        return new List<LayerInfo> {
+            new LayerInfo("clearBothArmsLayer"),
+            new LayerInfo("clearFaceLayer"),
+            new LayerInfo("clearLeftArmLayer"),
+            new LayerInfo("clearLegsLayer"),
+            new LayerInfo("clearRightArmLayer"),
+            new LayerInfo("clearTorsoLayer")};
+    }
 }

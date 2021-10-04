@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
             uI_Manager.setInteractDialogueState(isHoveringCharacter);
             if (Input.GetKeyUp(KeyCode.E) && isHoveringCharacter)
             {
+                StartCoroutine(DoRotationAtTargetDirection(HoveringCharacter.transform));
                 uI_Manager.setChatState(true);
                 chatManager.last_receiver = HoveringCharacter;
             }
@@ -41,6 +42,22 @@ public class PlayerController : MonoBehaviour
             }
         }
         return null;
+    }
+
+    IEnumerator DoRotationAtTargetDirection(Transform other)
+    {
+        Quaternion targetRotation = Quaternion.identity;
+        do
+        {
+            Debug.Log("Rotating");
+            Vector3 targetDirection = transform.position - other.position;
+            targetRotation = Quaternion.LookRotation(targetDirection);
+            Quaternion nextRotation = Quaternion.RotateTowards(targetRotation,
+                    transform.rotation, 5f * Time.deltaTime);
+            other.rotation = nextRotation;
+            yield return null;
+
+        } while (Quaternion.Angle(transform.rotation, targetRotation) > 0.05f && Vector3.Distance(transform.position, other.position) < 5f);
     }
 
 }
