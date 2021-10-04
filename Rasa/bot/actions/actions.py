@@ -43,7 +43,7 @@ class ActionVector(Action):
 
         with open("profiles/personalities.json", "r") as file:
             personality = json.load(file)[name]
-        BF = personality["BIGFIVE"]
+        BF = personality["Personality"]
         multiplicador = personality["Emotions"][mood]     
         for i in range(0, len(BF)):
             BF[i] = float(BF[i]) * float(multiplicador)

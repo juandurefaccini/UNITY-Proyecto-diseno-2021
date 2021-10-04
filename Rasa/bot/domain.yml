@@ -288,7 +288,7 @@ responses:
         text: "Sos boludo? como plaza, es el patio"
         vector: "{vector}"
 
-  utter_plaza_sorpesa_Juan:
+  utter_plaza_sorpresa_Juan:
   - custom:
         text: "Jajaja, igualmente es un patio"
         vector: "{vector}"
@@ -326,7 +326,7 @@ responses:
         text: "Pero si no estoy en el departamento, sali 10 minutos a tomar un descanso."
         vector: "{vector}"
  
-  utter_departamento_sorpesa_Juan:
+  utter_departamento_sorpresa_Juan:
   - custom:
         text: "Jajajaja no vivo aca, estoy tomando un descansito"
         vector: "{vector}"
@@ -354,7 +354,7 @@ responses:
         text: "Es que sali a tomar aire un poco. Ademas estoy en el patio"
         vector: "{vector}"
   
-  utter_atendiendo_sorpesa_Juan:
+  utter_atendiendo_sorpresa_Juan:
   - custom:
         text: "Es que estoy en el patio no en la recepcion jajaja"
         vector: "{vector}"
@@ -381,7 +381,7 @@ responses:
         text: "No estaba buscando un libro... Estaba descansando un poquito che"
         vector: "{vector}"
     
-  utter_libro_sorpesa_Juan:
+  utter_libro_sorpresa_Juan:
   - custom:
         text: "Si, perdon... necesitaba un descansito jaja"
         vector: "{vector}"
@@ -426,7 +426,7 @@ responses:
         text: "Bueno... calmate un poco que labure todo el dia"
         vector: "{vector}"
 
-  utter_descanso_sorpesa_Juan:
+  utter_descanso_sorpresa_Juan:
   - custom:
         text: "Jajaja sii, necesitaba ese descansito"
         vector: "{vector}"
@@ -511,24 +511,24 @@ responses:
       ##  QUE ESTABAS HACIENDO  ################################
   utter_que_estabas_haciendo_alegre_Camila:
   - custom:
-      text: "Estaba buscando un libroo"
+      text: "Estaba buscando un libroo, tuve un par de problemas de unas cositas"
       vector: "{vector}"
   - custom:
-      text: "Estaba buscando un librito"
+      text: "Estaba buscando un librito. Queria ver un algoritmo"
       vector: "{vector}"
   - custom:
-      text: "Buscando un libroo"
+      text: "Buscando un libroo. Lo necesito por un algoritmo"
       vector: "{vector}"
 
   utter_que_estabas_haciendo_enojo_Camila:
   - custom:
-      text: "Hablame bien y te respondo bien. Estaba buscando un libro nada mas"
+      text: "Hablame bien y te respondo bien. Estaba buscando un libro nada mas para ver un algoritmo nada mas"
       vector: "{vector}"
   - custom:
-      text: "Si me vas a hablar asi no te respondo un carajo. Buscaba un libro"
+      text: "Si me vas a hablar asi no te respondo un carajo. Buscaba un libro por un algoritmo"
       vector: "{vector}"
   - custom:
-      text: "Bue.. estamos de mal humor hoy?. Buscaba un librito nada mas"
+      text: "Bue.. estamos de mal humor hoy?. Buscaba un librito por un algoritmo nada mas"
       vector: "{vector}"
 
   utter_que_estabas_haciendo_miedo_Camila:
@@ -550,18 +550,18 @@ responses:
       text: "Estaba bastante complicada con una cosa y tenia que buscar un libro"
       vector: "{vector}"
   - custom:
-      text: "Ehh... Estaba buscando un libro"
+      text: "Ehh... Estaba buscando un libro porque estaba complicada con una cosa"
       vector: "{vector}"
 
   utter_que_estabas_haciendo_confianza_Camila:
   - custom:
-      text: "Buscando un librito"
+      text: "Buscando un librito para ver un algoritmo"
       vector: "{vector}"
   - custom:
-      text: "Buscaba un librooo"
+      text: "Buscaba un librooo por un algoritmoo"
       vector: "{vector}"
   - custom:
-      text: "Estaba tratando de encontrar un libro"
+      text: "Estaba tratando de encontrar un libro para ver un algoritmo"
       vector: "{vector}"
 
 
@@ -689,7 +689,7 @@ responses:
         text: "Porque me hablas asi si no estoy en la plaza"
         vector: "{vector}"
     
-  utter_plaza_sorpesa_Camila:
+  utter_plaza_sorpresa_Camila:
   - custom:
         text: "Es que no estoy en la plaza!"
         vector: "{vector}"
@@ -715,7 +715,7 @@ responses:
         text: "Pero no notas que estoy aca en el laburo?"
         vector: "{vector}"
     
-  utter_departamento_sorpesa_Camila:
+  utter_departamento_sorpresa_Camila:
   - custom:
         text: "No vivo aca jajaja. Vivo a unas cuadrass"
         vector: "{vector}"
@@ -741,7 +741,7 @@ responses:
         text: "Pero si estoy buscando un libro no hueveando en la recepcion..."
         vector: "{vector}"
     
-  utter_atendiendo_sorpesa_Camila:
+  utter_atendiendo_sorpresa_Camila:
   - custom:
         text: "Es que no estoy en recepcion jajaja"
         vector: "{vector}"
@@ -785,7 +785,7 @@ responses:
         text: "Estoy buscando un libro para no molestar... Porque no me hablas bien?"
         vector: "{vector}"
 
-  utter_libro_sorpesa_Camila:
+  utter_libro_sorpresa_Camila:
   - custom:
         text: "Sii, me trabe y lo necesitaba"
         vector: "{vector}"
@@ -823,7 +823,7 @@ responses:
         text: "Estoy buscando el libro para poder seguir nada mas..."
         vector: "{vector}"
     
-  utter_descanso_sorpesa_Camila:
+  utter_descanso_sorpresa_Camila:
   - custom:
         text: "Es que estamos en la oficina jajaja, estoy buscando el libro nada mas"
         vector: "{vector}"
@@ -1093,7 +1093,7 @@ responses:
         text: "No entendes que estoy de franco, no?"
         vector: "{vector}"
 
-  utter_plaza_sorpesa_Tobias:
+  utter_plaza_sorpresa_Tobias:
   - custom:
         text: "Si, a veces vengo"
         vector: "{vector}"
@@ -1131,7 +1131,7 @@ responses:
         text: "Como recien saliendo de mi casa. Estoy de franco y en la plaza"
         vector: "{vector}"
     
-  utter_departamento_sorpesa_Tobias:
+  utter_departamento_sorpresa_Tobias:
   - custom:
         text: "Jajaja tranquilo que no vivo aca, estoy disfrutando el dia"
         vector: "{vector}"
@@ -1159,7 +1159,7 @@ responses:
         vector: "{vector}"
     
 
-  utter_atendiendo_sorpesa_Tobias:
+  utter_atendiendo_sorpresa_Tobias:
   - custom:
         text: "Es que estamos en la plaza jajaja"
         vector: "{vector}"
@@ -1184,7 +1184,7 @@ responses:
         text: "Estoy de franco, no estoy laburando."
         vector: "{vector}"
     
-  utter_libro_sorpesa_Tobias:
+  utter_libro_sorpresa_Tobias:
   - custom:
         text: "Sii, estaba aca disfrutando el dia"
         vector: "{vector}"
@@ -1210,7 +1210,7 @@ responses:
         text: "Estoy de franco no descansando. No me jodas"
         vector: "{vector}"
     
-  utter_descanso_sorpesa_Tobias:
+  utter_descanso_sorpresa_Tobias:
   - custom:
         text: "Sii, hoy tengo franco y bueno, aproveche para venir aca"
         vector: "{vector}"
@@ -1463,7 +1463,7 @@ responses:
         vector: "{vector}"
   
 
-  utter_plaza_sorpesa_Mateo:
+  utter_plaza_sorpresa_Mateo:
   - custom:
         text: "Nono, no estoy en la plaza jajaja estoy trabajando"
         vector: "{vector}"
@@ -1497,7 +1497,7 @@ responses:
         vector: "{vector}"
   
 
-  utter_departamento_sorpesa_Mateo:
+  utter_departamento_sorpresa_Mateo:
   - custom:
         text: "Jajaj ya quisiera, aca laburo"
         vector: "{vector}"
@@ -1537,7 +1537,7 @@ responses:
         text: "No estoy de humor hoy, no me rompas"
         vector: "{vector}"
 
-  utter_atendiendo_sorpesa_Mateo:
+  utter_atendiendo_sorpresa_Mateo:
   - custom:
         text: "Y es mi trabajo este..."
         vector: "{vector}"
@@ -1590,7 +1590,7 @@ responses:
         text: "Que hablas flaco? estoy laburando, tomatela"
         vector: "{vector}"
 
-  utter_libro_sorpesa_Mateo:
+  utter_libro_sorpresa_Mateo:
   - custom:
         text: "Que te sorprende? que trabaje? si es lo que hago"
         vector: "{vector}"
@@ -1646,7 +1646,7 @@ responses:
         text: "Anda a cagar, que me venis a boludear a mi que laburo todo el dia"
         vector: "{vector}"
 
-  utter_descanso_sorpesa_Mateo:
+  utter_descanso_sorpresa_Mateo:
   - custom:
         text: "eeei, y no si yo trabajo aca"
         vector: "{vector}"
@@ -1912,7 +1912,7 @@ responses:
         text: "No me hables de pavadas, tomatela"
         vector: "{vector}"
 
-  utter_plaza_sorpesa_Agustin:
+  utter_plaza_sorpresa_Agustin:
   - custom:
         text: "Jajaja estas bien vos? aca vivo yo, que te sorprende?"
         vector: "{vector}"
@@ -1956,7 +1956,7 @@ responses:
         text: "Que mierda te importa gil"
         vector: "{vector}"
 
-  utter_departamento_sorpesa_Agustin:
+  utter_departamento_sorpresa_Agustin:
   - custom:
         text: "Sisi, hace poquito estoy viviendo aca"
         vector: "{vector}"
@@ -1998,7 +1998,7 @@ responses:
         vector: "{vector}"
 
 
-  utter_atendiendo_sorpesa_Agustin:
+  utter_atendiendo_sorpresa_Agustin:
   - custom:
         text: "Y es obvio, si no es mi trabajo ese..."
         vector: "{vector}"
@@ -2030,7 +2030,7 @@ responses:
         text: "Y no!, si estoy por ir para el trabajo..."
         vector: "{vector}"
 
-  utter_libro_sorpesa_Agustin:
+  utter_libro_sorpresa_Agustin:
   - custom:
         text: "Nono, estoy saliendo para el trabajo yo"
         vector: "{vector}"
@@ -2072,7 +2072,7 @@ responses:
         text: "Anda a cagar"
         vector: "{vector}"
 
-  utter_descanso_sorpesa_Agustin:
+  utter_descanso_sorpresa_Agustin:
   - custom:
         text: "Es que estoy yendo a laburar jajaja"
         vector: "{vector}"
