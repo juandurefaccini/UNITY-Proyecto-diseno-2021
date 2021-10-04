@@ -2,26 +2,6 @@ version: "2.0"
 
 nlu:
 
- #INTENTS DE SALUDOS
- #
- #
- #
-
-# - intent: saludo
-#   examples: |
-#     - Hola, Que tal?
-#     - Hola, Como estas?
-#     - Hola, Vas bien?
-#     - Que tal, como estas?
-#     - Hola.
-#     - Buenos dias
-#     - Que tal?
-#     - Hola, buenos dias.
-#     - Buenas
-#     - Que onda?
-#     - Hola wachin
-#     - Que onda amigo?
-
 - intent: saludo/alegre
   examples: |
     - Hola!!
@@ -57,35 +37,35 @@ nlu:
  #
  #
 
-- intent: que_hiciste_ayer/alegre
+- intent: que_estabas_haciendo/alegre
   examples: |
-    - Que hiciste ayer?
-    - Que hiciste hoy?
+    - Que hacias??
+    - Que estabas haciendo?
  
   
 
-- intent: que_hiciste_ayer/enojo
+- intent: que_estabas_haciendo/enojo
   examples: |
-    - Uh flaco, que hiciste ayer?
-    - Flaco, laburaste? Que hiciste ayer?
+    - Que mierda haces aca y no trabajando?
+    - Que haces aca y porque mierda no estas trabajando?
 
 
 
-- intent: que_hiciste_ayer/miedo
+- intent: que_estabas_haciendo/miedo
   examples: |
-      - Por favor decime, que hiciste algo ayer
-      - Decime que pudiste hacer algo ayer
+      - Paso algo que no estas trabajando?
+      - Estas bien?? paso algo que no estas trabajando??
 
 
-- intent: que_hiciste_ayer/sorpresa
+- intent: que_estabas_haciendo/sorpresa
   examples: |
-    - Que sorpresa!, Que hiciste ayer?
-    - Que raro verte aca, Que hiciste ayer?
+    - Que sorpresa!, pense que estabas trabajando. Que hacias?
+    - Que raro verte aca, Que estabas haciendo??
    
-- intent: que_hiciste_ayer/confianza
+- intent: que_estabas_haciendo/confianza
   examples: |
-    - Que haces locura, Que con que laburaste ayer?
-    - Que haces amigo, Que hiciste ayer?
+    - Que haces locura, Que hacias?
+    - Que hacess, Que andabas haciendo??
     
 
 - intent: felicitaciones/alegre
@@ -139,4 +119,155 @@ nlu:
   examples: |
     - Nos vemosss
     - Chauuu
-  
+
+    
+#### plaza ####
+
+ 
+- intent: plaza/alegre
+  examples: |
+    - Que linda plaza
+    - Alta plaza, es hermosa
+    
+- intent: plaza/miedo
+  examples: |
+    - che, no es peligrosa esta plaza?
+    - no te da miedo estar solo en esta plaza?
+    
+- intent: plaza/enojo
+  examples: |
+    - Que haces en esta plaza y no trabajando??
+    - Que haces aca y no trabajando??
+- intent: plaza/sorpresa
+  examples: |
+    - Que raro verte en esta plaza!
+    - Que sorpresa verte en esta plaza
+- intent: plaza/confianza
+  examples: |
+    - Siempre disfrutando en la plaza vos
+    - Jajaja, yo sabia que ibas a estar en la plaza
+
+
+
+## Departamento ##
+
+
+
+- intent: departamento/alegre
+  examples: |
+    - Que lindo departamento
+    - Tremento depa
+    
+- intent: departamento/miedo
+  examples: |
+    - Y que onda el barrio, es peligroso?
+    - Es seguro este departamento?
+    
+- intent: departamento/enojo
+  examples: |
+    - Que haces recien saliendo de tu casa y no laburando?
+    - Que haces aca en tu casa y no trabajando??
+
+- intent: departamento/sorpresa
+  examples: |
+    - Noo, no sabia que vivias aca!
+    - Que bien! vivis re cerca del laburo
+
+- intent: departamento/confianza
+  examples: |
+    - Debes armarte altas fiestas en este depto
+    - Que pedazo de departamento 
+
+
+
+## Atendiendo la entrada de la empresa ##
+
+
+
+- intent: atendiendo/alegre
+  examples: |
+    - y que onda, como te llevas con los clientes?
+    - Como va la clientela??
+    
+- intent: atendiendo/miedo
+  examples: |
+    - Viste los quilombos que hay con la gente, es seguro este trabajo?
+    - Te noto muy desprotegido, es seguro este trabajo?
+    
+- intent: atendiendo/enojo
+  examples: |
+    - Que haces aca abajo en recepcion y no arriba laburando
+    - Porque estas aca en la recepcion y no laburando
+
+- intent: atendiendo/sorpresa
+  examples: |
+    - No sabia que estabas aca abajo en la recepcion!
+    - Que raro encontrarte aca abajo en recepcion
+
+- intent: atendiendo/confianza
+  examples: |
+    - Yo sabia que ibas a estar aca abajo en la recepcion
+    - Jajaja yo sabia que te iba a encontrar aca en recepcion
+
+
+
+## Buscando un libro ##
+
+
+
+- intent: libro/alegre
+  examples: |
+    - Pudiste encontrar el libro??
+    - Y que onda, lo pudiste encontrar
+    
+- intent: libro/miedo
+  examples: |
+    - Era muy importante ese libro, no??
+    - Ese libro es muy importante, fijate si lo podes encontrar
+    
+- intent: libro/enojo
+  examples: |
+    - y si te pones a laburar y pedis ayuda?
+    - y no es mas facil pedir ayuda y no perder media hora buscando un libro?
+
+- intent: libro/sorpresa
+  examples: |
+    - Con razon no te encontraba en tu escritorio!
+    - Con razon no te encontraba en la compu
+
+- intent: libro/confianza
+  examples: |
+    - Ya lo vas a encontrar, no te preocupes
+    - vas a ver que lo vas a encontrar, no te preocupes
+
+
+
+## Tomando un descanso del laburo ##
+
+
+
+- intent: descanso/alegre
+  examples: |
+    - Esta bien, venias muy atareado
+    - Esta perfecto, hace falta un descanso cada tanto
+    
+- intent: descanso/miedo
+  examples: |
+    - Mejor, te notaba muy cansado
+    - Te notaba muy tenso, es mejor
+    
+- intent: descanso/enojo
+  examples: |
+    - Bueno, capaz que suficiente descanso por ahora. Ponete a laburar
+    - Mucho descansito y poco laburo
+
+- intent: descanso/sorpresa
+  examples: |
+    - Con razon no estabas arriba. Esta perfecto
+    - Con razon no te encontraba en la oficina. Esta bien, descansa
+
+- intent: descanso/confianza
+  examples: |
+    - Tranquilo papa, descansa nomas. Ya se van a solucionar esos problemas
+    - Buenisimo, esos descansitos ayudan una bocha
+

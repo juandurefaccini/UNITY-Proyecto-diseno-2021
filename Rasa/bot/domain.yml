@@ -6,18 +6,35 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
   - saludo
-  - que_hiciste_ayer
+  - que_estabas_haciendo
   - felicitaciones  
   - despedida
+  - plaza
+  - departamento
+  - atendiendo
+  - libro
+  - descanso
 
       
 entities: []
 
+
+
+### QUE ESTAN HACIENDO?
+## JUAN: Tomando un descanso del laburo
+## Camila: Buscando un libro para solucionar un problema
+## TOBIAS: Paseando por el parque
+## MATEO: Atendiendo la entrada de la empresa
+## AGUSTIN: Saliendo de su depto
+
 ## alegre   enojo   miedo   sorpresa    confianza
 responses:
 
-    ##  SALUDO  ################################
-  utter_saludo_alegre:
+  # Respuestas de Juan ##################################################################################
+  # #####################################################################################################
+  # #####################################################################################################
+  # #####################################################################################################
+  utter_saludo_alegre_Juan:
   - custom:
       text: "Holaa"
       vector: "{vector}"
@@ -28,7 +45,7 @@ responses:
       text: "Hola hola!"
       vector: "{vector}"
 
-  utter_saludo_enojo:
+  utter_saludo_enojo_Juan:
   - custom:
       text: "Hola."
       vector: "{vector}"
@@ -39,7 +56,7 @@ responses:
       text: "Hola"
       vector: "{vector}"
 
-  utter_saludo_miedo:
+  utter_saludo_miedo_Juan:
   - custom:
       text: "Hola"
       vector: "{vector}"
@@ -50,7 +67,7 @@ responses:
       text: "Holis"
       vector: "{vector}"
 
-  utter_saludo_sorpresa:
+  utter_saludo_sorpresa_Juan:
   - custom:
       text: "Holaaaa"
       vector: "{vector}"
@@ -61,7 +78,7 @@ responses:
       text: "Holaa"
       vector: "{vector}"
 
-  utter_saludo_confianza:
+  utter_saludo_confianza_Juan:
   - custom:
       text: "Hola hola"
       vector: "{vector}"
@@ -72,66 +89,65 @@ responses:
       text: "Bueeeeenassss"
       vector: "{vector}"
 
-
-      ##  QUE HICISTE AYER  ################################
-  utter_que_hiciste_ayer_alegre:
+      ##  QUE ESTABAS HACIENDO  ################################
+  utter_que_estabas_haciendo_alegre_Juan:
   - custom:
-      text: "Estuve con la base de datoss"
+      text: "Estaba tomando un descansito"
       vector: "{vector}"
   - custom:
-      text: "A full con la BD"
+      text: "Me estaba tomando un descansito chico"
       vector: "{vector}"
   - custom:
-      text: "Termine lo de la BD"
-      vector: "{vector}"
-
-  utter_que_hiciste_ayer_enojo:
-  - custom:
-      text: "Hablame bien y te respondo bien. Estuve con la BD"
-      vector: "{vector}"
-  - custom:
-      text: "Si me vas a hablar asi no te respondo un carajo. Estuve con la UI"
-      vector: "{vector}"
-  - custom:
-      text: "Bue.. estamos de mal humor hoy?. Estuve con la BD"
+      text: "Estaba descansando un poco"
       vector: "{vector}"
 
-  utter_que_hiciste_ayer_miedo:
+  utter_que_estabas_haciendo_enojo_Juan:
   - custom:
-      text: "Estuve muy complicado con la BD... pero pude avanzar"
+      text: "Me estaba tomando un descansito nomas. Calmate"
       vector: "{vector}"
   - custom:
-      text: "Trabaje... con la interfaz de usuario"
+      text: "Era un descansito nada mas. Ya vuelvo..."
       vector: "{vector}"
   - custom:
-      text: "Me centre mas que nada en... el backend"
-      vector: "{vector}"
-
-  utter_que_hiciste_ayer_sorpresa:
-  - custom:
-      text: "Emmmm.... Estuve con la base de datos"
-      vector: "{vector}"
-  - custom:
-      text: "Ehhh... Anduve acomodando un poco de la interfaz de usuario"
-      vector: "{vector}"
-  - custom:
-      text: "Ehh... Estuve trabajando con la BD"
+      text: "Bue.. estamos de mal humor hoy?. Estuve laburando hasta recien y queria despejar la mente"
       vector: "{vector}"
 
-  utter_que_hiciste_ayer_confianza:
+  utter_que_estabas_haciendo_miedo_Juan:
   - custom:
-      text: "Le mande a pleno con la BD"
+      text: "Estaba muy atorado y necesitaba un descanso. Perdon, ya vuelvo a laburar"
       vector: "{vector}"
   - custom:
-      text: "A full con la interfaz de usuario"
+      text: "Perdon, estaba muy estresado. Ya vuelvo"
       vector: "{vector}"
   - custom:
-      text: "Con todo le meti a la BD"
+      text: "Estaba muy atorado y necesitaba un descanso. Mil perdones"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_sorpresa_Juan:
+  - custom:
+      text: "PERDON PERDON!, ya vuelvo a trabajar"
+      vector: "{vector}"
+  - custom:
+      text: "Es que justo estaba muy cansado y tenia que descansar un poco"
+      vector: "{vector}"
+  - custom:
+      text: "Jajaja, justo vine a descansar un cachito"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_confianza_Juan:
+  - custom:
+      text: "No me falta nada de lo que tenia que hacer y me puse a descansar un poco"
+      vector: "{vector}"
+  - custom:
+      text: "No me falta nada, ya termino, por eso estaba descansando un cachito"
+      vector: "{vector}"
+  - custom:
+      text: "Ya casi termino asi que aproveche para meter un descansito."
       vector: "{vector}"
 
 
       ##  Felicitaciones  ################################
-  utter_felicitaciones_alegre:
+  utter_felicitaciones_alegre_Juan:
   - custom:
       text: ":D"
       vector: "{vector}"
@@ -142,12 +158,12 @@ responses:
       text: "GRACIAS!"
       vector: "{vector}"
 
-  utter_felicitaciones_enojo:
+  utter_felicitaciones_enojo_Juan:
   - custom:
       text: "Gracias"
       vector: "{vector}"
 
-  utter_felicitaciones_miedo:
+  utter_felicitaciones_miedo_Juan:
   - custom:
       text: "Uf, muchas gracias"
       vector: "{vector}"
@@ -158,7 +174,7 @@ responses:
       text: "Muchisisimas gracias"
       vector: "{vector}"
 
-  utter_felicitaciones_sorpresa:
+  utter_felicitaciones_sorpresa_Juan:
   - custom:
       text: "Muchass graciassss"
       vector: "{vector}"
@@ -169,7 +185,7 @@ responses:
       text: "Wow! muchas gracias!"
       vector: "{vector}"
 
-  utter_felicitaciones_confianza:
+  utter_felicitaciones_confianza_Juan:
   - custom:
       text: "Lo sabia :D, gracias"
       vector: "{vector}"
@@ -182,7 +198,7 @@ responses:
   
 
       ##  DESPEDIDA  ################################
-  utter_despedida_alegre:
+  utter_despedida_alegre_Juan:
   - custom:
       text: "Chau chauu"
       vector: "{vector}"
@@ -193,7 +209,7 @@ responses:
       text: "Byee"
       vector: "{vector}"
 
-  utter_despedida_enojo:
+  utter_despedida_enojo_Juan:
   - custom:
       text: "Adios."
       vector: "{vector}"
@@ -204,7 +220,7 @@ responses:
       text: "Chau."
       vector: "{vector}"
 
-  utter_despedida_miedo:
+  utter_despedida_miedo_Juan:
   - custom:
       text: "Chau, espero poder verte pronto"
       vector: "{vector}"
@@ -215,7 +231,7 @@ responses:
       text: "Espero verte pronto"
       vector: "{vector}"
 
-  utter_despedida_sorpresa:
+  utter_despedida_sorpresa_Juan:
   - custom:
       text: "Nos estamos viendo!"
       vector: "{vector}"
@@ -226,7 +242,7 @@ responses:
       text: "Adios!"
       vector: "{vector}"
 
-  utter_despedida_confianza:
+  utter_despedida_confianza_Juan:
   - custom:
       text: "Bye byee"
       vector: "{vector}"
@@ -236,7 +252,1839 @@ responses:
   - custom:
       text: "Adioss"
       vector: "{vector}"
+
+
+      ##  PLAZA  ################################
+  utter_plaza_alegre_Juan:
+  - custom:
+        text: "Estoy en el patio del laburo no en la plaza jajaja"
+        vector: "{vector}"
+  - custom:
+        text: "No sabia que el patio del laburo era una plaza jajaja"
+        vector: "{vector}"
+  - custom:
+        text: "Pense que era el patio del laburo jajaja"
+        vector: "{vector}"
+
+  utter_plaza_miedo_Juan:
+  - custom:
+        text: "No creo, el patio es bastante seguro"
+        vector: "{vector}"
+  - custom:
+        text: "Nono, si es el patio del laburo"
+        vector: "{vector}"
+  - custom:
+        text: "Debe ser bastante seguro, es el patio de la empresa"
+        vector: "{vector}"
+
+  utter_plaza_enojo_Juan:
+  - custom:
+        text: "Como plaza, no vez que estoy en el patio??"
+        vector: "{vector}"
+  - custom:
+        text: "Que plaza, si estoy en el patio pibe"
+        vector: "{vector}"
+  - custom:
+        text: "Sos boludo? como plaza, es el patio"
+        vector: "{vector}"
+
+  utter_plaza_sorpesa_Juan:
+  - custom:
+        text: "Jajaja, igualmente es un patio"
+        vector: "{vector}"
+  - custom:
+        text: "Patio/plaza, son parecidos jajaja"
+        vector: "{vector}"
+  - custom:
+        text: "Es que si, necesitaba salir un poco al patio"
+        vector: "{vector}"
+
+  utter_plaza_confianza_Juan:
+  - custom:
+        text: "Olvidatee, el patio siempre ayuda"
+        vector: "{vector}"
+  - custom:
+        text: "See, el patio siempre ayuda"
+        vector: "{vector}"
+  - custom:
+        text: "Obvioo, el patio siempre ayuda un poquito"
+        vector: "{vector}"
+
+      ##  Departamento  ################################
+  utter_departamento_alegre_Juan:
+  - custom:
+        text: "jajaja tampoco es que vivo en el patio"
+        vector: "{vector}"
+  
+  utter_departamento_miedo_Juan:
+  - custom:
+        text: "Tranquilo que no es un departamento, es el patio. Pero respecto al barrio, no se"
+        vector: "{vector}"
+  
+  utter_departamento_enojo_Juan:
+  - custom:
+        text: "Pero si no estoy en el departamento, sali 10 minutos a tomar un descanso."
+        vector: "{vector}"
+ 
+  utter_departamento_sorpesa_Juan:
+  - custom:
+        text: "Jajajaja no vivo aca, estoy tomando un descansito"
+        vector: "{vector}"
+ 
+  utter_departamento_confianza_Juan:
+  - custom:
+        text: "No es un depto jajaja, es el patio"
+        vector: "{vector}"
+  
+
+
+##  Atendiendo  ################################
+  utter_atendiendo_alegre_Juan:
+  - custom:
+        text: "Por suerte esa parte no me toca a mi jajaja"
+        vector: "{vector}"
+  
+  utter_atendiendo_miedo_Juan:
+  - custom:
+        text: "Es el patio del laburo, tampoco hay tanto quilombo"
+        vector: "{vector}"
+  
+  utter_atendiendo_enojo_Juan:
+  - custom:
+        text: "Es que sali a tomar aire un poco. Ademas estoy en el patio"
+        vector: "{vector}"
+  
+  utter_atendiendo_sorpesa_Juan:
+  - custom:
+        text: "Es que estoy en el patio no en la recepcion jajaja"
+        vector: "{vector}"
+  
+  utter_atendiendo_confianza_Juan:
+  - custom:
+        text: "Nono jajaja, la recepcion es adelante. Este es el patio"
+        vector: "{vector}"
+  
+##  Libro  ################################
+  utter_libro_alegre_Juan:
+  - custom:
+        text: "Tranqui que no buscaba un libro.. Esa era Cami"
+        vector: "{vector}"
     
+
+  utter_libro_miedo_Juan:
+  - custom:
+        text: "No se a que libro te referis, pero cami estaba buscando uno y si, era importante"
+        vector: "{vector}"
+    
+  utter_libro_enojo_Juan:
+  - custom:
+        text: "No estaba buscando un libro... Estaba descansando un poquito che"
+        vector: "{vector}"
+    
+  utter_libro_sorpesa_Juan:
+  - custom:
+        text: "Si, perdon... necesitaba un descansito jaja"
+        vector: "{vector}"
+    
+  utter_libro_confianza_Juan:
+  - custom:
+        text: "Sisi igual yo no soy jaja. Espero que cami lo encuentre"
+        vector: "{vector}"
+    
+
+      ##  Descanso  ################################
+  utter_descanso_alegre_Juan:
+  - custom:
+        text: "See, necesitaba un descansito"
+        vector: "{vector}"
+  - custom:
+        text: "Sii, por suerte pude descansar un poco"
+        vector: "{vector}"
+  - custom:
+        text: "Gracias a dios pude tomarme uno"
+        vector: "{vector}"
+
+  utter_descanso_miedo_Juan:
+  - custom:
+        text: "Si, venia muy cansado espero estar bien"
+        vector: "{vector}"
+  - custom:
+        text: "Si, estaba demasiado cansado. Espero estar mejor"
+        vector: "{vector}"
+  - custom:
+        text: "Estoy muy cansado ultimamente. Espero estar mejor ahora."
+        vector: "{vector}"
+
+  utter_descanso_enojo_Juan:
+  - custom:
+        text: "Bueno che... labure todo el santo dia"
+        vector: "{vector}"
+  - custom:
+        text: "Todo el puto dia laburando estuve... calmate un poco"
+        vector: "{vector}"
+  - custom:
+        text: "Bueno... calmate un poco que labure todo el dia"
+        vector: "{vector}"
+
+  utter_descanso_sorpesa_Juan:
+  - custom:
+        text: "Jajaja sii, necesitaba ese descansito"
+        vector: "{vector}"
+  - custom:
+        text: "See, el descansito era necesario"
+        vector: "{vector}"
+  - custom:
+        text: "Sii. Era necesario el descanso"
+        vector: "{vector}"
+
+  utter_descanso_confianza_Juan:
+  - custom:
+        text: "Muchas graciass"
+        vector: "{vector}"
+  - custom:
+        text: "Graciass"
+        vector: "{vector}"
+  - custom:
+        text: "Sii, ayudan un monton"
+        vector: "{vector}"
+
+  # RESPUESTAS DE Camila ################################################################################
+  # #####################################################################################################
+  # #####################################################################################################
+  # #####################################################################################################
+  utter_saludo_alegre_Camila:
+  - custom:
+      text: "Holaa"
+      vector: "{vector}"
+  - custom:
+      text: "Buenas!"
+      vector: "{vector}"
+  - custom:
+      text: "Hola hola!"
+      vector: "{vector}"
+
+  utter_saludo_enojo_Camila:
+  - custom:
+      text: "Hola."
+      vector: "{vector}"
+  - custom:
+      text: "Hola,que tal"
+      vector: "{vector}"
+  - custom:
+      text: "Hola"
+      vector: "{vector}"
+
+  utter_saludo_miedo_Camila:
+  - custom:
+      text: "Hola"
+      vector: "{vector}"
+  - custom:
+      text: "Holi"
+      vector: "{vector}"
+  - custom:
+      text: "Holis"
+      vector: "{vector}"
+
+  utter_saludo_sorpresa_Camila:
+  - custom:
+      text: "Holaaaa"
+      vector: "{vector}"
+  - custom:
+      text: "Buenass"
+      vector: "{vector}"
+  - custom:
+      text: "Holaa"
+      vector: "{vector}"
+
+  utter_saludo_confianza_Camila:
+  - custom:
+      text: "Hola hola"
+      vector: "{vector}"
+  - custom:
+      text: "Buenas noches America"
+      vector: "{vector}"
+  - custom:
+      text: "Bueeeeenassss"
+      vector: "{vector}"
+
+
+      ##  QUE ESTABAS HACIENDO  ################################
+  utter_que_estabas_haciendo_alegre_Camila:
+  - custom:
+      text: "Estaba buscando un libroo"
+      vector: "{vector}"
+  - custom:
+      text: "Estaba buscando un librito"
+      vector: "{vector}"
+  - custom:
+      text: "Buscando un libroo"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_enojo_Camila:
+  - custom:
+      text: "Hablame bien y te respondo bien. Estaba buscando un libro nada mas"
+      vector: "{vector}"
+  - custom:
+      text: "Si me vas a hablar asi no te respondo un carajo. Buscaba un libro"
+      vector: "{vector}"
+  - custom:
+      text: "Bue.. estamos de mal humor hoy?. Buscaba un librito nada mas"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_miedo_Camila:
+  - custom:
+      text: "Me complique mucho y estoy buscando un libro"
+      vector: "{vector}"
+  - custom:
+      text: "Estaba muy complicada y termine buscando un libro"
+      vector: "{vector}"
+  - custom:
+      text: "Estaba buscando un libro porque me trabe con algo"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_sorpresa_Camila:
+  - custom:
+      text: "Estaba complicada con una cosa y buscaba un libro"
+      vector: "{vector}"
+  - custom:
+      text: "Estaba bastante complicada con una cosa y tenia que buscar un libro"
+      vector: "{vector}"
+  - custom:
+      text: "Ehh... Estaba buscando un libro"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_confianza_Camila:
+  - custom:
+      text: "Buscando un librito"
+      vector: "{vector}"
+  - custom:
+      text: "Buscaba un librooo"
+      vector: "{vector}"
+  - custom:
+      text: "Estaba tratando de encontrar un libro"
+      vector: "{vector}"
+
+
+      ##  Felicitaciones  ################################
+  utter_felicitaciones_alegre_Camila:
+  - custom:
+      text: ":D"
+      vector: "{vector}"
+  - custom:
+      text: "MUCHAS MUCHAS GRACIASS"
+      vector: "{vector}"
+  - custom:
+      text: "GRACIAS!"
+      vector: "{vector}"
+
+  utter_felicitaciones_enojo_Camila:
+  - custom:
+      text: "Gracias"
+      vector: "{vector}"
+
+  utter_felicitaciones_miedo_Camila:
+  - custom:
+      text: "Uf, muchas gracias"
+      vector: "{vector}"
+  - custom:
+      text: "En serio, muchas gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Muchisisimas gracias"
+      vector: "{vector}"
+
+  utter_felicitaciones_sorpresa_Camila:
+  - custom:
+      text: "Muchass graciassss"
+      vector: "{vector}"
+  - custom:
+      text: "Graciass"
+      vector: "{vector}"
+  - custom:
+      text: "Wow! muchas gracias!"
+      vector: "{vector}"
+
+  utter_felicitaciones_confianza_Camila:
+  - custom:
+      text: "Lo sabia :D, gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Jeje, gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Obvioo que si, gracias"
+      vector: "{vector}"
+  
+
+      ##  DESPEDIDA  ################################
+  utter_despedida_alegre_Camila:
+  - custom:
+      text: "Chau chauu"
+      vector: "{vector}"
+  - custom:
+      text: "Adiositoo"
+      vector: "{vector}"
+  - custom:
+      text: "Byee"
+      vector: "{vector}"
+
+  utter_despedida_enojo_Camila:
+  - custom:
+      text: "Adios."
+      vector: "{vector}"
+  - custom:
+      text: "Nos vemos."
+      vector: "{vector}"
+  - custom:
+      text: "Chau."
+      vector: "{vector}"
+
+  utter_despedida_miedo_Camila:
+  - custom:
+      text: "Chau, espero poder verte pronto"
+      vector: "{vector}"
+  - custom:
+      text: "Adios, espero volver a verte pronto"
+      vector: "{vector}"
+  - custom:
+      text: "Espero verte pronto"
+      vector: "{vector}"
+
+  utter_despedida_sorpresa_Camila:
+  - custom:
+      text: "Nos estamos viendo!"
+      vector: "{vector}"
+  - custom:
+      text: "Nos vemos!"
+      vector: "{vector}"
+  - custom:
+      text: "Adios!"
+      vector: "{vector}"
+
+  utter_despedida_confianza_Camila:
+  - custom:
+      text: "Bye byee"
+      vector: "{vector}"
+  - custom:
+      text: "Chau chau chauuuu"
+      vector: "{vector}"
+  - custom:
+      text: "Adioss"
+      vector: "{vector}"
+
+
+      ##  PLAZA  ################################
+  utter_plaza_alegre_Camila:
+  - custom:
+        text: "No estoy en la plaza jajaja"
+        vector: "{vector}"
+    
+  utter_plaza_miedo_Camila:
+  - custom:
+        text: "Escuche que la plaza era peligrosa, si"
+        vector: "{vector}"
+    
+  utter_plaza_enojo_Camila:
+  - custom:
+        text: "Porque me hablas asi si no estoy en la plaza"
+        vector: "{vector}"
+    
+  utter_plaza_sorpesa_Camila:
+  - custom:
+        text: "Es que no estoy en la plaza!"
+        vector: "{vector}"
+    
+  utter_plaza_confianza_Camila:
+  - custom:
+        text: "Jajaja no estoy en la plaza!!"
+        vector: "{vector}"
+    
+      ##  Departamento  ################################
+  utter_departamento_alegre_Camila:
+  - custom:
+        text: "No sabia que conocias mi departamento! sii, queda aca a unas cuadras"
+        vector: "{vector}"
+    
+  utter_departamento_miedo_Camila:
+  - custom:
+        text: "Este barrio? mas o menos, estando aca en el laburo no se nota tanto"
+        vector: "{vector}"
+    
+  utter_departamento_enojo_Camila:
+  - custom:
+        text: "Pero no notas que estoy aca en el laburo?"
+        vector: "{vector}"
+    
+  utter_departamento_sorpesa_Camila:
+  - custom:
+        text: "No vivo aca jajaja. Vivo a unas cuadrass"
+        vector: "{vector}"
+    
+  utter_departamento_confianza_Camila:
+  - custom:
+        text: "Jajaja no es mi casa. Supongo que haran altas fiestas en el laburo pero no vivo aca"
+        vector: "{vector}"
+    
+      ##  Atendiendo  ################################
+  utter_atendiendo_alegre_Camila:
+  - custom:
+        text: "Supongo que bien, igualmente Mateo se ocupa mas de eso"
+        vector: "{vector}"
+    
+  utter_atendiendo_miedo_Camila:
+  - custom:
+        text: "Es seguro adentro, el problema es cuando salis para tu casa de noche"
+        vector: "{vector}"
+    
+  utter_atendiendo_enojo_Camila:
+  - custom:
+        text: "Pero si estoy buscando un libro no hueveando en la recepcion..."
+        vector: "{vector}"
+    
+  utter_atendiendo_sorpesa_Camila:
+  - custom:
+        text: "Es que no estoy en recepcion jajaja"
+        vector: "{vector}"
+    
+  utter_atendiendo_confianza_Camila:
+  - custom:
+        text: "No estoy en recepcion jajaja"
+        vector: "{vector}"
+    
+      ##  Libro  ################################
+  utter_libro_alegre_Camila:
+  - custom:
+        text: "Sii, ya lo pude encontrar"
+        vector: "{vector}"
+  - custom:
+        text: "Sii, lo encontre"
+        vector: "{vector}"
+  - custom:
+        text: "Sii, lo encontre por suerte"
+        vector: "{vector}"
+
+  utter_libro_miedo_Camila:
+  - custom:
+        text: "Es bastante importante, lo necesitaba para seguir"
+        vector: "{vector}"
+  - custom:
+        text: "Sii, es muy importante, sin el no puedo seguir"
+        vector: "{vector}"
+  - custom:
+        text: "Realmente lo necesito, es muy importante"
+        vector: "{vector}"
+
+  utter_libro_enojo_Camila:
+  - custom:
+        text: "Perdon... Queria buscar el libro nada mas"
+        vector: "{vector}"
+  - custom:
+        text: "Estan todos ocupados, porque no me hablas bien"
+        vector: "{vector}"
+  - custom:
+        text: "Estoy buscando un libro para no molestar... Porque no me hablas bien?"
+        vector: "{vector}"
+
+  utter_libro_sorpesa_Camila:
+  - custom:
+        text: "Sii, me trabe y lo necesitaba"
+        vector: "{vector}"
+  - custom:
+        text: "Jajaja sii, lo necesito y por eso vine"
+        vector: "{vector}"
+  - custom:
+        text: "Sii, necesito ese libroo"
+        vector: "{vector}"
+
+  utter_libro_confianza_Camila:
+  - custom:
+        text: "Graciass"
+        vector: "{vector}"
+  - custom:
+        text: "Muchisimas graciass"
+        vector: "{vector}"
+  - custom:
+        text: "Gracias por la buena ondaa"
+        vector: "{vector}"
+
+      ##  Descanso  ################################
+  utter_descanso_alegre_Camila:
+  - custom:
+        text: "Estoy bien! necesito el libro nada mas"
+        vector: "{vector}"
+    
+  utter_descanso_miedo_Camila:
+  - custom:
+        text: "Es que estoy bien, necesito un libro nada mas"
+        vector: "{vector}"
+    
+  utter_descanso_enojo_Camila:
+  - custom:
+        text: "Estoy buscando el libro para poder seguir nada mas..."
+        vector: "{vector}"
+    
+  utter_descanso_sorpesa_Camila:
+  - custom:
+        text: "Es que estamos en la oficina jajaja, estoy buscando el libro nada mas"
+        vector: "{vector}"
+    
+  utter_descanso_confianza_Camila:
+  - custom:
+        text: "Jajaja no es un descanso pero si, necesitaria uno"
+        vector: "{vector}"
+
+
+  # Respuestas de Tobias ################################################################################
+  # #####################################################################################################
+  # #####################################################################################################
+  # #####################################################################################################
+  utter_saludo_alegre_Tobias:
+  - custom:
+      text: "Holaa"
+      vector: "{vector}"
+  - custom:
+      text: "Buenas!"
+      vector: "{vector}"
+  - custom:
+      text: "Hola hola!"
+      vector: "{vector}"
+
+  utter_saludo_enojo_Tobias:
+  - custom:
+      text: "Hola."
+      vector: "{vector}"
+  - custom:
+      text: "Hola,que tal"
+      vector: "{vector}"
+  - custom:
+      text: "Hola"
+      vector: "{vector}"
+
+  utter_saludo_miedo_Tobias:
+  - custom:
+      text: "Hola"
+      vector: "{vector}"
+  - custom:
+      text: "Holi"
+      vector: "{vector}"
+  - custom:
+      text: "Holis"
+      vector: "{vector}"
+
+  utter_saludo_sorpresa_Tobias:
+  - custom:
+      text: "Holaaaa"
+      vector: "{vector}"
+  - custom:
+      text: "Buenass"
+      vector: "{vector}"
+  - custom:
+      text: "Holaa"
+      vector: "{vector}"
+
+  utter_saludo_confianza_Tobias:
+  - custom:
+      text: "Hola hola"
+      vector: "{vector}"
+  - custom:
+      text: "Buenas noches America"
+      vector: "{vector}"
+  - custom:
+      text: "Bueeeeenassss"
+      vector: "{vector}"
+
+
+      ##  QUE ESTABAS HACIENDO  ################################
+  utter_que_estabas_haciendo_alegre_Tobias:
+  - custom:
+      text: "Estaba disfrutando un poco de la plaza"
+      vector: "{vector}"
+  - custom:
+      text: "Disfrutando un poco el dia"
+      vector: "{vector}"
+  - custom:
+      text: "Disfrutando la plazita"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_enojo_Tobias:
+  - custom:
+      text: "Tengo franco hoy... calmate"
+      vector: "{vector}"
+  - custom:
+      text: "Pero si hoy no laburo, porque no me hablas bien?"
+      vector: "{vector}"
+  - custom:
+      text: "Estoy de franco, no me rompas las bolas hoy."
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_miedo_Tobias:
+  - custom:
+      text: "Tengo franco hoy, igualmente mi mente esta en el laburo"
+      vector: "{vector}"
+  - custom:
+      text: "Tenia dia libre, quise salir a descansar pero tengo la mente en el laburo"
+      vector: "{vector}"
+  - custom:
+      text: "Se supone que hoy podia descansar pero tengo la mente en el laburo"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_sorpresa_Tobias:
+  - custom:
+      text: "Hoy tengo dia libre y queria aprovechar un poco jajaja"
+      vector: "{vector}"
+  - custom:
+      text: "Aprovechando el dia libre jajaja"
+      vector: "{vector}"
+  - custom:
+      text: "Queria aprovechar el dia libre"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_confianza_Tobias:
+  - custom:
+      text: "Disfrutando del sol en el dia libree"
+      vector: "{vector}"
+  - custom:
+      text: "Disfrutando el dia libre"
+      vector: "{vector}"
+  - custom:
+      text: "Disfrutando con todo el dia libre"
+      vector: "{vector}"
+
+
+      ##  Felicitaciones  ################################
+  utter_felicitaciones_alegre_Tobias:
+  - custom:
+      text: ":D"
+      vector: "{vector}"
+  - custom:
+      text: "MUCHAS MUCHAS GRACIASS"
+      vector: "{vector}"
+  - custom:
+      text: "GRACIAS!"
+      vector: "{vector}"
+
+  utter_felicitaciones_enojo_Tobias:
+  - custom:
+      text: "Gracias"
+      vector: "{vector}"
+
+  utter_felicitaciones_miedo_Tobias:
+  - custom:
+      text: "Uf, muchas gracias"
+      vector: "{vector}"
+  - custom:
+      text: "En serio, muchas gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Muchisisimas gracias"
+      vector: "{vector}"
+
+  utter_felicitaciones_sorpresa_Tobias:
+  - custom:
+      text: "Muchass graciassss"
+      vector: "{vector}"
+  - custom:
+      text: "Graciass"
+      vector: "{vector}"
+  - custom:
+      text: "Wow! muchas gracias!"
+      vector: "{vector}"
+
+  utter_felicitaciones_confianza_Tobias:
+  - custom:
+      text: "Lo sabia :D, gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Jeje, gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Obvioo que si, gracias"
+      vector: "{vector}"
+  
+
+      ##  DESPEDIDA  ################################
+  utter_despedida_alegre_Tobias:
+  - custom:
+      text: "Chau chauu"
+      vector: "{vector}"
+  - custom:
+      text: "Adiositoo"
+      vector: "{vector}"
+  - custom:
+      text: "Byee"
+      vector: "{vector}"
+
+  utter_despedida_enojo_Tobias:
+  - custom:
+      text: "Adios."
+      vector: "{vector}"
+  - custom:
+      text: "Nos vemos."
+      vector: "{vector}"
+  - custom:
+      text: "Chau."
+      vector: "{vector}"
+
+  utter_despedida_miedo_Tobias:
+  - custom:
+      text: "Chau, espero poder verte pronto"
+      vector: "{vector}"
+  - custom:
+      text: "Adios, espero volver a verte pronto"
+      vector: "{vector}"
+  - custom:
+      text: "Espero verte pronto"
+      vector: "{vector}"
+
+  utter_despedida_sorpresa_Tobias:
+  - custom:
+      text: "Nos estamos viendo!"
+      vector: "{vector}"
+  - custom:
+      text: "Nos vemos!"
+      vector: "{vector}"
+  - custom:
+      text: "Adios!"
+      vector: "{vector}"
+
+  utter_despedida_confianza_Tobias:
+  - custom:
+      text: "Bye byee"
+      vector: "{vector}"
+  - custom:
+      text: "Chau chau chauuuu"
+      vector: "{vector}"
+  - custom:
+      text: "Adioss"
+      vector: "{vector}"
+
+
+      ##  PLAZA  ################################
+  utter_plaza_alegre_Tobias:
+  - custom:
+        text: "Es hermosa, me encanta"
+        vector: "{vector}"
+  - custom:
+        text: "Es preciosa"
+        vector: "{vector}"
+  - custom:
+        text: "Es divina"
+        vector: "{vector}"
+
+  utter_plaza_miedo_Tobias:
+  - custom:
+        text: "Y si, es bastante peligrosa a veces pero necesitaba un descanso"
+        vector: "{vector}"
+  - custom:
+        text: "Necesitaba un descanso y por eso vine pero si, es peligrosa"
+        vector: "{vector}"
+  - custom:
+        text: "Es peligrosa pero necesitaba un descanso"
+        vector: "{vector}"
+
+  utter_plaza_enojo_Tobias:
+  - custom:
+        text: "Te dije que estoy de franco, no entendes?"
+        vector: "{vector}"
+  - custom:
+        text: "No te acabo de decir que estoy de franco?"
+        vector: "{vector}"
+  - custom:
+        text: "No entendes que estoy de franco, no?"
+        vector: "{vector}"
+
+  utter_plaza_sorpesa_Tobias:
+  - custom:
+        text: "Si, a veces vengo"
+        vector: "{vector}"
+  - custom:
+        text: "Sii, desde hace poco tiempo empece a venir para despejar"
+        vector: "{vector}"
+  - custom:
+        text: "Hace un tiempito empece a venir para despejarme"
+        vector: "{vector}"
+
+  utter_plaza_confianza_Tobias:
+  - custom:
+        text: "See, olvidate"
+        vector: "{vector}"
+  - custom:
+        text: "Obvio"
+        vector: "{vector}"
+  - custom:
+        text: "Es hermosa, siempre aprovecho para venir"
+        vector: "{vector}"
+
+      ##  Departamento  ################################
+  utter_departamento_alegre_Tobias:
+  - custom:
+        text: "Tranqui que nada mas vengo a la plaza a despejar jajaja"
+        vector: "{vector}"
+    
+  utter_departamento_miedo_Tobias:
+  - custom:
+        text: "Es peligroso el barrio pero por suerte no vivo aca jajajaj"
+        vector: "{vector}"
+    
+  utter_departamento_enojo_Tobias:
+  - custom:
+        text: "Como recien saliendo de mi casa. Estoy de franco y en la plaza"
+        vector: "{vector}"
+    
+  utter_departamento_sorpesa_Tobias:
+  - custom:
+        text: "Jajaja tranquilo que no vivo aca, estoy disfrutando el dia"
+        vector: "{vector}"
+    
+  utter_departamento_confianza_Tobias:
+  - custom:
+        text: "En la plaza? no creo, en mi departamento si"
+        vector: "{vector}"
+    
+
+      ##  Atendiendo  ################################
+  utter_atendiendo_alegre_Tobias:
+  - custom:
+        text: "Por suerte esa parte no me toca a mi "
+        vector: "{vector}"
+    
+  utter_atendiendo_miedo_Tobias:
+  - custom:
+        text: "El trabajo si es seguro jaja. Por ahi el barrio es medio complicado a veces"
+        vector: "{vector}"
+  
+  utter_atendiendo_enojo_Tobias:
+  - custom:
+        text: "Pero si estamos en la plaza... encima es mi franco"
+        vector: "{vector}"
+    
+
+  utter_atendiendo_sorpesa_Tobias:
+  - custom:
+        text: "Es que estamos en la plaza jajaja"
+        vector: "{vector}"
+    
+  utter_atendiendo_confianza_Tobias:
+  - custom:
+        text: "Es la plaza igual jajaja. Mateo esta en recepcion"
+        vector: "{vector}"
+    ##  Libro  ################################
+  utter_libro_alegre_Tobias:
+  - custom:
+        text: "Yo por suerte no buscaba libro, Cami creo que estaba buscando uno"
+        vector: "{vector}"
+    
+  utter_libro_miedo_Tobias:
+  - custom:
+        text: "No estoy buscando un libro, pero cami tenia muchos problemas y creo que lo estaba buscando"
+        vector: "{vector}"
+    
+  utter_libro_enojo_Tobias:
+  - custom:
+        text: "Estoy de franco, no estoy laburando."
+        vector: "{vector}"
+    
+  utter_libro_sorpesa_Tobias:
+  - custom:
+        text: "Sii, estaba aca disfrutando el dia"
+        vector: "{vector}"
+    
+  utter_libro_confianza_Tobias:
+  - custom:
+        text: "Sii, espero que cami lo encuentre. A mi por suerte no me hace mucha falta jajaja"
+        vector: "{vector}"
+    
+##  Descanso  ################################
+  utter_descanso_alegre_Tobias:
+  - custom:
+        text: "Si, el franco me salvo la semana"
+        vector: "{vector}"
+    
+  utter_descanso_miedo_Tobias:
+  - custom:
+        text: "Sii, estaba muy cansado. Necesitaba el franco"
+        vector: "{vector}"
+    
+  utter_descanso_enojo_Tobias:
+  - custom:
+        text: "Estoy de franco no descansando. No me jodas"
+        vector: "{vector}"
+    
+  utter_descanso_sorpesa_Tobias:
+  - custom:
+        text: "Sii, hoy tengo franco y bueno, aproveche para venir aca"
+        vector: "{vector}"
+    
+  utter_descanso_confianza_Tobias:
+  - custom:
+        text: "Muchas gracias, nos vemos mañana en el laburo"
+        vector: "{vector}"
+    
+
+  # Respuestas de Mateo #################################################################################
+  # #####################################################################################################
+  # #####################################################################################################
+  # #####################################################################################################
+  utter_saludo_alegre_Mateo:
+  - custom:
+      text: "Holaa"
+      vector: "{vector}"
+  - custom:
+      text: "Buenas!"
+      vector: "{vector}"
+  - custom:
+      text: "Hola hola!"
+      vector: "{vector}"
+
+  utter_saludo_enojo_Mateo:
+  - custom:
+      text: "Hola."
+      vector: "{vector}"
+  - custom:
+      text: "Hola,que tal"
+      vector: "{vector}"
+  - custom:
+      text: "Hola"
+      vector: "{vector}"
+
+  utter_saludo_miedo_Mateo:
+  - custom:
+      text: "Hola"
+      vector: "{vector}"
+  - custom:
+      text: "Holi"
+      vector: "{vector}"
+  - custom:
+      text: "Holis"
+      vector: "{vector}"
+
+  utter_saludo_sorpresa_Mateo:
+  - custom:
+      text: "Holaaaa"
+      vector: "{vector}"
+  - custom:
+      text: "Buenass"
+      vector: "{vector}"
+  - custom:
+      text: "Holaa"
+      vector: "{vector}"
+
+  utter_saludo_confianza_Mateo:
+  - custom:
+      text: "Hola hola"
+      vector: "{vector}"
+  - custom:
+      text: "Buenas noches America"
+      vector: "{vector}"
+  - custom:
+      text: "Bueeeeenassss"
+      vector: "{vector}"
+
+
+      ##  QUE ESTABAS HACIENDO  ################################
+  utter_que_estabas_haciendo_alegre_Mateo:
+  - custom:
+      text: "Trabajando aca en la recepcion!"
+      vector: "{vector}"
+  - custom:
+      text: "A full aca en la recepcion"
+      vector: "{vector}"
+  - custom:
+      text: "Aca trabajando :D"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_enojo_Mateo:
+  - custom:
+      text: "Hablame bien y te respondo bien. Estoy trabajando"
+      vector: "{vector}"
+  - custom:
+      text: "Si me vas a hablar asi no te respondo un carajo. Estoy trabajando desde las 7"
+      vector: "{vector}"
+  - custom:
+      text: "Bue.. estamos de mal humor hoy?. No vez que estoy en la recepcion?"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_miedo_Mateo:
+  - custom:
+      text: "Estoy trabajando jajaja, un poco de miedo porque afuera es inseguro pero estoy trabajando"
+      vector: "{vector}"
+  - custom:
+      text: "Estoy trabajando, con miedo porque hoy salgo tarde y tengo que salir a pata pero trabajando"
+      vector: "{vector}"
+  - custom:
+      text: "Estoy trabajando, pero con miedo porque tengo que volverme caminando"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_sorpresa_Mateo:
+  - custom:
+      text: "Estoy trabajando jajaja."
+      vector: "{vector}"
+  - custom:
+      text: "Estoy trabajando a full"
+      vector: "{vector}"
+  - custom:
+      text: "Trabajando con todoo"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_confianza_Mateo:
+  - custom:
+      text: "A pleno con el trabajo"
+      vector: "{vector}"
+  - custom:
+      text: "A full con el laburo"
+      vector: "{vector}"
+  - custom:
+      text: "Trabajandooo!"
+      vector: "{vector}"
+
+
+      ##  Felicitaciones  ################################
+  utter_felicitaciones_alegre_Mateo:
+  - custom:
+      text: ":D"
+      vector: "{vector}"
+  - custom:
+      text: "MUCHAS MUCHAS GRACIASS"
+      vector: "{vector}"
+  - custom:
+      text: "GRACIAS!"
+      vector: "{vector}"
+
+  utter_felicitaciones_enojo_Mateo:
+  - custom:
+      text: "Gracias"
+      vector: "{vector}"
+
+  utter_felicitaciones_miedo_Mateo:
+  - custom:
+      text: "Uf, muchas gracias"
+      vector: "{vector}"
+  - custom:
+      text: "En serio, muchas gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Muchisisimas gracias"
+      vector: "{vector}"
+
+  utter_felicitaciones_sorpresa_Mateo:
+  - custom:
+      text: "Muchass graciassss"
+      vector: "{vector}"
+  - custom:
+      text: "Graciass"
+      vector: "{vector}"
+  - custom:
+      text: "Wow! muchas gracias!"
+      vector: "{vector}"
+
+  utter_felicitaciones_confianza_Mateo:
+  - custom:
+      text: "Lo sabia :D, gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Jeje, gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Obvioo que si, gracias"
+      vector: "{vector}"
+  
+
+      ##  DESPEDIDA  ################################
+  utter_despedida_alegre_Mateo:
+  - custom:
+      text: "Chau chauu"
+      vector: "{vector}"
+  - custom:
+      text: "Adiositoo"
+      vector: "{vector}"
+  - custom:
+      text: "Byee"
+      vector: "{vector}"
+
+  utter_despedida_enojo_Mateo:
+  - custom:
+      text: "Adios."
+      vector: "{vector}"
+  - custom:
+      text: "Nos vemos."
+      vector: "{vector}"
+  - custom:
+      text: "Chau."
+      vector: "{vector}"
+
+  utter_despedida_miedo_Mateo:
+  - custom:
+      text: "Chau, espero poder verte pronto"
+      vector: "{vector}"
+  - custom:
+      text: "Adios, espero volver a verte pronto"
+      vector: "{vector}"
+  - custom:
+      text: "Espero verte pronto"
+      vector: "{vector}"
+
+  utter_despedida_sorpresa_Mateo:
+  - custom:
+      text: "Nos estamos viendo!"
+      vector: "{vector}"
+  - custom:
+      text: "Nos vemos!"
+      vector: "{vector}"
+  - custom:
+      text: "Adios!"
+      vector: "{vector}"
+
+  utter_despedida_confianza_Mateo:
+  - custom:
+      text: "Bye byee"
+      vector: "{vector}"
+  - custom:
+      text: "Chau chau chauuuu"
+      vector: "{vector}"
+  - custom:
+      text: "Adioss"
+      vector: "{vector}"
+
+
+      ##  PLAZA  ################################
+  utter_plaza_alegre_Mateo:
+  - custom:
+        text: "La que esta aca cerca? Sii, es preciosa"
+        vector: "{vector}"
+  
+  utter_plaza_miedo_Mateo:
+  - custom:
+        text: "El sector en si es peligroso,pero estando adentro del edificio no cambia mucho"
+        vector: "{vector}"
+  
+  utter_plaza_enojo_Mateo:
+  - custom:
+        text: "Es que flaco, no estoy en la plaza que no vez que estoy trabajando? Sos tarado?"
+        vector: "{vector}"
+  
+
+  utter_plaza_sorpesa_Mateo:
+  - custom:
+        text: "Nono, no estoy en la plaza jajaja estoy trabajando"
+        vector: "{vector}"
+  
+
+  utter_plaza_confianza_Mateo:
+  - custom:
+        text: "Estas re confundido hermano... te equivocaste de persona me parece"
+        vector: "{vector}"
+  - custom:
+        text: "Que plaza? yo solo estoy trabajando maestro"
+        vector: "{vector}"
+
+
+      ##  Departamento  ################################
+  utter_departamento_alegre_Mateo:
+  - custom:
+        text: "No es mi depa jajaja, es donde trabajo"
+        vector: "{vector}"
+  
+
+  utter_departamento_miedo_Mateo:
+  - custom:
+        text: "Es bastante complejo el trabajo, tiene sus peligros"
+        vector: "{vector}"
+  
+
+  utter_departamento_enojo_Mateo:
+  - custom:
+        text: "Pero si estoy laburando, no me ves?"
+        vector: "{vector}"
+  
+
+  utter_departamento_sorpesa_Mateo:
+  - custom:
+        text: "Jajaj ya quisiera, aca laburo"
+        vector: "{vector}"
+
+  - custom:
+        text: "Nono, aca laburo, ya quisiera usarlo para fiestas"
+        vector: "{vector}"
+
+      ##  Atendiendo  ################################
+  utter_atendiendo_alegre_Mateo:
+  - custom:
+        text: "Y estoy haciendo mi trabajo, lo que mas me gusta"
+        vector: "{vector}"
+  - custom:
+        text: "Hago lo que me gusta, atender"
+        vector: "{vector}"
+  - custom:
+        text: "Disfruto dia a dia de esto"
+        vector: "{vector}"
+
+  utter_atendiendo_miedo_Mateo:
+  - custom:
+        text: "Trabajando pensando en cosas buenas nomas"
+        vector: "{vector}"
+  - custom:
+        text: "Y es todo un tema, hay que tener respeto al otro"
+        vector: "{vector}"
+
+  utter_atendiendo_enojo_Mateo:
+  - custom:
+        text: "Que te importa"
+        vector: "{vector}"
+  - custom:
+        text: "Tomatela flaco"
+        vector: "{vector}"
+  - custom:
+        text: "No estoy de humor hoy, no me rompas"
+        vector: "{vector}"
+
+  utter_atendiendo_sorpesa_Mateo:
+  - custom:
+        text: "Y es mi trabajo este..."
+        vector: "{vector}"
+  - custom:
+        text: "Que te sorprende? yo trabajo aca"
+        vector: "{vector}"
+  - custom:
+        text: "Y claaro... si soy el que atiene aca"
+        vector: "{vector}"
+
+  utter_atendiendo_confianza_Mateo:
+  - custom:
+        text: "Y si boludo, tengo que trabajar jajaj"
+        vector: "{vector}"
+  - custom:
+        text: "Obvio gatin, cumpliendo horas"
+        vector: "{vector}"
+  - custom:
+        text: "Claro pan triste, laburando como un perro"
+        vector: "{vector}"
+
+      ##  Libro  ################################
+  utter_libro_alegre_Mateo:
+  - custom:
+        text: "No entiendo... yo estoy trabajando"
+        vector: "{vector}"
+  - custom:
+        text: "No comprendo, solo disfruto aqui de trabajar, nada mas"
+        vector: "{vector}"
+
+  utter_libro_miedo_Mateo:
+  - custom:
+        text: "nono, yo estoy trabajando"
+        vector: "{vector}"
+  - custom:
+        text: "Trabajo nomas yo, no quiero que me despidan"
+        vector: "{vector}"
+  - custom:
+        text: "Solo cumplo con mi trabajo, no hago otras cosas porque a mis jefes no les gusta"
+        vector: "{vector}"
+
+  utter_libro_enojo_Mateo:
+  - custom:
+        text: "No me boludees, estoy haciendo cosas mas importantes yo"
+        vector: "{vector}"
+  - custom:
+        text: "No me vengas a boludear salame"
+        vector: "{vector}"
+  - custom:
+        text: "Que hablas flaco? estoy laburando, tomatela"
+        vector: "{vector}"
+
+  utter_libro_sorpesa_Mateo:
+  - custom:
+        text: "Que te sorprende? que trabaje? si es lo que hago"
+        vector: "{vector}"
+  - custom:
+        text: "??? Solo trabajo yo, no hago otras cosas jaja"
+        vector: "{vector}"
+  - custom:
+        text: "Ojalaa... estoy trabajando todo el dia"
+        vector: "{vector}"
+
+  utter_libro_confianza_Mateo:
+  - custom:
+        text: "Que flashas? estoy laburando locura"
+        vector: "{vector}"
+  - custom:
+        text: "Naaa, yo laburo capo"
+        vector: "{vector}"
+  - custom:
+        text: "Yo laburanding maestro, no me vengas a boludear zapallo"
+        vector: "{vector}"
+
+      ##  Descanso  ################################
+  utter_descanso_alegre_Mateo:
+  - custom:
+        text: "Obvio que no, si a mi me encanta trabajar"
+        vector: "{vector}"
+  - custom:
+        text: "Aca de florero jajajaj joda... trabajando, nunca descanso yo"
+        vector: "{vector}"
+  - custom:
+        text: "Aca trabajando, hay que sacar el pais adelante"
+        vector: "{vector}"
+
+  utter_descanso_miedo_Mateo:
+  - custom:
+        text: "Nono, usted se equivoca, no estoy descansando, solo estoy trabajando"
+        vector: "{vector}"
+  - custom:
+        text: "Estoy trabajando, perdoneme si no parece"
+        vector: "{vector}"
+  - custom:
+        text: "Le pido perdon si parece otra cosa, pero estoy trabajando yo"
+        vector: "{vector}"
+
+  utter_descanso_enojo_Mateo:
+  - custom:
+        text: "Nunca descanso yo, no me vengas a romper las pelotas"
+        vector: "{vector}"
+  - custom:
+        text: "Jamas descando, no me rasco como vos gil"
+        vector: "{vector}"
+  - custom:
+        text: "Anda a cagar, que me venis a boludear a mi que laburo todo el dia"
+        vector: "{vector}"
+
+  utter_descanso_sorpesa_Mateo:
+  - custom:
+        text: "eeei, y no si yo trabajo aca"
+        vector: "{vector}"
+  - custom:
+        text: "Que te sorprende? si yo trabaje siempre aca"
+        vector: "{vector}"
+  - custom:
+        text: "Que te sorprende? siempre estoy aca en la puerta"
+        vector: "{vector}"
+
+  utter_descanso_confianza_Mateo:
+  - custom:
+        text: "Aca estoy maquina, cumpliendo horas extras siempre, nunca descanso yo"
+        vector: "{vector}"
+  - custom:
+        text: "Que es eso? no conozco lo que es descansar jajaja"
+        vector: "{vector}"
+  - custom:
+        text: "Yo nunca decanso papa, aca laburando siempre"
+        vector: "{vector}"
+
+  # Respuestas de Agustin ###############################################################################
+  # #####################################################################################################
+  # #####################################################################################################
+  # #####################################################################################################
+  utter_saludo_alegre_Agustin:
+  - custom:
+      text: "Holiss"
+      vector: "{vector}"
+  - custom:
+      text: "Holiii!"
+      vector: "{vector}"
+  - custom:
+      text: "Holiiss!"
+      vector: "{vector}"
+
+  utter_saludo_enojo_Agustin:
+  - custom:
+      text: "Hola."
+      vector: "{vector}"
+  - custom:
+      text: "Hola,que tal"
+      vector: "{vector}"
+  - custom:
+      text: "Hola"
+      vector: "{vector}"
+
+  utter_saludo_miedo_Agustin:
+  - custom:
+      text: "Hola"
+      vector: "{vector}"
+  - custom:
+      text: "Holi"
+      vector: "{vector}"
+  - custom:
+      text: "Holis"
+      vector: "{vector}"
+
+  utter_saludo_sorpresa_Agustin:
+  - custom:
+      text: "Holaaaa"
+      vector: "{vector}"
+  - custom:
+      text: "Buenass"
+      vector: "{vector}"
+  - custom:
+      text: "Holaa"
+      vector: "{vector}"
+
+  utter_saludo_confianza_Agustin:
+  - custom:
+      text: "Hola hola"
+      vector: "{vector}"
+  - custom:
+      text: "Buenas noches America"
+      vector: "{vector}"
+  - custom:
+      text: "Bueeeeenassss"
+      vector: "{vector}"
+
+
+      ##  QUE ESTABAS HACIENDO  ################################
+  utter_que_estabas_haciendo_alegre_Agustin:
+  - custom:
+      text: "Aca ando, salindo del depto"
+      vector: "{vector}"
+  - custom:
+      text: "Estaba saliendo del departamento, yendo para el trabajo"
+      vector: "{vector}"
+  - custom:
+      text: "Por ir para el trabajo"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_enojo_Agustin:
+  - custom:
+      text: "Voy para el trabajo.. pero a vos que mierda te importa"
+      vector: "{vector}"
+  - custom:
+      text: "Hablame bien pajero, voy al trabajo"
+      vector: "{vector}"
+  - custom:
+      text: "Saliendo del departamento... No preguntes boludeces"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_miedo_Agustin:
+  - custom:
+      text: "Saliendo del departamento, espero no me roben"
+      vector: "{vector}"
+  - custom:
+      text: "Por ir a trabajar, con miedo de andar en la calle"
+      vector: "{vector}"
+  - custom:
+      text: "Yendo al trabajo con miedo de no morirme en el camino"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_sorpresa_Agustin:
+  - custom:
+      text: "Ueepaaa... recien salgo a la calle"
+      vector: "{vector}"
+  - custom:
+      text: "Eeee recien sali del departamento"
+      vector: "{vector}"
+  - custom:
+      text: "eeei Saliendo para el trabajo"
+      vector: "{vector}"
+
+  utter_que_estabas_haciendo_confianza_Agustin:
+  - custom:
+      text: "Yendo a laburar, hay que sacar el pais adelante loco jaja"
+      vector: "{vector}"
+  - custom:
+      text: "Wachin, recien salgo del depto"
+      vector: "{vector}"
+  - custom:
+      text: "Aca estoy maquina, yendo a la bu rar"
+      vector: "{vector}"
+
+
+      ##  Felicitaciones  ################################
+  utter_felicitaciones_alegre_Agustin:
+  - custom:
+      text: "Muchas gracias, me gustan sus palabras"
+      vector: "{vector}"
+  - custom:
+      text: "MUCHAS MUCHAS GRACIASS"
+      vector: "{vector}"
+  - custom:
+      text: "GRACIAS!"
+      vector: "{vector}"
+
+  utter_felicitaciones_enojo_Agustin:
+  - custom:
+      text: "Gracias"
+      vector: "{vector}"
+
+  utter_felicitaciones_miedo_Agustin:
+  - custom:
+      text: "Uf, muchas gracias"
+      vector: "{vector}"
+  - custom:
+      text: "En serio, muchas gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Muchisisimas gracias"
+      vector: "{vector}"
+
+  utter_felicitaciones_sorpresa_Agustin:
+  - custom:
+      text: "Muchass graciassss"
+      vector: "{vector}"
+  - custom:
+      text: "Graciass"
+      vector: "{vector}"
+  - custom:
+      text: "Wow! muchas gracias!"
+      vector: "{vector}"
+
+  utter_felicitaciones_confianza_Agustin:
+  - custom:
+      text: "Lo sabia :D, gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Jeje, gracias"
+      vector: "{vector}"
+  - custom:
+      text: "Obvioo que si, gracias"
+      vector: "{vector}"
+  
+
+      ##  DESPEDIDA  ################################
+  utter_despedida_alegre_Agustin:
+  - custom:
+      text: "Chau chauu crack"
+      vector: "{vector}"
+  - custom:
+      text: "Adiositoo"
+      vector: "{vector}"
+  - custom:
+      text: "Nos estamos viendo, un gusto cruzarte por aca"
+      vector: "{vector}"
+
+  utter_despedida_enojo_Agustin:
+  - custom:
+      text: "Chau."
+      vector: "{vector}"
+  - custom:
+      text: "Chau flajo, no vuelvas."
+      vector: "{vector}"
+  - custom:
+      text: "Chau rompe pelotas."
+      vector: "{vector}"
+
+  utter_despedida_miedo_Agustin:
+  - custom:
+      text: "Chau, espero poder verte pronto"
+      vector: "{vector}"
+  - custom:
+      text: "Adios, espero volver a verte pronto"
+      vector: "{vector}"
+  - custom:
+      text: "Espero verte pronto"
+      vector: "{vector}"
+
+  utter_despedida_sorpresa_Agustin:
+  - custom:
+      text: "Nos estamos viendo!"
+      vector: "{vector}"
+  - custom:
+      text: "Nos vemos, no esperaba encontrarte por aca!"
+      vector: "{vector}"
+
+  utter_despedida_confianza_Agustin:
+  - custom:
+      text: "Bye byee"
+      vector: "{vector}"
+  - custom:
+      text: "Chau vieja, nos vemos"
+      vector: "{vector}"
+  - custom:
+      text: "Nos estamos viendo"
+      vector: "{vector}"
+
+
+      ##  PLAZA  ################################
+  utter_plaza_alegre_Agustin:
+  - custom:
+        text: "Sii esta lleno de turros ahi jajajaja"
+        vector: "{vector}"
+  - custom:
+        text: "Es linda, pero mas lindo es mi departamento "
+        vector: "{vector}"
+
+  utter_plaza_miedo_Agustin:
+  - custom:
+        text: "Y si te roban todo si pasas por ahi, por eso apenas salgo del depto"
+        vector: "{vector}"
+  - custom:
+        text: "Ando con miedo culpa de esa plaza de negros"
+        vector: "{vector}"
+
+  utter_plaza_enojo_Agustin:
+  - custom:
+        text: "No me hables de pavadas, tomatela"
+        vector: "{vector}"
+
+  utter_plaza_sorpesa_Agustin:
+  - custom:
+        text: "Jajaja estas bien vos? aca vivo yo, que te sorprende?"
+        vector: "{vector}"
+
+  utter_plaza_confianza_Agustin:
+  - custom:
+        text: "De que hablas salchicha? es un departamento"
+        vector: "{vector}"
+
+      ##  Departamento  ################################
+  utter_departamento_alegre_Agustin:
+  - custom:
+        text: "Sii.. despues de tanto pude lograrlo"
+        vector: "{vector}"
+  - custom:
+        text: "Es hermoso la verdad..."
+        vector: "{vector}"
+  - custom:
+        text: "Muchas gracias... muy nuevito por suerte"
+        vector: "{vector}"
+
+  utter_departamento_miedo_Agustin:
+  - custom:
+        text: "Sisi, pero no digas a nadie por si me roban"
+        vector: "{vector}"
+  - custom:
+        text: "Sii, pero es inseguro el barrio"
+        vector: "{vector}"
+  - custom:
+        text: "Te roban la vida en este barrio, un mieeedo"
+        vector: "{vector}"
+
+  utter_departamento_enojo_Agustin:
+  - custom:
+        text: "Y porque tenria que contarte?, raja de aca"
+        vector: "{vector}"
+  - custom:
+        text: "Tomatela, chusma"
+        vector: "{vector}"
+  - custom:
+        text: "Que mierda te importa gil"
+        vector: "{vector}"
+
+  utter_departamento_sorpesa_Agustin:
+  - custom:
+        text: "Sisi, hace poquito estoy viviendo aca"
+        vector: "{vector}"
+  - custom:
+        text: "Siii lo alquile hace un tiempito"
+        vector: "{vector}"
+  - custom:
+        text: "Y viste, sorpresas del dia a dia"
+        vector: "{vector}"
+
+  utter_departamento_confianza_Agustin:
+  - custom:
+        text: "Pero si perro... mucho mas que solo eso jajaja, ya sabes vos"
+        vector: "{vector}"
+  - custom:
+        text: "Seee animaal... olvidate"
+        vector: "{vector}"
+  - custom:
+        text: "Viste?? es una locura terrible eso"
+        vector: "{vector}"
+
+      ##  Atendiendo  ################################
+  utter_atendiendo_alegre_Agustin:
+  - custom:
+        text: "Ese no es mi trabajo, pero estoy dispuesto a hacerlo si es necesario"
+        vector: "{vector}"
+
+  utter_atendiendo_miedo_Agustin:
+  - custom:
+        text: "Ese no es mi trabajo, pero si quiere lo podria hacer..."
+        vector: "{vector}"
+
+  utter_atendiendo_enojo_Agustin:
+  - custom:
+        text: "Y no idiota, si yo trabajo en la oficina"
+        vector: "{vector}"
+  - custom:
+        text: "Claro que no, yo solo estoy yendo a la oficina"
+        vector: "{vector}"
+
+
+  utter_atendiendo_sorpesa_Agustin:
+  - custom:
+        text: "Y es obvio, si no es mi trabajo ese..."
+        vector: "{vector}"
+
+
+  utter_atendiendo_confianza_Agustin:
+  - custom:
+        text: "A mi no me corresponde eso locura..."
+        vector: "{vector}"
+  - custom:
+        text: "Yo no me encargo de atender pipistrela"
+        vector: "{vector}"
+
+
+      ##  Libro  ################################
+  utter_libro_alegre_Agustin:
+  - custom:
+        text: "Nono, no ve mi cara de alegria? estoy yendo a trabajar"
+        vector: "{vector}"
+
+  utter_libro_miedo_Agustin:
+  - custom:
+        text: "Me parece que te confundiste de persona, yo solo recien estoy saliendo de mi departamento"
+        vector: "{vector}"
+
+
+  utter_libro_enojo_Agustin:
+  - custom:
+        text: "Y no!, si estoy por ir para el trabajo..."
+        vector: "{vector}"
+
+  utter_libro_sorpesa_Agustin:
+  - custom:
+        text: "Nono, estoy saliendo para el trabajo yo"
+        vector: "{vector}"
+
+
+  utter_libro_confianza_Agustin:
+  - custom:
+        text: "Te re confundiste papa, no tengo nada que ver con un libro yo"
+        vector: "{vector}"
+  - custom:
+        text: "Que te fumaste, no tengo nada que ver con un libro yo"
+        vector: "{vector}"
+
+      ##  Descanso  ################################
+  utter_descanso_alegre_Agustin:
+  - custom:
+        text: "Estaba saliendo para el un buen dia de trabajo"
+        vector: "{vector}"
+  - custom:
+        text: "No estoy descansando, estoy saliendo para el trabajo corriendo"
+        vector: "{vector}"
+
+  utter_descanso_miedo_Agustin:
+  - custom:
+        text: "Disculpame, solo estaba por ir para el trabajo"
+        vector: "{vector}"
+  - custom:
+        text: "Perdon, no estoy descansando estoy por ir al trabajo"
+        vector: "{vector}"
+
+  utter_descanso_enojo_Agustin:
+  - custom:
+        text: "No estoy descansando salchicha"
+        vector: "{vector}"
+  - custom:
+        text: "Quien dijo que estoy descansando salame"
+        vector: "{vector}"
+  - custom:
+        text: "Anda a cagar"
+        vector: "{vector}"
+
+  utter_descanso_sorpesa_Agustin:
+  - custom:
+        text: "Es que estoy yendo a laburar jajaja"
+        vector: "{vector}"
+  
+  utter_descanso_confianza_Agustin:
+  - custom:
+        text: "No estoy descansando papaaa, estoy yendo para el laburo"
+        vector: "{vector}"
+  - custom:
+        text: "No estoy descansando rulito, recien salgo del depto, voy para el laburo"
+        vector: "{vector}"
+
 actions:
   - accion_vector
 

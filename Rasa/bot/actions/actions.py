@@ -6,25 +6,8 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 import json
 
-
-
-# class ActionHelloWorld(Action):
-
-#     def name(self) -> Text:
-#         return "action_hello_world"
-
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-#         dispatcher.utter_message(text="Hello World!")
-
-#         return []
-
-# persona = 'developer1'
-
 class ActionVector(Action):
-    """Despues agregar comentario"""
+    """Esta accion se encarga de seleccionar la respuesta determinada al intent detectado por rasa, acorde a la persona que interpreta el asistente"""
 
     def name(self) -> Text:
         return "accion_vector"
@@ -37,15 +20,17 @@ class ActionVector(Action):
   
         emocion = tracker.current_state()['latest_message']['response_selector']['default']['response']['responses'][0]['text'].split('/')[1]
 
-        print("Sender: ", tracker.current_state()['sender_id'])
+        sender_id = tracker.current_state()['sender_id']
+
+        print("Sender: ", sender_id)
         print("Intent detectado: ", ultimo_intent)
         print("Emocion detectada: ", emocion)
 
-        accion_a_responder = "utter_" + ultimo_intent + "_" + emocion 
+        accion_a_responder = "utter_" + ultimo_intent + "_" + emocion + "_" + sender_id
         
         index = self.get_mood(emocion)
         print("INDEX: ", index)
-        vectorResultado = self.calcularVector(tracker.current_state()['sender_id'], index)
+        vectorResultado = self.calcularVector(sender_id, index)
 
         print("Vector resultado: ", vectorResultado)
         print("Accion a responder: ", accion_a_responder) 
