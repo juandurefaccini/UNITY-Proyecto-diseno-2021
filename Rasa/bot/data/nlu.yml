@@ -10,7 +10,6 @@ nlu:
     - Hola!
     - Buen dia!
     - Buenas tardes!
-
 - intent: saludo/enojo
   examples: |
     - Hola flaca.
@@ -18,25 +17,21 @@ nlu:
     - Hola flaco.
     - Buen dia.
     - Buenas tardes.
-
 - intent: saludo/miedo
   examples: |
     - Hola
     - Hola...
     - Buenas...
-
 - intent: saludo/sorpresa
   examples: |
     - Holaaa, tanto tiempo
     - Holaaa, que tal?
     - Holaaa, que onda?
-
 - intent: saludo/confianza
   examples: |
     - Buueeenass
     - Buen dia cheee
     - Buenas tardessss
-
  #INTENTS DE QUEHICISTE
  #
  #
@@ -57,15 +52,11 @@ nlu:
     - Que mierda haces aca y no trabajando?
     - Que haces aca y porque mierda no estas trabajando?
     - Porque no estas trabajando? que haces aca??
-
-
 - intent: que_estabas_haciendo/miedo
   examples: |
       - Estas bien? Que raro que no estas trabajando? Paso algo??
       - Paso algo que no estas trabajando?
       - Estas bien?? paso algo que no estas trabajando??
-
-
 - intent: que_estabas_haciendo/sorpresa
   examples: |
     - Que justo te vi!, Que estabas haciendo??
@@ -78,68 +69,56 @@ nlu:
     - Que haces locura, Que hacias?
     - Que hacess, Que andabas haciendo??
     
-
 - intent: felicitaciones/alegre
   examples: |
     - Felicidades!
     - Felicitacionesss
     - Felicidades
-
 - intent: felicitaciones/enojo
   examples: |
     - bien flaca.
     - bien flaco.
     - Bien pibe.
     - bien.
-
 - intent: felicitaciones/miedo
   examples: |
     - Muy bien hecho...
     - bien hecho...
     - Buen trabajo...
     - Bien hecho...
-
-
 - intent: felicitaciones/sorpresa
   examples: |
     - Que nivel! felicitaciones
     - Noo que bienn,Felicitaciones
     - Que biennn, Felicidades
-
 - intent: felicitaciones/confianza
   examples: |
     - Felicidadessss geniaa
     - Felicitaciones capooo
     - Felicidades titan
-
 - intent: despedida/alegre
   examples: |
     - Chau chauuuu
     - Chauuu
     - Hasta luegooo
     
-
 - intent: despedida/miedo
   examples: |
     - nos vemos...
     - adios...
-
 - intent: despedida/enojo
   examples: |
     - chau.
     - adios.
-
 - intent: despedida/sorpresa
   examples: |
     - Fue una sorpresa verte!
     - Nos vemos! espero verte pronto
     - Espero verte pronto!
-
 - intent: despedida/confianza
   examples: |
     - Nos re vimoss
     - Chauuuuuuu
-
     
 #### plaza ####
 
@@ -167,15 +146,11 @@ nlu:
     - Que raro verte en esta plaza!
     - Que sorpresa verte en esta plaza
     - Que justo te veo en la plaza!
-
 - intent: plaza/confianza
   examples: |
     - Jajaja siempre en la plaza vos
     - Siempre disfrutando en la plaza vos
     - Jajaja, yo sabia que ibas a estar en la plaza
-
-
-
 ## Departamento ##
 
 
@@ -200,23 +175,18 @@ nlu:
     - Que mierda haces en el departamento?
     - Que haces recien saliendo de tu casa y no laburando?
     - Que haces aca en tu casa y no trabajando??
-
 - intent: departamento/sorpresa
   examples: |
     - Que sorpresa verte en el departamento!
     - Que raro verte en el departamento!
     - Noo, no sabia que vivias aca!
     - Que bien! vivis re cerca del laburo
-
 - intent: departamento/confianza
   examples: |
     - Pero que pedazo de departamento, parece un palacio
     - Que bien! que pedazo de departamento
     - Debes armarte altas fiestas en este depto
     - Que pedazo de departamento 
-
-
-
 ## Atendiendo la entrada de la empresa ##
 
 
@@ -241,23 +211,18 @@ nlu:
     - Que mierda haces atendiendo? y no arriba laburando
     - Que haces aca abajo en recepcion y no arriba laburando
     - Porque estas aca en la recepcion y no laburando
-
 - intent: atendiendo/sorpresa
   examples: |
     - Que sorpresa verte aca trabajando en recepcion!
     - Que raro te veo en la recepcion!
     - No sabia que estabas aca abajo en la recepcion!
     - Que raro encontrarte aca abajo en recepcion
-
 - intent: atendiendo/confianza
   examples: |
     - Es una bomba la recepcion!
     - Que bien! que pedazo de recepcion
     - Yo sabia que ibas a estar aca abajo en la recepcion
     - Jajaja yo sabia que te iba a encontrar aca en recepcion
-
-
-
 ## Buscando un libro ##
 
 
@@ -282,24 +247,18 @@ nlu:
     - Que mierda haces buscando el libro? porque no pedis ayuda
     - y si te pones a laburar y pedis ayuda?
     - y no es mas facil pedir ayuda y no perder media hora buscando un libro?
-
 - intent: libro/sorpresa
   examples: |
     - Ahora veo porque no estabas en el tu oficina
     - Ahora entiendo porque no estabas en tu escritorio
     - Con razon no te encontraba en tu escritorio!
     - Con razon no te encontraba en la compu
-
 - intent: libro/confianza
   examples: |
     - Tranqui que ya va a aparecer ese libro
     - Tranqui que ya lo vas a encontrar
     - Ya lo vas a encontrar, no te preocupes
     - vas a ver que lo vas a encontrar, no te preocupes
-
-
-
-
 ## Tomando un descanso del laburo ##
 
 
@@ -324,14 +283,12 @@ nlu:
     - Bueno, no descansaste ya? metete a laburar
     - Bueno, capaz que suficiente descanso por ahora. Ponete a laburar
     - Mucho descansito y poco laburo
-
 - intent: descanso/sorpresa
   examples: |
     - Ahora veo porque no estabas arriba. Mejor que estes descansando un poco
     - Ahora entiendo porque no estabas arriba. Estabas descansando aca
     - Con razon no estabas arriba. Esta perfecto
     - Con razon no te encontraba en la oficina. Esta bien, descansa
-
 - intent: descanso/confianza
   examples: |
     - Tranquilo, metele al descanso un rato que hace falta a veces
@@ -339,4 +296,3 @@ nlu:
     - Descansaa, asi despues te comes todas las tasks
     - Tranquilo papa, descansa nomas. Ya se van a solucionar esos problemas
     - Buenisimo, esos descansitos ayudan una bocha
-

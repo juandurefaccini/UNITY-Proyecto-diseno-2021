@@ -8,6 +8,7 @@ namespace UnityWithRasaDemoScene
     public class EmotionInterpreter : MonoBehaviour
     {
         public TuplaScriptableObject[] anim;
+        public TuplaScriptableObject[] Facialanim;
 
         private void Start()
         {
@@ -18,8 +19,32 @@ namespace UnityWithRasaDemoScene
         {
             var parsedVector = ParseVector(vector);
             List<Tupla> conjGanador = MatchingVector(parsedVector, new List<TuplaScriptableObject>(anim));
-            return BlockQueueGenerator.GetBlockQueue(conjGanador);
+            String triggerFacial = MatchingFacial(parsedVector, new List<TuplaScriptableObject>(Facialanim));
+            return BlockQueueGenerator.GetBlockQueue(conjGanador, triggerFacial);
         }
+
+        private String MatchingFacial(double[] vector, List<TuplaScriptableObject> facialAnims)
+        {
+            TuplaScriptableObject sol1 = new TuplaScriptableObject()
+            {
+                Vector = new double[] { 10, 10, 10, 10, 10 },
+                tupla = new Tupla()
+                {
+                    Trigger = null,
+                    Layer = null,
+                }
+
+            };
+            foreach (TuplaScriptableObject tupla in facialAnims)
+            {
+                if (diferencia(vector, tupla.Vector) < diferencia(vector, sol1.Vector))
+                {
+                    sol1 = tupla;
+                }
+            }
+            return sol1.tupla.Trigger;
+        }
+
         public double diferencia(double[] v, double[] vector)
         {
             double aux = System.Math.Abs(vector[0] - v[0] + vector[1] - v[1] + vector[2] - v[2] + vector[3] - v[3] + vector[4] -
