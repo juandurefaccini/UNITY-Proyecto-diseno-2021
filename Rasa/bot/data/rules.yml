@@ -41,3 +41,9 @@ rules:
   steps:
   - intent: descanso
   - action: accion_vector
+
+- rule: libro
+  steps: 
+  - intent: libro
+  - action: accion_vector
+  
