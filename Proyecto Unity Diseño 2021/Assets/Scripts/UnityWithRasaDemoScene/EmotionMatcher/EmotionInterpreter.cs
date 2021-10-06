@@ -2,100 +2,44 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using AnimatorComposerStructures;
+using System.Linq;
 
 namespace UnityWithRasaDemoScene
 {
     public class EmotionInterpreter : MonoBehaviour
     {
-        public TuplaScriptableObject[] anim;
+        private BibliotecaAnimaciones bibliotecaAnimaciones;
+        private BlockQueueGenerator blockQueueGenerator;
+        private EmotionDictonary emotionDictonary;
         public TuplaScriptableObject[] Facialanim;
-
-        private void Start()
-        {
-            // anim = Resources.LoadAll("ScriptableObjects/TriggersEmotions", typeof(TuplaScriptableObject)) as TuplaScriptableObject[];
-        }
 
         public BlockQueue GetBlockQueue(string vector)
         {
-            var parsedVector = ParseVector(vector);
-            List<Tupla> conjGanador = MatchingVector(parsedVector, new List<TuplaScriptableObject>(anim));
-            String triggerFacial = MatchingFacial(parsedVector, new List<TuplaScriptableObject>(Facialanim));
-            return BlockQueueGenerator.GetBlockQueue(conjGanador, triggerFacial);
-        }
-
-        private String MatchingFacial(double[] vector, List<TuplaScriptableObject> facialAnims)
-        {
-            TuplaScriptableObject sol1 = new TuplaScriptableObject()
+            double[] parsedVector = ParseVector(vector); // Parse the vector
+            List<TuplaScriptableObject> bestTriggers = new List<TuplaScriptableObject>(); // List of the best triggers
+            string emocion = emotionDictonary.GetEmotionBySum(parsedVector.Sum()); // Get the emotion by the sum of the vector
+            Dictionary<string, List<TuplaScriptableObject>> triggers = bibliotecaAnimaciones.GetTriggersByEmocion(emocion); // Obtengo la animacion a partir del indice
+            foreach (List<TuplaScriptableObject> lista in triggers.Values)
             {
-                Vector = new double[] { 10, 10, 10, 10, 10 },
-                tupla = new Tupla()
-                {
-                    Trigger = null,
-                    Layer = null,
-                }
-
-            };
-            foreach (TuplaScriptableObject tupla in facialAnims)
-            {
-                if (diferencia(vector, tupla.Vector) < diferencia(vector, sol1.Vector))
-                {
-                    sol1 = tupla;
-                }
+                bestTriggers.Add(GetBestMatchTrigger(lista, parsedVector));
             }
-            return sol1.tupla.Trigger;
+            return blockQueueGenerator.GetBlockQueue(bestTriggers);
         }
 
-        public double diferencia(double[] v, double[] vector)
+        private TuplaScriptableObject GetBestMatchTrigger(List<TuplaScriptableObject> lista, double[] vector)
+        {
+            List<TuplaScriptableObject> lista_copia = new List<TuplaScriptableObject>(lista);
+            TuplaScriptableObject bestTrigger = lista_copia.Select(q => new { Matching = diferencia(q.Vector, vector), Tupla = q }).OrderBy(q => q.Matching).First().Tupla;
+            return bestTrigger;
+        }
+
+        private double diferencia(double[] v, double[] vector)
         {
             double aux = System.Math.Abs(vector[0] - v[0] + vector[1] - v[1] + vector[2] - v[2] + vector[3] - v[3] + vector[4] -
                                   v[4]);
             return aux;
         }
 
-        public List<Tupla> MatchingVector(double[] vector, List<TuplaScriptableObject> lista)
-        {
-            TuplaScriptableObject sol1 = new TuplaScriptableObject()
-            {
-                Vector = new double[] { 10, 10, 10, 10, 10 },
-                tupla = new Tupla()
-                {
-                    Trigger = null,
-                    Layer = null,
-                }
-
-            };
-            TuplaScriptableObject sol2 = new TuplaScriptableObject()
-            {
-                Vector = new double[] { 10, 10, 10, 10, 10 },
-                tupla = new Tupla()
-                {
-                    Trigger = null,
-                    Layer = null,
-                }
-            };
-            foreach (TuplaScriptableObject t in lista)
-            {
-                if (diferencia(vector, t.Vector) < diferencia(vector, sol1.Vector))
-                {
-                    sol1 = t;
-                }
-                else if (diferencia(vector, t.Vector) < diferencia(vector, sol2.Vector))
-                {
-                    sol2 = t;
-                }
-            }
-
-            List<Tupla> aux = new List<Tupla>();
-            if (sol1.tupla.Trigger != null)
-            {
-                aux.Add(sol1.tupla);
-            }
-            if (sol2.tupla.Trigger != null)
-            {
-                aux.Add(sol2.tupla);
-            }
-            return aux;
-        }
 
         private double[] ParseVector(string vector)
         {
