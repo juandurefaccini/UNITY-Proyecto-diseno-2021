@@ -35,8 +35,7 @@ namespace UnityWithRasaDemoScene
 
         private double diferencia(double[] v, double[] vector)
         {
-            double aux = System.Math.Abs(vector[0] - v[0] + vector[1] - v[1] + vector[2] - v[2] + vector[3] - v[3] + vector[4] -
-                                  v[4]);
+            double aux = System.Math.Abs(vector[0] - v[0] + vector[1] - v[1] + vector[2] - v[2] + vector[3] - v[3] + vector[4] - v[4]);
             return aux;
         }
 

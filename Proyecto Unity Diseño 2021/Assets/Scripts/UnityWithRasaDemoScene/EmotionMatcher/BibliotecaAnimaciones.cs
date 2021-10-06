@@ -2,9 +2,9 @@ using System.Collections.Generic;
 
 namespace UnityWithRasaDemoScene
 {
-    public class BibiliotecaAnimaciones
+    public class BibliotecaAnimaciones
     {
-        public BibiliotecaAnimaciones()
+        public BibliotecaAnimaciones()
         {
 
         }
