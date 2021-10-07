@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdfc42e492294c49a87005f978bbb1b3, type: 3}
-  m_Name: TristeFace
+  m_Name: Dolor
   m_EditorClassIdentifier: 
   Vector:
-  - 1.6
+  - 1.1
   - 0
   - 0
   - 0
   - 0
-  tupla: {fileID: 11400000, guid: 6598ea166af9d95a0bd69416d7999213, type: 2}
+  tupla: {fileID: 11400000, guid: c2a7ca07066b8364ba724dd61cab1a60, type: 2}
