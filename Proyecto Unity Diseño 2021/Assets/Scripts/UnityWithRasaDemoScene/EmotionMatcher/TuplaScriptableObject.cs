@@ -10,7 +10,7 @@ namespace UnityWithRasaDemoScene
     public class TuplaScriptableObject : ScriptableObject
     {
         public double[] Vector;
-        public Tupla tupla;
+        public String Trigger;
     }
     
     
