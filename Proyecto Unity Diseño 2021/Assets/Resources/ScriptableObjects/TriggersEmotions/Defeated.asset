@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Defeated
   m_EditorClassIdentifier: 
   Vector:
-  - 1.5
+  - 1.6
   - 0
   - 0
   - 0

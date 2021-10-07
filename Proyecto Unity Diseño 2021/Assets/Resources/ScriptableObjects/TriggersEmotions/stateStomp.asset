@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: stateStomp
   m_EditorClassIdentifier: 
   Vector:
-  - 0.95
+  - 0.98
   - 0
   - 0
   - 0

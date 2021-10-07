@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: stateFistPump
   m_EditorClassIdentifier: 
   Vector:
-  - 2.9
+  - 2.85
   - 0
   - 0
   - 0
