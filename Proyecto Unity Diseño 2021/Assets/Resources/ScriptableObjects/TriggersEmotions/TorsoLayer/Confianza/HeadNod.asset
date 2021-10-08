@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: HeadNod
   m_EditorClassIdentifier: 
   Vector:
-  - 4.4
-  - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 5a67d2e12bc528d4f836348144c282bf, type: 2}
+  - 0.4
+  - 1
+  - 1
+  - 1
+  - 1
   Trigger: HeadNod

@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: LookingDown
   m_EditorClassIdentifier: 
   Vector:
-  - 1.7
+  - 0.7
+  - 0.8
   - 0
+  - 0.2
   - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 6ca1bd38d4bc8d142914e70093c16896, type: 2}
   Trigger: LookingDown

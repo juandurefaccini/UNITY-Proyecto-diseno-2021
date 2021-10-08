@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: ConfianzaFace
   m_EditorClassIdentifier: 
   Vector:
-  - 4.5
-  - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: cdb835f94b83e218a95660fdc514ffba, type: 2}
+  - 0.75
+  - 0.6
+  - 1
+  - 1
+  - 1
   Trigger: ConfianzaFace

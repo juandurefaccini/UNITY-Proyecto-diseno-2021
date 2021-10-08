@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: stateCrossArms
   m_EditorClassIdentifier: 
   Vector:
-  - 0.3
+  - 0.2
+  - 0.1
   - 0
   - 0
   - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 817b9801e04799942b2a294cea8608fd, type: 2}
   Trigger: CrossArms

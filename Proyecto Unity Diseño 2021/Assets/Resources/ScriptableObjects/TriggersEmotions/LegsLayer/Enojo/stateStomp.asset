@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: stateStomp
   m_EditorClassIdentifier: 
   Vector:
-  - 0.98
+  - 0.8
+  - 0.18
   - 0
   - 0
   - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 5d000368cb46faf4c8306feb85c2c2d4, type: 2}
   Trigger: Stomp

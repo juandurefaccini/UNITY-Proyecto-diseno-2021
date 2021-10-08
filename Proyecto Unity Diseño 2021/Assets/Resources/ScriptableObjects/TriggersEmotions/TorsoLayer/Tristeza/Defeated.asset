@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Defeated
   m_EditorClassIdentifier: 
   Vector:
-  - 1.6
+  - 0.3
+  - 1
   - 0
   - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 5700ca3b5c595bf4ea9223777138154e, type: 2}
+  - 0.3
   Trigger: Defeated

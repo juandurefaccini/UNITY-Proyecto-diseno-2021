@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Canchero Face
   m_EditorClassIdentifier: 
   Vector:
-  - 4.5
-  - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: c5ccf54defd15d15fbdab73dd01d8c9b, type: 2}
+  - 0.75
+  - 0.75
+  - 1
+  - 1
+  - 1
   Trigger: CancheroFace

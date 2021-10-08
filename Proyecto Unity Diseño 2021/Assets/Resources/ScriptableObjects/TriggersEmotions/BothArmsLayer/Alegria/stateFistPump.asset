@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: stateFistPump
   m_EditorClassIdentifier: 
   Vector:
-  - 2.85
-  - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 647298ec70f87f64bb2f8d5c7ec29e12, type: 2}
+  - 0.1
+  - 0.15
+  - 1
+  - 0.6
+  - 1
   Trigger: FistPump

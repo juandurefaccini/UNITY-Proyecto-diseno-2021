@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: stateScratchHeadL
   m_EditorClassIdentifier: 
   Vector:
-  - 3.81
-  - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 1210415f139fecc47a864f52b3e2312c, type: 2}
+  - 0.33
+  - 1
+  - 0.5
+  - 1
+  - 1
   Trigger: ScratchHeadL

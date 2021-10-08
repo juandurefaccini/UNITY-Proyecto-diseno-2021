@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: LlantoFace
   m_EditorClassIdentifier: 
   Vector:
-  - 1.5
+  - 0.1
+  - 1
   - 0
+  - 0.4
   - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 5adab6b3402d3414d89e9623a135164c, type: 2}
   Trigger: LlantoFace

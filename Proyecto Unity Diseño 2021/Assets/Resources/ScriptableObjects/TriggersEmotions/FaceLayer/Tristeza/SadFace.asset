@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: SadFace
   m_EditorClassIdentifier: 
   Vector:
-  - 1.8
+  - 0.4
+  - 1
   - 0
+  - 0.4
   - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 4d72bbe39ae0fc208965e1f5f0743e14, type: 2}
   Trigger: SadFace

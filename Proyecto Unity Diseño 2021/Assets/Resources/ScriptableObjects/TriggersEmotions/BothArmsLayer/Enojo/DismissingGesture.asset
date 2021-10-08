@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DismissingGesture
   m_EditorClassIdentifier: 
   Vector:
-  - 0.9
+  - 0.8
   - 0
   - 0
   - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 6de05d63ba7461c4a9c97b0be2d080ae, type: 2}
+  - 0.1
+  Trigger: 

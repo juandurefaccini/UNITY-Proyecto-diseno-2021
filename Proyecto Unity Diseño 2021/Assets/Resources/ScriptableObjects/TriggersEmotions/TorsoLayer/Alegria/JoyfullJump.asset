@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: JoyfullJump
   m_EditorClassIdentifier: 
   Vector:
-  - 2.9
   - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 9d87811de6aa05e448ce1f16ca50ce08, type: 2}
+  - 0.1
+  - 1
+  - 0.8
+  - 1
   Trigger: JoyfullJump

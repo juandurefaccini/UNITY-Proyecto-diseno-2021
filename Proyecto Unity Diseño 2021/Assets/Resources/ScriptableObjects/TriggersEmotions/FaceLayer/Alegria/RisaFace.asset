@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: RisaFace
   m_EditorClassIdentifier: 
   Vector:
-  - 2.9
   - 0
   - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: e92804d9c9d6488479e6ec326c5eeb74, type: 2}
+  - 1
+  - 1
+  - 0.9
   Trigger: RisaFace

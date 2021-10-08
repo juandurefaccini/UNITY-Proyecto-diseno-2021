@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Dolor Face
   m_EditorClassIdentifier: 
   Vector:
-  - 1.1
   - 0
+  - 1
   - 0
+  - 0.1
   - 0
-  - 0
-  tupla: {fileID: 11400000, guid: c2a7ca07066b8364ba724dd61cab1a60, type: 2}
   Trigger: Dolor

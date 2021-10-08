@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: ElGrito
   m_EditorClassIdentifier: 
   Vector:
-  - 3.2
-  - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: a48d5c7dc4c633c4785f9d38968dd293, type: 2}
+  - 1
+  - 1
+  - 0.1
+  - 1
+  - 0.1
   Trigger: ElGrito

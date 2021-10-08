@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: AngryFace
   m_EditorClassIdentifier: 
   Vector:
-  - 0.5
+  - 0.4
+  - 0.1
   - 0
   - 0
   - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 80e0326ec5d0411f2853b0dfca7210a9, type: 2}
   Trigger: AngryFace

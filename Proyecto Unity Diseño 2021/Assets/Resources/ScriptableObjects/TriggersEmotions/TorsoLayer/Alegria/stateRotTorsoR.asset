@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: stateRotTorsoR
   m_EditorClassIdentifier: 
   Vector:
-  - 2.11
+  - 0.06
+  - 0.05
+  - 1
+  - 1
   - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: e14dbe6af0eb8864da278dc524edc41d, type: 2}
   Trigger: RotTorsoR

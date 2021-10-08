@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Disbelief
   m_EditorClassIdentifier: 
   Vector:
-  - 3.5
-  - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 4197f7ae8e2a12b418888b3c9516551b, type: 2}
+  - 0.5
+  - 0.5
+  - 0.5
+  - 1
+  - 1
   Trigger: Disbelief

@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: AngryGesture
   m_EditorClassIdentifier: 
   Vector:
-  - 0.98
+  - 0.8
   - 0
   - 0
   - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 7a4a4dbe3a2293b4698374dcdcdc01a6, type: 2}
+  - 0.18
   Trigger: AngryGesture

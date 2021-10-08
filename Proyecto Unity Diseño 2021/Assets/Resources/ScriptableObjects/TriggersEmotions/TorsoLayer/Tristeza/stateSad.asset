@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: stateSad
   m_EditorClassIdentifier: 
   Vector:
-  - 1.9
+  - 0.4
+  - 1
   - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 19ecc5403c75aa74b8cbf774a5c0bbdd, type: 2}
+  - 0.3
+  - 0.1
   Trigger: Sad

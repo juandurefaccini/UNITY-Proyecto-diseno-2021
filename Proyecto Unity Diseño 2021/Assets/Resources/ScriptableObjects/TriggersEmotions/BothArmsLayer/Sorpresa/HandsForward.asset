@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: HandsForward
   m_EditorClassIdentifier: 
   Vector:
-  - 3.5
-  - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 978a3e01a6ad61f4482755b2720b73c4, type: 2}
+  - 0.5
+  - 0.5
+  - 0.6
+  - 1
+  - 1
   Trigger: HandsForward

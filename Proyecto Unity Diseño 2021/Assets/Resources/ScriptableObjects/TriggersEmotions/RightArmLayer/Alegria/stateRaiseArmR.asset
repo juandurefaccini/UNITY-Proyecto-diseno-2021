@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: stateRaiseArmR
   m_EditorClassIdentifier: 
   Vector:
-  - 2.051
+  - 0.0001
   - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: e9eb5de0ffe677e4fadf19f9cff6cb9e, type: 2}
+  - 1
+  - 1
+  - 0.05
   Trigger: RaiseArmR

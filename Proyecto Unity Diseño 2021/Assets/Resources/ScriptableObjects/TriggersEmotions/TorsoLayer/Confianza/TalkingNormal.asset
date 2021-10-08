@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: TalkingNormal
   m_EditorClassIdentifier: 
   Vector:
-  - 4.4
-  - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: e816fa51de8c9104cb5f644c4348e722, type: 2}
+  - 0.4
+  - 1
+  - 1
+  - 1
+  - 1
   Trigger: Talking2

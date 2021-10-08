@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: HappyHandGesture
   m_EditorClassIdentifier: 
   Vector:
-  - 2.3
+  - 0.1
   - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 3835fe81a3475094bad9d1ed9cfe263a, type: 2}
+  - 1
+  - 0.2
+  - 1
   Trigger: HappyHandGesture

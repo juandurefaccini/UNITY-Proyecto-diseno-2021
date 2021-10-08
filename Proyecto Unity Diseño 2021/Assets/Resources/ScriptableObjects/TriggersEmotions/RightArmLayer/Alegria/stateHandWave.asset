@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: stateHandWave
   m_EditorClassIdentifier: 
   Vector:
-  - 2.35
+  - 0.05
   - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: e05fb0a96a1fc2d4aaf331c1dd2d371b, type: 2}
+  - 1
+  - 0.3
+  - 1
   Trigger: HandWave

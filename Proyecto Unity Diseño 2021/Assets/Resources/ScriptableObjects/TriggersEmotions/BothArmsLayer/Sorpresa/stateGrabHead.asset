@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: stateGrabHead
   m_EditorClassIdentifier: 
   Vector:
-  - 3.9
-  - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 3bc3fc5f214653b4d8b3bc4cee9a0163, type: 2}
+  - 1
+  - 0.5
+  - 0.4
+  - 1
+  - 1
   Trigger: GrabHead

@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Happy1
   m_EditorClassIdentifier: 
   Vector:
-  - 2.95
-  - 0
-  - 0
-  - 0
-  - 0
-  tupla: {fileID: 11400000, guid: 5bed21bdd5cde76429b90f758ac2284f, type: 2}
+  - 0.2
+  - 0.2
+  - 1
+  - 0.55
+  - 1
   Trigger: Happy1

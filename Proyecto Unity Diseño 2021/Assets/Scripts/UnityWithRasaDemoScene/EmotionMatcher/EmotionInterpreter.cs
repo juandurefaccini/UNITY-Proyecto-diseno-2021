@@ -18,7 +18,7 @@ namespace UnityWithRasaDemoScene
         public BlockQueue GetBlockQueue(string vector)
         {
             var parsedVector = ParseVector(vector);
-            List<Tupla> conjGanador = MatchingVector(parsedVector, new List<TuplaScriptableObject>(anim));
+            List<TuplaScriptableObject> conjGanador = MatchingVector(parsedVector, new List<TuplaScriptableObject>(anim));
             String triggerFacial = MatchingFacial(parsedVector, new List<TuplaScriptableObject>(Facialanim));
             return BlockQueueGenerator.GetBlockQueue(conjGanador, triggerFacial);
         }
@@ -28,12 +28,6 @@ namespace UnityWithRasaDemoScene
             TuplaScriptableObject sol1 = new TuplaScriptableObject()
             {
                 Vector = new double[] { 10, 10, 10, 10, 10 },
-                tupla = new Tupla()
-                {
-                    Trigger = null,
-                    Layer = null,
-                }
-
             };
             foreach (TuplaScriptableObject tupla in facialAnims)
             {
@@ -42,7 +36,7 @@ namespace UnityWithRasaDemoScene
                     sol1 = tupla;
                 }
             }
-            return sol1.tupla.Trigger;
+            return sol1.Trigger;
         }
 
         public double diferencia(double[] v, double[] vector)
@@ -52,26 +46,17 @@ namespace UnityWithRasaDemoScene
             return aux;
         }
 
-        public List<Tupla> MatchingVector(double[] vector, List<TuplaScriptableObject> lista)
+        public List<TuplaScriptableObject> MatchingVector(double[] vector, List<TuplaScriptableObject> lista)
         {
             TuplaScriptableObject sol1 = new TuplaScriptableObject()
             {
                 Vector = new double[] { 10, 10, 10, 10, 10 },
-                tupla = new Tupla()
-                {
-                    Trigger = null,
-                    Layer = null,
-                }
-
+                Trigger= null,
             };
             TuplaScriptableObject sol2 = new TuplaScriptableObject()
             {
                 Vector = new double[] { 10, 10, 10, 10, 10 },
-                tupla = new Tupla()
-                {
-                    Trigger = null,
-                    Layer = null,
-                }
+                Trigger= null,
             };
             foreach (TuplaScriptableObject t in lista)
             {
@@ -85,14 +70,14 @@ namespace UnityWithRasaDemoScene
                 }
             }
 
-            List<Tupla> aux = new List<Tupla>();
-            if (sol1.tupla.Trigger != null)
+            List<TuplaScriptableObject> aux = new List<TuplaScriptableObject>();
+            if (sol1.Trigger != null)
             {
-                aux.Add(sol1.tupla);
+                aux.Add(sol1);
             }
-            if (sol2.tupla.Trigger != null)
+            if (sol2.Trigger != null)
             {
-                aux.Add(sol2.tupla);
+                aux.Add(sol2);
             }
             return aux;
         }
