@@ -1,4 +1,6 @@
 using System;
+using System.IO; // Para directory
+using System.Linq; // Para parsear el nombre de la carpeta de un path
 using System.Collections.Generic;
 using UnityEngine;
 using AnimatorComposerStructures;
@@ -9,10 +11,43 @@ namespace UnityWithRasaDemoScene
     {
         public TuplaScriptableObject[] anim;
         public TuplaScriptableObject[] Facialanim;
+        public Dictionary<String,Dictionary<String,List<TuplaScriptableObject>>> animations;
 
         private void Start()
         {
-            // anim = Resources.LoadAll("ScriptableObjects/TriggersEmotions", typeof(TuplaScriptableObject)) as TuplaScriptableObject[];
+            //Cargar un mapa de layers
+            animations = new Dictionary<String,Dictionary<String,List<TuplaScriptableObject>>>();
+            String animationpath = Directory.GetCurrentDirectory();
+            animationpath = animationpath + @"\Assets\Resources\ScriptableObjects\TriggersEmotions"; // @ me deja insertar \ sin que se considere especial
+            string[] layerEntries = Directory.GetDirectories(animationpath);
+            //Por cada layer en Resources/ScriptableObjects/TriggersEmotions
+            foreach (String layerpath in layerEntries)
+            {
+                String layer = layerpath.Split(Path.DirectorySeparatorChar).Last();
+                animations.Add(layer, new Dictionary<String,List<TuplaScriptableObject>>());
+                string[] emotionEntries = Directory.GetDirectories(layerpath);
+                //Por cada emocion en una layer, cargar su coleccion de scriptable objects
+                foreach (String emotionpath in emotionEntries)
+                {
+                        String emotion = emotionpath.Split(Path.DirectorySeparatorChar).Last();
+                        animations[layer].Add(emotion, new List<TuplaScriptableObject>());
+                        String resourcespath = @"ScriptableObjects\TriggersEmotions";
+                        try // No es necesario, ahora LoadAll retorna una lista vacia y no null.
+                        {
+                            TuplaScriptableObject[] listTuplas = (TuplaScriptableObject[])Resources.LoadAll<TuplaScriptableObject>(resourcespath + @"\" + layer + @"\" + emotion);
+                            foreach (TuplaScriptableObject tupla in listTuplas)
+                            {
+                                animations[layer][emotion].Add(tupla);
+                            }
+                            Debug.Log(layer + @"\" + emotion + " posee " + animations[layer][emotion].Count + " tuplas");
+                        }
+                        catch 
+                        {
+                            Debug.Log("No hay animaciones para " + layer + " en la emocion " + emotion);
+                        }
+                }
+            }
+
         }
 
         public BlockQueue GetBlockQueue(string vector)
