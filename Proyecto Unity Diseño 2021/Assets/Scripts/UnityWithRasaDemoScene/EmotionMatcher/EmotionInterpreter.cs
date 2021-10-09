@@ -20,7 +20,7 @@ namespace UnityWithRasaDemoScene
             var parsedVector = ParseVector(vector);
             List<TuplaScriptableObject> conjGanador = MatchingVector(parsedVector, new List<TuplaScriptableObject>(anim));
             String triggerFacial = MatchingFacial(parsedVector, new List<TuplaScriptableObject>(Facialanim));
-            return BlockQueueGenerator.GetBlockQueue(conjGanador, triggerFacial);
+            return BlockQueueGenerator.GetBlockQueue(conjGanador);
         }
 
         private String MatchingFacial(double[] vector, List<TuplaScriptableObject> facialAnims)
