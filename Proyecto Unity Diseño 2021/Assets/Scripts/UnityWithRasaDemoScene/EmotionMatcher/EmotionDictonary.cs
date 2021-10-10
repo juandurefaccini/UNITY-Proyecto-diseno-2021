@@ -8,9 +8,9 @@ namespace UnityWithRasaDemoScene
         {
 
         }
-        string[] emotions = new string[] { "anger", "disgust", "fear", "joy", "sadness" };
+        static string[] emotions = new string[] { "Enojo", "Miedo", "Alegria", "Sorpresa", "Confianza" };
 
-        public string GetEmotionBySum(double sum)
+        public static string GetEmotionBySum(double sum)
         {
             int index = (int)sum;
             if (sum < 0 || sum > emotions.Length) throw new InvalidOperationException("Suma de vector invalida");

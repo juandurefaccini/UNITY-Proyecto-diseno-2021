@@ -13,26 +13,42 @@ namespace UnityWithRasaDemoScene
         private BibliotecaAnimaciones bibliotecaAnimaciones;
         private BlockQueueGenerator blockQueueGenerator;
         private EmotionDictonary emotionDictonary;
-        public TuplaScriptableObject[] Facialanim;
-        public Dictionary<String,Dictionary<String,List<TuplaScriptableObject>>> animations;
+        // public TuplaScriptableObject[] Facialanim;
+        // public Dictionary<String,Dictionary<String,List<TuplaScriptableObject>>> animations;
+
+        public void Start() {
+            BibliotecaAnimaciones.CargarAnimaciones();
+        }
 
         public BlockQueue GetBlockQueue(string vector)
         {
             double[] parsedVector = ParseVector(vector); // Parse the vector
             List<TuplaScriptableObject> bestTriggers = new List<TuplaScriptableObject>(); // List of the best triggers
-            string emocion = emotionDictonary.GetEmotionBySum(parsedVector.Sum()); // Get the emotion by the sum of the vector
-            Dictionary<string, List<TuplaScriptableObject>> triggers = bibliotecaAnimaciones.GetTriggersByEmocion(emocion); // Obtengo la animacion a partir del indice
-            foreach (List<TuplaScriptableObject> lista in triggers.Values)
+            string emocion = EmotionDictonary.GetEmotionBySum(parsedVector.Sum()); // Get the emotion by the sum of the vector
+            Dictionary<string, List<TuplaScriptableObject>> triggers = BibliotecaAnimaciones.GetTriggersByEmocion(emocion); // Obtengo la animacion a partir del indice
+            foreach (List<TuplaScriptableObject> capa in triggers.Values)
             {
-                bestTriggers.Add(GetBestMatchTrigger(lista, parsedVector));
+                TuplaScriptableObject animacion = GetBestMatchTrigger(capa, parsedVector);
+                if (animacion != null ) 
+                {
+                    bestTriggers.Add(animacion);
+                }
             }
-            return blockQueueGenerator.GetBlockQueue(bestTriggers);
+            return BlockQueueGenerator.GetBlockQueue(bestTriggers);
         }
 
-        private TuplaScriptableObject GetBestMatchTrigger(List<TuplaScriptableObject> lista, double[] vector)
+        private TuplaScriptableObject GetBestMatchTrigger(List<TuplaScriptableObject> capa, double[] vector)
         {
-            List<TuplaScriptableObject> lista_copia = new List<TuplaScriptableObject>(lista);
-            TuplaScriptableObject bestTrigger = lista_copia.Select(q => new { Matching = diferencia(q.Vector, vector), Tupla = q }).OrderBy(q => q.Matching).First().Tupla;
+            TuplaScriptableObject bestTrigger = null;
+            if(capa.Count > 0) 
+            {
+                List<TuplaScriptableObject> lista_copia = new List<TuplaScriptableObject>(capa);
+                bestTrigger = lista_copia.Select(q => new { Matching = diferencia(q.Vector, vector), Tupla = q }).OrderBy(q => q.Matching).First().Tupla;
+            } 
+            else 
+            {
+                Debug.Log("NO EXITEN ANIMACIONES PARA ESA EMOCION Y CAPA");
+            }
             return bestTrigger;
         }
 
