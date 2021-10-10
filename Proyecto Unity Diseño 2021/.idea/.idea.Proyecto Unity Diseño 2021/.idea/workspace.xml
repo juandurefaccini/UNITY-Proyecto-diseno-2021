@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13082c4c-a1e0-4cd4-b6bb-a945db5699df" name="Changes" comment="" />
+    <list default="true" id="13082c4c-a1e0-4cd4-b6bb-a945db5699df" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Unity Diseño 2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Unity Diseño 2021/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Demo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Demo.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +74,8 @@
       <workItem from="1633616648662" duration="884000" />
       <workItem from="1633706916849" duration="2763000" />
       <workItem from="1633877054552" duration="1189000" />
+      <workItem from="1633886640098" duration="611000" />
+      <workItem from="1633889794739" duration="1019000" />
     </task>
     <servers />
   </component>

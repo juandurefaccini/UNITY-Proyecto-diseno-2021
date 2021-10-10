@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Demo : MonoBehaviour
 {
-    public GameObject p1;
-    public GameObject p2;
+    public GameObject oso;
+    public GameObject mateo;
+    public GameObject cami;
+    public GameObject agus;
 
     // Start is called before the first frame update
     void Start()
     {
-        p1.GetComponent<AnimationComposer>().AddBlock(new Block(new List<LayerInfo>()
+        oso.GetComponent<AnimationComposer>().AddBlock(new Block(new List<LayerInfo>()
         {
             new LayerInfo("StandingArguing"),
             new LayerInfo("AngryFace")
@@ -20,8 +22,20 @@ public class Demo : MonoBehaviour
 
     private IEnumerator Esperar()
     {
-        yield return new WaitForSeconds(5f);
-        p2.GetComponent<AnimationComposer>().AddBlock(new Block(new List<LayerInfo>()
+        yield return new WaitForSeconds(3f);
+        mateo.GetComponent<AnimationComposer>().AddBlock(new Block(new List<LayerInfo>()
+        {
+            new LayerInfo("StandingArguing"),
+            new LayerInfo("AngryFace")
+        }));
+        yield return new WaitForSeconds(0.87f);
+        cami.GetComponent<AnimationComposer>().AddBlock(new Block(new List<LayerInfo>()
+        {
+            new LayerInfo("AngryArmR"),
+            new LayerInfo("AngryFace")
+        }));
+        yield return new WaitForSeconds(0.6f);
+        agus.GetComponent<AnimationComposer>().AddBlock(new Block(new List<LayerInfo>()
         {
             new LayerInfo("StandingArguing"),
             new LayerInfo("AngryFace")
