@@ -16,7 +16,6 @@ public class Demo : MonoBehaviour
             new LayerInfo("AngryFace")
         }));
         StartCoroutine(Esperar());        
-        
     }
 
     private IEnumerator Esperar()
