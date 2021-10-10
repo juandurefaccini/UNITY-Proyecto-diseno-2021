@@ -58,7 +58,6 @@ namespace UnityWithRasaDemoScene
             // layer es de tipo <string, Dictionary> 
             foreach (var layer in animations) 
             {
-                Debug.Log("For e");
                 retorno.Add(layer.Key, animations[layer.Key][emocion]);
             }
             return retorno; 

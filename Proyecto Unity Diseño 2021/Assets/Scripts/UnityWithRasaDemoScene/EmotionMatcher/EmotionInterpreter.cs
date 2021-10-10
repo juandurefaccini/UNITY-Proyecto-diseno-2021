@@ -26,10 +26,11 @@ namespace UnityWithRasaDemoScene
             List<TuplaScriptableObject> bestTriggers = new List<TuplaScriptableObject>(); // List of the best triggers
             string emocion = EmotionDictonary.GetEmotionBySum(parsedVector.Sum()); // Get the emotion by the sum of the vector
             Dictionary<string, List<TuplaScriptableObject>> triggers = BibliotecaAnimaciones.GetTriggersByEmocion(emocion); // Obtengo la animacion a partir del indice
-            foreach (List<TuplaScriptableObject> capa in triggers.Values)
+            foreach (var capa in triggers)
             {
-                TuplaScriptableObject animacion = GetBestMatchTrigger(capa, parsedVector);
-                if (animacion != null ) 
+                TuplaScriptableObject animacion = GetBestMatchTrigger(capa.Value, parsedVector);
+                
+                if (animacion != null) 
                 {
                     bestTriggers.Add(animacion);
                 }
@@ -47,18 +48,24 @@ namespace UnityWithRasaDemoScene
             } 
             else 
             {
-                Debug.Log("NO EXITEN ANIMACIONES PARA ESA EMOCION Y CAPA");
+                Debug.Log("NO EXISTEN ANIMACIONES PARA ESA EMOCION Y CAPA");
             }
             return bestTrigger;
         }
 
         private double diferencia(double[] v, double[] vector)
         {
-            double aux = System.Math.Abs(vector[0] - v[0] + vector[1] - v[1] + vector[2] - v[2] + vector[3] - v[3] + vector[4] - v[4]);
-            return aux;
+            double diferencia = 0;
+
+            for (int i = 0; i < 5; ++i)
+            {
+                diferencia += Math.Abs(vector[i] - v[i]);
+            }
+            
+            return diferencia;
         }
 
-
+        // Depende de algo del idioma de la maquina en la que se este ejecutando, si no anda con una proba con la otra
         private double[] ParseVector(string vector)
         {
             var aux = vector.Substring(1, vector.Length - 2);
@@ -66,7 +73,8 @@ namespace UnityWithRasaDemoScene
             double[] res = new double[5];
             for (int i = 0; i < 5; i++)
             {
-                res[i] = Convert.ToDouble(csv_input[i]);
+                res[i] = Convert.ToDouble(csv_input[i].Replace('.', ','));
+                // res[i] = Convert.ToDouble(csv_input[i]);  // Segunda opcion
             }
             return res;
         }

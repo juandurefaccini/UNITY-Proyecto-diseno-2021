@@ -1,7 +1,8 @@
 using System.Collections.Generic;
-using System.Diagnostics;
 using AnimatorComposerStructures;
 using UnityWithRasaDemoScene;
+using UnityEngine;
+
 public class BlockQueueGenerator
 {
     private const string DEFAULT_TRIGGER = " ";
@@ -11,6 +12,7 @@ public class BlockQueueGenerator
         blocks.Add(new Block());   //El constructor vacio crea la lista de layer info sin necesidad de pasarsela
         foreach (TuplaScriptableObject tupla in triggerScriptableObjects)
         {
+            Debug.Log("Trigger dentro del GetBlockQueue: " + tupla.Trigger);
             blocks[0].AddLayerInfo(new LayerInfo(tupla.Trigger));
         }
         blocks.Add(new Block(GetCleanBlock())); // Agrego un bloque con un trigger por defecto
