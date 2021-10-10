@@ -21,7 +21,7 @@ public class Demo : MonoBehaviour
 
     private IEnumerator Esperar()
     {
-        yield return new WaitForSeconds(0f);
+        yield return new WaitForSeconds(5f);
         p2.GetComponent<AnimationComposer>().AddBlock(new Block(new List<LayerInfo>()
         {
             new LayerInfo("StandingArguing"),
