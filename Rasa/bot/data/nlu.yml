@@ -7,31 +7,43 @@ nlu:
   examples: |
     - Holis
     - Hola
+    - Hola!!
     - Hola!
-    - Buen dia!
-    - Buenas tardes!
+    - Holis!
+    - Hola hola!
+    - Holaa
+    
+  
 - intent: saludo/enojo
   examples: |
+    - Hola piba.
     - Hola flaca.
     - Hola pibe.
     - Hola flaco.
-    - Buen dia.
-    - Buenas tardes.
+    
+
 - intent: saludo/miedo
   examples: |
-    - Hola
-    - Hola...
+    - Buenas tardes...
     - Buenas...
+    - Buenas noches...
+    - Buen dia...
+
 - intent: saludo/sorpresa
   examples: |
+    - Holaaa, que haces tanto tiempo?
     - Holaaa, tanto tiempo
     - Holaaa, que tal?
     - Holaaa, que onda?
+
 - intent: saludo/confianza
   examples: |
+    - Que ondaaaa??
+    - Hooooolaaa!!
     - Buueeenass
     - Buen dia cheee
     - Buenas tardessss
+ 
  #INTENTS DE QUEHICISTE
  #
  #
@@ -39,12 +51,11 @@ nlu:
 
 - intent: que_estabas_haciendo/alegre
   examples: |
-    
+    - En que andabas??
     - Que andabas haciendo?
     - Que hacias??
     - Que estabas haciendo?
  
-  
 
 - intent: que_estabas_haciendo/enojo
   examples: |
@@ -52,11 +63,13 @@ nlu:
     - Que mierda haces aca y no trabajando?
     - Que haces aca y porque mierda no estas trabajando?
     - Porque no estas trabajando? que haces aca??
+
 - intent: que_estabas_haciendo/miedo
   examples: |
-      - Estas bien? Que raro que no estas trabajando? Paso algo??
-      - Paso algo que no estas trabajando?
-      - Estas bien?? paso algo que no estas trabajando??
+    - Estas bien? Que raro que no estas trabajando? Paso algo??
+    - Paso algo que no estas trabajando?
+    - Estas bien?? paso algo que no estas trabajando??
+
 - intent: que_estabas_haciendo/sorpresa
   examples: |
     - Que justo te vi!, Que estabas haciendo??
@@ -74,28 +87,33 @@ nlu:
     - Felicidades!
     - Felicitacionesss
     - Felicidades
+
 - intent: felicitaciones/enojo
   examples: |
     - bien flaca.
     - bien flaco.
     - Bien pibe.
     - bien.
+
 - intent: felicitaciones/miedo
   examples: |
     - Muy bien hecho...
     - bien hecho...
     - Buen trabajo...
     - Bien hecho...
+
 - intent: felicitaciones/sorpresa
   examples: |
     - Que nivel! felicitaciones
     - Noo que bienn,Felicitaciones
     - Que biennn, Felicidades
+
 - intent: felicitaciones/confianza
   examples: |
     - Felicidadessss geniaa
     - Felicitaciones capooo
     - Felicidades titan
+
 - intent: despedida/alegre
   examples: |
     - Chau chauuuu
@@ -106,15 +124,18 @@ nlu:
   examples: |
     - nos vemos...
     - adios...
+
 - intent: despedida/enojo
   examples: |
     - chau.
     - adios.
+
 - intent: despedida/sorpresa
   examples: |
     - Fue una sorpresa verte!
     - Nos vemos! espero verte pronto
     - Espero verte pronto!
+
 - intent: despedida/confianza
   examples: |
     - Nos re vimoss
@@ -132,14 +153,14 @@ nlu:
 - intent: plaza/miedo
   examples: |
     - No es peligrosa la plaza?
-    - che, no es peligrosa esta plaza?
-    - no te da miedo estar solo en esta plaza?
+    - che, no es peligrosa la plaza?
+    - es un peligro la plaza, no? 
     
 - intent: plaza/enojo
   examples: |
-    - Que mierda haces en la plaza?
+    - Que mierda haces en la plaza y no trabajando?
     - Que haces en esta plaza y no trabajando??
-    - Que haces aca y no trabajando??
+    - Que carajo haces en la plaza y no trabajando??
 
 - intent: plaza/sorpresa
   examples: |
@@ -165,9 +186,9 @@ nlu:
 - intent: departamento/miedo
   examples: |
     - Es peligroso este barrio?
-    - No es peligrosa el departamento?
+    - Es un peligro este barrio,no?
     - Y que onda el barrio, es peligroso?
-    - Es seguro este departamento?
+    - Dicen que es peligroso el barrio, es verdad?
     
 - intent: departamento/enojo
   examples: |
@@ -175,17 +196,17 @@ nlu:
     - Que mierda haces en el departamento?
     - Que haces recien saliendo de tu casa y no laburando?
     - Que haces aca en tu casa y no trabajando??
+
 - intent: departamento/sorpresa
   examples: |
-    - Que sorpresa verte en el departamento!
-    - Que raro verte en el departamento!
-    - Noo, no sabia que vivias aca!
-    - Que bien! vivis re cerca del laburo
+    - Que sorpresa verte en tu departamento!
+    - Que raro verte en tu departamento!
+    - Que curioso verte en tu departamento!
+
 - intent: departamento/confianza
   examples: |
     - Pero que pedazo de departamento, parece un palacio
     - Que bien! que pedazo de departamento
-    - Debes armarte altas fiestas en este depto
     - Que pedazo de departamento 
 ## Atendiendo la entrada de la empresa ##
 
@@ -193,14 +214,13 @@ nlu:
 
 - intent: atendiendo/alegre
   examples: |
-    - Es un lugar precioso. Me imagino que te pagan de 10
     - Que buen lugar! como vas con los clientes
     - y que onda, como te llevas con los clientes?
     - Como va la clientela??
     
 - intent: atendiendo/miedo
   examples: |
-    - y que onda el barrio, es seguro el trabajo?
+    - Es seguro el trabajo?
     - Es seguro estar aca atendiendo?
     - Viste los quilombos que hay con la gente, es seguro este trabajo?
     - Te noto muy desprotegido, es seguro este trabajo?
@@ -208,31 +228,33 @@ nlu:
 - intent: atendiendo/enojo
   examples: |
     - Que carajo haces en recepcion y no laburando
-    - Que mierda haces atendiendo? y no arriba laburando
+    - Que mierda haces en recepcion y no arriba laburando
     - Que haces aca abajo en recepcion y no arriba laburando
     - Porque estas aca en la recepcion y no laburando
+
 - intent: atendiendo/sorpresa
   examples: |
     - Que sorpresa verte aca trabajando en recepcion!
     - Que raro te veo en la recepcion!
     - No sabia que estabas aca abajo en la recepcion!
     - Que raro encontrarte aca abajo en recepcion
+
 - intent: atendiendo/confianza
   examples: |
     - Es una bomba la recepcion!
     - Que bien! que pedazo de recepcion
-    - Yo sabia que ibas a estar aca abajo en la recepcion
-    - Jajaja yo sabia que te iba a encontrar aca en recepcion
+    - Es hermosa la recepcion!
+    - Alta recepcion che!
 ## Buscando un libro ##
 
 
 
 - intent: libro/alegre
   examples: |
-    - Y que paso, pudiste encontrarlo??
+    - Y que paso, pudiste encontrarlo a ese libro??
     - Que paso con el libro, lo pudiste encontrar?
     - Pudiste encontrar el libro??
-    - Y que onda, lo pudiste encontrar
+    - Y que onda, lo pudiste encontrar al libro?
     
 - intent: libro/miedo
   examples: |
@@ -256,26 +278,26 @@ nlu:
 - intent: libro/confianza
   examples: |
     - Tranqui que ya va a aparecer ese libro
-    - Tranqui que ya lo vas a encontrar
-    - Ya lo vas a encontrar, no te preocupes
-    - vas a ver que lo vas a encontrar, no te preocupes
+    - Tranqui que ya lo vas a encontrar al libro
+    - Ya lo vas a encontrar al libro, no te preocupes
+    - vas a ver que lo vas a encontrar al libro, no te preocupes
 ## Tomando un descanso del laburo ##
 
 
 
 - intent: descanso/alegre
   examples: |
-    - Es una buena idea, nunca esta de mas
+    - Es una buena idea, nunca esta de mas un descanso
     - Esta perfecto, un buen descanso viene bien siempre
-    - Esta bien, venias muy atareado
+    - Esta bien, te hacia falta un descanso
     - Esta perfecto, hace falta un descanso cada tanto
     
 - intent: descanso/miedo
   examples: |
     - Que bueno que te tomaste un descansito, estaba preocupado
     - Mejor, ya me estaba preocupando por lo cansado que estabas
-    - Mejor, te notaba muy cansado
-    - Te notaba muy tenso, es mejor
+    - Mejor, te notaba muy cansado y era preocupante
+    - Te notaba muy tenso y me estaba preocupando
     
 - intent: descanso/enojo
   examples: |
@@ -283,12 +305,14 @@ nlu:
     - Bueno, no descansaste ya? metete a laburar
     - Bueno, capaz que suficiente descanso por ahora. Ponete a laburar
     - Mucho descansito y poco laburo
+
 - intent: descanso/sorpresa
   examples: |
     - Ahora veo porque no estabas arriba. Mejor que estes descansando un poco
     - Ahora entiendo porque no estabas arriba. Estabas descansando aca
     - Con razon no estabas arriba. Esta perfecto
     - Con razon no te encontraba en la oficina. Esta bien, descansa
+
 - intent: descanso/confianza
   examples: |
     - Tranquilo, metele al descanso un rato que hace falta a veces
