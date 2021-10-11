@@ -11,7 +11,6 @@ public class SendButton : MonoBehaviour
 
     void TaskOnClick()
     {
-        
         if (!System.String.IsNullOrEmpty(networkManager.chatManager.input.text))
         {
             string message = networkManager.chatManager.input.text;
