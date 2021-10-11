@@ -1,6 +1,4 @@
 using System;
-using System.IO; // Para directory
-using System.Linq; // Para parsear el nombre de la carpeta de un path
 using System.Collections.Generic;
 using UnityEngine;
 using AnimatorComposerStructures;

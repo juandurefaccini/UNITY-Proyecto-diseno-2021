@@ -11,12 +11,14 @@ public class SendButton : MonoBehaviour
 
     void TaskOnClick()
     {
-        string message = networkManager.chatManager.input.text;
-        //networkManager.botUI.UpdateDisplay("user", message, "text");
-        networkManager.chatManager.input.text = "";
-        GameObject receiver = networkManager.chatManager.last_receiver;
-        networkManager.SendMessageToRasa(receiver, message);
-        // networkManager.sendMessageToRasa().... etc Hay que conseguir los gameobjects que pide el metodo ese y despues sacar las tres lineas anteriores
+        
+        if (!System.String.IsNullOrEmpty(networkManager.chatManager.input.text))
+        {
+            string message = networkManager.chatManager.input.text;
+            networkManager.chatManager.input.text = "";
+            GameObject receiver = networkManager.chatManager.last_receiver;
+            networkManager.SendMessageToRasa(receiver, message);
+        }
     }
 
     // Start is called before the first frame update
@@ -29,6 +31,10 @@ public class SendButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        //Detect when the Return key is pressed down NO FUNCIONA
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            TaskOnClick();
+        }
     }
 }
