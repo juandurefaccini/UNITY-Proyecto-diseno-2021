@@ -53,7 +53,7 @@ public class NetworkManager : MonoBehaviour
             message = message
         };
 
-        Debug.Log(postMessage.sender + " recibio un " + postMessage.message);
+        // Debug.Log(postMessage.sender + " recibio un " + postMessage.message);
 
         string jsonBody = JsonUtility.ToJson(postMessage);
 
@@ -78,11 +78,11 @@ public class NetworkManager : MonoBehaviour
 
         RootReceiveMessageJson recieveMessages = JsonUtility.FromJson<RootReceiveMessageJson>("{\"messages\":" + request.downloadHandler.text + "}");
 
-        Debug.Log(recieveMessages.messages[0].recipient_id);
+        // Debug.Log(recieveMessages.messages[0].recipient_id);
 
-        Debug.Log(recieveMessages.messages[0].custom.text);
+        // Debug.Log(recieveMessages.messages[0].custom.text);
 
-        Debug.Log(recieveMessages.messages[0].custom.vector);
+        // Debug.Log(recieveMessages.messages[0].custom.vector);
 
         // Agregar comportamiento de alterar animaciones
         var vector = recieveMessages.messages[0].custom.vector;
