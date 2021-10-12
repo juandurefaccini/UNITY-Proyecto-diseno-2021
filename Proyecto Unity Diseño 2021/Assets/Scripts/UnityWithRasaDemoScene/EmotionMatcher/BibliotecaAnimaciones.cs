@@ -9,7 +9,7 @@ namespace UnityWithRasaDemoScene
 {
     public class BibliotecaAnimaciones
     {
-        public static Dictionary<string,Dictionary<string,List<TuplaScriptableObject>>> animations;
+        public static Dictionary<string, Dictionary<string, List<TuplaScriptableObject>>> animations;
 
         // public BibliotecaAnimaciones()
         // {
@@ -18,7 +18,7 @@ namespace UnityWithRasaDemoScene
         public static void CargarAnimaciones()
         {
             //Cargar un mapa de layers
-            animations = new Dictionary<string,Dictionary<string,List<TuplaScriptableObject>>>();
+            animations = new Dictionary<string, Dictionary<string, List<TuplaScriptableObject>>>();
             string animationpath = Directory.GetCurrentDirectory();
             animationpath = animationpath + "/Assets/Resources/ScriptableObjects/TriggersEmotions"; // @ me deja insertar \ sin que se considere especial
             string[] layerEntries = Directory.GetDirectories(animationpath);
@@ -26,7 +26,7 @@ namespace UnityWithRasaDemoScene
             foreach (string layerpath in layerEntries)
             {
                 string layer = layerpath.Split(Path.DirectorySeparatorChar).Last();
-                animations.Add(layer, new Dictionary<string,List<TuplaScriptableObject>>());
+                animations.Add(layer, new Dictionary<string, List<TuplaScriptableObject>>());
                 string[] emotionEntries = Directory.GetDirectories(layerpath);
                 //Por cada emocion en una layer, cargar su coleccion de scriptable objects
                 foreach (string emotionpath in emotionEntries)
@@ -41,11 +41,11 @@ namespace UnityWithRasaDemoScene
                         {
                             animations[layer][emotion].Add(tupla);
                         }
-                        Debug.Log(layer + @"/" + emotion + " posee " + animations[layer][emotion].Count + " tuplas");
+                        // Debug.Log(layer + @"/" + emotion + " posee " + animations[layer][emotion].Count + " tuplas");
                     }
-                    catch 
+                    catch
                     {
-                        Debug.Log("No hay animaciones para " + layer + " en la emocion " + emotion);
+                        // Debug.Log("No hay animaciones para " + layer + " en la emocion " + emotion);
                     }
                 }
             }
@@ -56,11 +56,11 @@ namespace UnityWithRasaDemoScene
             Dictionary<string, List<TuplaScriptableObject>> retorno = new Dictionary<string, List<TuplaScriptableObject>>();
             Debug.Log(emocion);
             // layer es de tipo <string, Dictionary> 
-            foreach (var layer in animations) 
+            foreach (var layer in animations)
             {
                 retorno.Add(layer.Key, animations[layer.Key][emocion]);
             }
-            return retorno; 
+            return retorno;
         }
     }
 }

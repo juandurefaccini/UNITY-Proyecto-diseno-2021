@@ -11,8 +11,6 @@ namespace UnityWithRasaDemoScene
         private BibliotecaAnimaciones bibliotecaAnimaciones;
         private BlockQueueGenerator blockQueueGenerator;
         private EmotionDictonary emotionDictonary;
-        // public TuplaScriptableObject[] Facialanim;
-        // public Dictionary<String,Dictionary<String,List<TuplaScriptableObject>>> animations;
 
         public void Start()
         {
@@ -67,14 +65,7 @@ namespace UnityWithRasaDemoScene
         // Depende de algo del idioma de la maquina en la que se este ejecutando, si no anda con una proba con la otra
         private double[] ParseVector(string vector)
         {
-            var aux = vector.Substring(1, vector.Length - 2);
-            string[] csv_input = aux.Split(',');
-            double[] res = new double[5];
-            for (int i = 0; i < 5; i++)
-            {
-                // res[i] = Convert.ToDouble(csv_input[i].Replace('.', ','));
-                res[i] = Convert.ToDouble(csv_input[i]);  // Segunda opcion
-            }
+            double[] res = vector.Substring(1, vector.Length - 2).Split(',').Select(q => Convert.ToDouble(q)).ToArray(); // Convertimos a double
             return res;
         }
     }
