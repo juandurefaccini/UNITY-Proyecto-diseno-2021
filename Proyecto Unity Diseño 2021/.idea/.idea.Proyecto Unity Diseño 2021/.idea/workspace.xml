@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="13082c4c-a1e0-4cd4-b6bb-a945db5699df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Unity Diseño 2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Unity Diseño 2021/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/UnityWithRasaDemoScene/Chat/ChatExitButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/UnityWithRasaDemoScene/Chat/ChatExitButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityWithRasaDemoScene/EmotionMatcher/BibliotecaAnimaciones.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityWithRasaDemoScene/EmotionMatcher/BibliotecaAnimaciones.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityWithRasaDemoScene/EmotionMatcher/EmotionInterpreter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityWithRasaDemoScene/EmotionMatcher/EmotionInterpreter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityWithRasaDemoScene/EmotionMatcher/EmotionInterpreter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityWithRasaDemoScene/EmotionMatcher/EmotionInterpreter.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UnityWithRasaDemoScene/EmotionMatcher/NewBlockQueue/BlockQueueGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UnityWithRasaDemoScene/EmotionMatcher/NewBlockQueue/BlockQueueGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +74,10 @@
       <workItem from="1633530966489" duration="1493000" />
       <workItem from="1633616648662" duration="884000" />
       <workItem from="1633706916849" duration="2763000" />
-      <workItem from="1633904473531" duration="3191000" />
+      <workItem from="1633904473531" duration="4113000" />
+      <workItem from="1633999631525" duration="5000" />
+      <workItem from="1634000245328" duration="133000" />
+      <workItem from="1634055503101" duration="55000" />
     </task>
     <servers />
   </component>

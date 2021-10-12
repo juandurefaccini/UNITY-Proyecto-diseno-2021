@@ -23,4 +23,12 @@ public class ChatExitButton : MonoBehaviour
         btn.onClick.AddListener(TaskOnClick);
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+           TaskOnClick();
+        }
+    }
+
 }
