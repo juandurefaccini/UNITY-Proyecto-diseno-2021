@@ -67,7 +67,7 @@ namespace UnityWithRasaDemoScene
         private double[] ParseVector(string vector)
         {
             double[] res = vector.Substring(1, vector.Length - 2).Split(',').Select(q => double.Parse(q, CultureInfo.InvariantCulture)).ToArray(); // Convertimos a double
-            // Debug.Log(res[0] + " " + res[1] + " " + res[2] + " " + res[3] + " " + res[4] + " Suma: " + res.Sum());
+            Debug.Log(res[0] + " " + res[1] + " " + res[2] + " " + res[3] + " " + res[4] + " Suma: " + res.Sum());
             return res;
         }
     }
