@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using AnimatorComposerStructures;
 using System.Linq;
+using System.Globalization;
 
 namespace UnityWithRasaDemoScene
 {
@@ -65,7 +66,7 @@ namespace UnityWithRasaDemoScene
         // Depende de algo del idioma de la maquina en la que se este ejecutando, si no anda con una proba con la otra
         private double[] ParseVector(string vector)
         {
-            double[] res = vector.Substring(1, vector.Length - 2).Split(',').Select(q => Convert.ToDouble(q)).ToArray(); // Convertimos a double
+            double[] res = vector.Substring(1, vector.Length - 2).Split(',').Select(q => double.Parse(q, CultureInfo.InvariantCulture)).ToArray(); // Convertimos a double
             return res;
         }
     }
