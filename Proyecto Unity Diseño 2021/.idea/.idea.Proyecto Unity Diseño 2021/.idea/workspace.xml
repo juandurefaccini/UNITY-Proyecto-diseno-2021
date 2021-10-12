@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13082c4c-a1e0-4cd4-b6bb-a945db5699df" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/.FullBodyAnimationsScene.unity.swp" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/.FullBodyAnimationsScene.unity.swp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/.FullBodyAnimationsScene_BASE_1204.unity.swp" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/.FullBodyAnimationsScene_BASE_1204.unity.swp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/.FullBodyAnimationsScene_LOCAL_1204.unity.swp" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/.FullBodyAnimationsScene_LOCAL_1204.unity.swp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/.FullBodyAnimationsScene_REMOTE_1204.unity.swp" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/.FullBodyAnimationsScene_REMOTE_1204.unity.swp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Proyecto Unity Diseño 2021/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Proyecto Unity Diseño 2021/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +74,7 @@
       <workItem from="1633706916849" duration="2763000" />
       <workItem from="1633904473531" duration="4113000" />
       <workItem from="1633999631525" duration="5000" />
+      <workItem from="1634000245328" duration="133000" />
     </task>
     <servers />
   </component>
