@@ -18,9 +18,10 @@ namespace UnityWithRasaDemoScene
         public static void CargarAnimaciones()
         {
             //Cargar un mapa de layers
-            animations = new Dictionary<string, Dictionary<string, List<TuplaScriptableObject>>>();
+            char dsc = Path.DirectorySeparatorChar; //Directory Separator Char
+            animations = new Dictionary<string,Dictionary<string,List<TuplaScriptableObject>>>();
             string animationpath = Directory.GetCurrentDirectory();
-            animationpath = animationpath + "/Assets/Resources/ScriptableObjects/TriggersEmotions"; // @ me deja insertar \ sin que se considere especial
+            animationpath = animationpath+dsc+"Assets"+dsc+"Resources"+dsc+"ScriptableObjects"+dsc+"TriggersEmotions";
             string[] layerEntries = Directory.GetDirectories(animationpath);
             //Por cada layer en Resources/ScriptableObjects/TriggersEmotions
             foreach (string layerpath in layerEntries)
@@ -36,12 +37,12 @@ namespace UnityWithRasaDemoScene
                     string resourcespath = "ScriptableObjects/TriggersEmotions";
                     try // No es necesario, ahora LoadAll retorna una lista vacia y no null.
                     {
-                        TuplaScriptableObject[] listTuplas = (TuplaScriptableObject[])Resources.LoadAll<TuplaScriptableObject>(resourcespath + "/" + layer + "/" + emotion);
+                        TuplaScriptableObject[] listTuplas = (TuplaScriptableObject[])Resources.LoadAll<TuplaScriptableObject>(resourcespath + dsc + layer + dsc + emotion);
                         foreach (TuplaScriptableObject tupla in listTuplas)
                         {
                             animations[layer][emotion].Add(tupla);
                         }
-                        // Debug.Log(layer + @"/" + emotion + " posee " + animations[layer][emotion].Count + " tuplas");
+                        Debug.Log(layer + dsc + emotion + " posee " + animations[layer][emotion].Count + " tuplas");
                     }
                     catch
                     {
