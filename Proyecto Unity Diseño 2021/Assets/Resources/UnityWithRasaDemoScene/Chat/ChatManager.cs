@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class ChatManager : MonoBehaviour
 {
+    // Si se modifica la forma del chat: Para que los mensajes no solapen con el input, hay que alinear el gameobject Scrollview con el tamaño del chat. Ya se bajo de 390 a 380.
     public GameObject contentDisplayObject; // gameobject texto donde se muestra toda la convers
     public InputField input; // input field donde el user escribe su mensaje
 
@@ -61,7 +62,7 @@ public class ChatManager : MonoBehaviour
         //Poner la posicion vertical de la burbuja de dialogo
         allMessagesHeight += 15 + (int)chatBubblePos.sizeDelta.y;
         chatBubblePos.anchoredPosition3D = new Vector3(HorizontalPos, -allMessagesHeight, 0);
-        if (allMessagesHeight > 340)
+        if (allMessagesHeight > 300) 
         {
             //Actualizar la altura de contentDisplayObject (atributo)
             RectTransform contentRect = contentDisplayObject.GetComponent<RectTransform>();

@@ -1,6 +1,4 @@
 using System;
-using System.IO; // Para directory
-using System.Linq; // Para parsear el nombre de la carpeta de un path
 using System.Collections.Generic;
 using UnityEngine;
 using AnimatorComposerStructures;
@@ -16,7 +14,8 @@ namespace UnityWithRasaDemoScene
         // public TuplaScriptableObject[] Facialanim;
         // public Dictionary<String,Dictionary<String,List<TuplaScriptableObject>>> animations;
 
-        public void Start() {
+        public void Start()
+        {
             BibliotecaAnimaciones.CargarAnimaciones();
         }
 
@@ -29,8 +28,8 @@ namespace UnityWithRasaDemoScene
             foreach (var capa in triggers)
             {
                 TuplaScriptableObject animacion = GetBestMatchTrigger(capa.Value, parsedVector);
-                
-                if (animacion != null) 
+
+                if (animacion != null)
                 {
                     bestTriggers.Add(animacion);
                 }
@@ -41,12 +40,12 @@ namespace UnityWithRasaDemoScene
         private TuplaScriptableObject GetBestMatchTrigger(List<TuplaScriptableObject> capa, double[] vector)
         {
             TuplaScriptableObject bestTrigger = null;
-            if(capa.Count > 0) 
+            if (capa.Count > 0)
             {
                 List<TuplaScriptableObject> lista_copia = new List<TuplaScriptableObject>(capa);
                 bestTrigger = lista_copia.Select(q => new { Matching = diferencia(q.Vector, vector), Tupla = q }).OrderBy(q => q.Matching).First().Tupla;
-            } 
-            else 
+            }
+            else
             {
                 Debug.Log("NO EXISTEN ANIMACIONES PARA ESA EMOCION Y CAPA");
             }
@@ -61,7 +60,7 @@ namespace UnityWithRasaDemoScene
             {
                 diferencia += Math.Abs(vector[i] - v[i]);
             }
-            
+
             return diferencia;
         }
 
@@ -73,8 +72,8 @@ namespace UnityWithRasaDemoScene
             double[] res = new double[5];
             for (int i = 0; i < 5; i++)
             {
-                res[i] = Convert.ToDouble(csv_input[i].Replace('.', ','));
-                // res[i] = Convert.ToDouble(csv_input[i]);  // Segunda opcion
+                // res[i] = Convert.ToDouble(csv_input[i].Replace('.', ','));
+                res[i] = Convert.ToDouble(csv_input[i]);  // Segunda opcion
             }
             return res;
         }
