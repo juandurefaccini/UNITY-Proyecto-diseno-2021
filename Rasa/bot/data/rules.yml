@@ -1,0 +1,49 @@
+version: "2.0"
+
+rules:
+
+- rule: saludo
+  steps:
+  - intent: saludo
+  - action: accion_vector  
+
+- rule: que_estabas_haciendo
+  steps:
+  - intent: que_estabas_haciendo
+  - action: accion_vector
+
+- rule: felicitaciones
+  steps:
+  - intent: felicitaciones
+  - action: accion_vector
+
+- rule: despedida
+  steps:
+  - intent: despedida
+  - action: accion_vector
+
+- rule: plaza
+  steps:
+  - intent: plaza
+  - action: accion_vector
+
+- rule: departamento
+  steps:
+  - intent: departamento
+  - action: accion_vector
+
+- rule: atendiendo
+  steps:
+  - intent: atendiendo
+  - action: accion_vector
+
+- rule: descanso
+  steps:
+  - intent: descanso
+  - action: accion_vector
+
+- rule: libro
+  steps: 
+  - intent: libro
+  - action: accion_vector
+  

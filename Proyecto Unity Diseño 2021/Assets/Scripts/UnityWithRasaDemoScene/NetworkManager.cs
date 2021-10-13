@@ -9,6 +9,7 @@ public class PostMessageJson
 {
     public string message;
     public string sender;
+
 }
 
 [Serializable]
@@ -20,37 +21,45 @@ public class RootReceiveMessageJson
 }
 
 [Serializable]
+public class Custom
+{
+    public String text;
+    public String vector;
+}
+
+[Serializable]
 // ReceiveMessageJson extrae el valor del objeto json que se recibe del servidor rasa
 // Se usa para extraer un solo mensaje devuelto por el bot
 public class ReceiveMessageJson
 {
     public string recipient_id;
-    public string text;
-    public string image;
-    public string attachemnt;
-    public string button;
-    public string element;
-    public string quick_replie;
+    public Custom custom;
 }
 
 public class NetworkManager : MonoBehaviour
 {
-
-
+    public ChatManager chatManager;
     private const string rasa_url = "http://localhost:5005/webhooks/rest/webhook";
+    public AnimationManager animationManager;
 
 
-    public void SendMessageToRasa(GameObject sender, GameObject receiver, string message)
+    public void SendMessageToRasa(GameObject receiver, string message)
     {
         // Va a ser llamado cuando el usuario presiona el botón de enviar mensaje
         // Creo un JSON para representar el mensaje del usuario
         PostMessageJson postMessage = new PostMessageJson
         {
-            sender = sender.GetComponent<Persona>().nombre,
+            sender = receiver.name,
             message = message
         };
 
+        // Debug.Log(postMessage.sender + " recibio un " + postMessage.message);
+
         string jsonBody = JsonUtility.ToJson(postMessage);
+
+        // botUI solo reconoce user y bot de sender, no distintos usuarios DE MOMENTO
+        chatManager.UpdateDisplay("user", message, "text");
+
 
         // Creo una petición POST con los datos a enviar al servidor Rasa
         StartCoroutine(PostRequest(receiver, rasa_url, jsonBody));
@@ -68,13 +77,44 @@ public class NetworkManager : MonoBehaviour
         yield return request.SendWebRequest();
 
         RootReceiveMessageJson recieveMessages = JsonUtility.FromJson<RootReceiveMessageJson>("{\"messages\":" + request.downloadHandler.text + "}");
-        // receiver.GetComponent<Persona>();
-        string data = recieveMessages.messages[0].text;
-        string animacionAEjecutar = data.Split('=')[0];
-        string mensaje = data.Split('=')[1];
 
-        UIManager.GetInstance().mostrarMensaje("CHAT: " + mensaje);
-        AnimationManager.playAnim(animacionAEjecutar, receiver.gameObject);
+        // Debug.Log(recieveMessages.messages[0].recipient_id);
+
+        // Debug.Log(recieveMessages.messages[0].custom.text);
+
+        // Debug.Log(recieveMessages.messages[0].custom.vector);
+
+        // Agregar comportamiento de alterar animaciones
+        var vector = recieveMessages.messages[0].custom.vector;
+        animationManager.AnimateCharacter(vector, receiver);
+
+        if (recieveMessages.messages[0].custom.text != null)//&& field.Name != "recipient_id")
+        {
+            chatManager.UpdateDisplay("bot", receiver.name + ": " + recieveMessages.messages[0].custom.text, "text"); //messageType si o si text, solo muestra el contenido de la rta
+        }
+
+        //string recipient = recieveMessages.messages[0].text;
+        //Custom cus = recieveMessages.messages[0].custom;
+
+
+        //Debug.Log(recipient);
+
+        //Debug.Log(cus.text);
+
+        //Debug.Log(cus.vector);
+
+        // Comento de aca para abajo porque hay que implementarlo de la nueva forma ////// IMPORTANTE
+
+        //string animacionAEjecutar = data.Split('=')[0];
+        //string mensaje = data.Split('=')[1];
+
+        //UIManager.GetInstance().mostrarMensaje("CHAT: " + mensaje);
+        //AnimationManager.playAnim(animacionAEjecutar, receiver.gameObject);
+
+        //////////////////////////////////////////////////////////////////////////////////
+
+        //UIManager.mostrarMensaje("CHAT: " + mensaje);
+        //AnimationManager.playAnim(animacionAEjecutar, receiver.gameObject);
         // RecieveResponse(request.downloadHandler.text);
     }
 }
